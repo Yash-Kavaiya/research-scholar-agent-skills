@@ -482,3 +482,132 @@ def to_markdown(papers: list[dict], abstract_chars: int = 0) -> str:
             text = paper["abstract"]
             lines.append("   > " + (text[:abstract_chars].rstrip() + "…" if len(text) > abstract_chars else text))
     return "\n".join(lines)
+
+
+# ------------------------------------------------------------------------- BibTeX
+
+
+def parse_bibtex(text: str) -> list[dict]:
+    """Parse BibTeX into [{'type', 'key', 'fields'}]; field names are lowercased, in file order.
+
+    Handles nested braces, quoted values, bare numbers and macros, and `#`
+    concatenation. @string macros are expanded; @comment and @preamble are skipped.
+    """
+    entries, pos = [], 0
+    macros: dict[str, str] = {}
+    while True:
+        at = text.find("@", pos)
+        if at == -1:
+            break
+        match = re.compile(r"@\s*([A-Za-z]+)\s*([{(])").match(text, at)
+        if not match:
+            pos = at + 1
+            continue
+        kind = match.group(1).lower()
+        body, end = _balanced(text, match.end() - 1)
+        pos = end
+        if kind == "string":
+            macros.update(_parse_fields(body, macros))
+            continue
+        if kind in ("comment", "preamble"):
+            continue
+        key, _, rest = body.partition(",")
+        entries.append({"type": kind, "key": key.strip(), "fields": _parse_fields(rest, macros)})
+    return entries
+
+
+def _balanced(text: str, start: int) -> tuple[str, int]:
+    """Content of the brace or parenthesis group opening at `start`, and the index after it."""
+    opener = text[start]
+    closer = "}" if opener == "{" else ")"
+    depth, i = 0, start
+    while i < len(text):
+        ch = text[i]
+        if ch == "\\":
+            i += 2
+            continue
+        if ch == "{" or (opener == "(" and ch == "("):
+            depth += 1
+        elif ch == "}" or (opener == "(" and ch == ")"):
+            depth -= 1
+            if depth == 0 and ch == closer:
+                return text[start + 1:i], i + 1
+        i += 1
+    return text[start + 1:], len(text)
+
+
+def _parse_fields(body: str, macros: dict[str, str] | None = None) -> dict[str, str]:
+    fields: dict[str, str] = {}
+    i, n = 0, len(body)
+    while i < n:
+        match = re.compile(r"[\s,]*([A-Za-z][\w:.+-]*)\s*=\s*").match(body, i)
+        if not match:
+            break
+        name, i = match.group(1).lower(), match.end()
+        parts = []
+        while i < n:
+            if body[i] == "{":
+                value, i = _balanced(body, i)
+            elif body[i] == '"':
+                j, depth = i + 1, 0
+                while j < n and (body[j] != '"' or depth):
+                    depth += (body[j] == "{") - (body[j] == "}")
+                    j += 2 if body[j] == "\\" else 1
+                value, i = body[i + 1:j], j + 1
+            else:
+                j = i
+                while j < n and body[j] not in ",#\n":
+                    j += 1
+                value, i = body[i:j].strip(), j
+                value = (macros or {}).get(value.lower(), value)
+            parts.append(value)
+            rest = re.compile(r"\s*#\s*").match(body, i)
+            if not rest:
+                break
+            i = rest.end()
+        fields[name] = " ".join("".join(parts).split())
+    return fields
+
+
+FIELD_ORDER = ["author", "editor", "title", "booktitle", "journal", "year", "month", "volume", "number", "pages",
+               "publisher", "address", "organization", "school", "institution", "series", "edition", "howpublished",
+               "eprint", "archiveprefix", "primaryclass", "doi", "url", "note"]
+
+
+def format_bibtex(entries: list[dict]) -> str:
+    """Write entries with one field per line, aligned, in a conventional field order."""
+    blocks = []
+    for entry in entries:
+        names = sorted(entry["fields"], key=lambda f: (FIELD_ORDER.index(f) if f in FIELD_ORDER else len(FIELD_ORDER), f))
+        width = max((len(name) for name in names), default=0)
+        lines = [f"  {name.ljust(width)} = {{{entry['fields'][name]}}}," for name in names]
+        blocks.append("@" + entry["type"] + "{" + entry["key"] + ",\n" + "\n".join(lines) + "\n}")
+    return "\n\n".join(blocks) + "\n"
+
+
+def bib_authors(author_field: str) -> list[str]:
+    """Split a BibTeX author field on ' and ' (outside braces)."""
+    names, depth, current = [], 0, []
+    tokens = re.split(r"(\s+and\s+|[{}])", author_field or "")
+    for token in tokens:
+        if token == "{":
+            depth += 1
+        elif token == "}":
+            depth -= 1
+        if depth == 0 and re.fullmatch(r"\s+and\s+", token or ""):
+            names.append("".join(current).strip())
+            current = []
+        else:
+            current.append(token or "")
+    if "".join(current).strip():
+        names.append("".join(current).strip())
+    return names
+
+
+def surname(name: str) -> str:
+    """Normalized family name from 'Last, First', 'First Last', or '{Corporate Name}'."""
+    name = name.strip()
+    if name.startswith("{") and name.endswith("}"):
+        return normalize_title(name)
+    family = name.split(",")[0] if "," in name else (name.split() or [""])[-1]
+    return normalize_title(family).replace(" ", "")
