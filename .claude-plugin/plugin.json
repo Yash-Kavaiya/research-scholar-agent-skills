@@ -1,0 +1,12 @@
+{
+  "name": "research-scholar",
+  "version": "0.1.0",
+  "description": "60 agent skills covering the research lifecycle: finding a problem, literature search and review, study design, analysis, writing, citations, submission, funding, and dissemination.",
+  "author": {
+    "name": "Yash Kavaiya",
+    "url": "https://github.com/Yash-Kavaiya"
+  },
+  "homepage": "https://github.com/Yash-Kavaiya/research-scholar-agent-skills",
+  "repository": "https://github.com/Yash-Kavaiya/research-scholar-agent-skills",
+  "keywords": ["research", "academic-writing", "literature-review", "citations", "latex", "phd"]
+}

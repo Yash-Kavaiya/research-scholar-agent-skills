@@ -1,0 +1,7 @@
+# API scripts use the standard library only.
+# These are needed by the analysis, figure, and PDF scripts, and by the tests.
+numpy
+scipy
+matplotlib
+pypdf
+pytest

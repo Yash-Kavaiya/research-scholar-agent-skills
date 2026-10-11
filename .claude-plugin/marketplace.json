@@ -1,0 +1,14 @@
+{
+  "name": "research-scholar-agent-skills",
+  "owner": {
+    "name": "Yash Kavaiya",
+    "url": "https://github.com/Yash-Kavaiya"
+  },
+  "plugins": [
+    {
+      "name": "research-scholar",
+      "source": "./",
+      "description": "60 agent skills covering the research lifecycle, from finding a problem to defending the thesis."
+    }
+  ]
+}
