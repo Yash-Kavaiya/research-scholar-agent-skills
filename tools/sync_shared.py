@@ -19,6 +19,7 @@ CONSUMERS = [
     "citation-graph-explorer",
     "topic-trend-analyzer",
     "novelty-checker",
+    "dataset-finder",
     "citation-verifier",
     "bibtex-manager",
     "weekly-paper-digest",
