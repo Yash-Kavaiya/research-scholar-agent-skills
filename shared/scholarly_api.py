@@ -21,6 +21,7 @@ from __future__ import annotations
 import json
 import os
 import re
+import sys
 import time
 import unicodedata
 import urllib.error
@@ -66,6 +67,13 @@ def http_get(url: str, params: dict | None = None, headers: dict | None = None,
             time.sleep(delay)
             delay *= 2
     raise ApiError(f"request failed after {retries} attempts: {url} ({last})")
+
+
+def utf8_stdout() -> None:
+    """Make printing non-ASCII titles safe on Windows consoles."""
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8", errors="replace")
 
 
 def get_json(url: str, params: dict | None = None, headers: dict | None = None) -> dict:
@@ -180,7 +188,8 @@ def parse_arxiv(xml_bytes: bytes) -> list[dict]:
 def search_arxiv(query: str, limit: int = 10, sort_by: str = "relevance") -> list[dict]:
     """sort_by: relevance, submittedDate, or lastUpdatedDate. `query` may use arXiv field syntax."""
     if not re.search(r"\b(all|ti|au|abs|cat|co|jr|rn|id):", query):
-        query = "all:" + query
+        # arXiv ORs bare words, which buries relevant papers; require every term instead.
+        query = " AND ".join("all:" + term for term in query.split())
     xml_bytes = http_get("https://export.arxiv.org/api/query", {
         "search_query": query, "start": 0, "max_results": limit,
         "sortBy": sort_by, "sortOrder": "descending",
@@ -468,7 +477,7 @@ def to_markdown(papers: list[dict], abstract_chars: int = 0) -> str:
         link = paper.get("url") or ""
         sources = ", ".join(paper.get("sources") or [paper.get("source", "")])
         lines.append(f"{number}. **{paper['title']}** ({paper.get('year') or 'n.d.'}). "
-                     f"{short_authors(paper['authors'])}.{venue} {link} [{sources}{cites}]")
+                     f"{short_authors(paper['authors']).rstrip('.')}.{venue} {link} [{sources}{cites}]")
         if abstract_chars and paper.get("abstract"):
             text = paper["abstract"]
             lines.append("   > " + (text[:abstract_chars].rstrip() + "…" if len(text) > abstract_chars else text))
