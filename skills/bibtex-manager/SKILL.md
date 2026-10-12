@@ -164,6 +164,10 @@ Requests that belong to another skill:
 | Citations become undefined after cleaning | Duplicate keys were merged or `--rekey` changed keys | Apply the `duplicates_merged` and `keys_changed` mappings to every `\cite` in the manuscript |
 | `warning: Crossref lookup failed for <key>` | A network error or rate limit during `--fill-doi` | Rerun later; entries without a filled DOI are otherwise unchanged |
 | An entry disappeared | It was merged as a duplicate of another | Check `duplicates_merged`; if the two are different works, give them distinct titles or DOIs and rerun |
+| Two different works were merged (for example a paper and its erratum, or two editions of a book) | They share a title and year and neither has a DOI | Restore both from the original file, add each work's DOI or a distinguishing `year` or `edition`, and rerun; entries with different DOIs are never merged |
+| A filled DOI points to the wrong paper | Another paper has a near-identical title | Open `https://doi.org/<doi>` and compare authors and venue; if it is wrong, delete the `doi` field and look the reference up by hand |
+| Entries are missing from the output, or the count is lower than expected with no merges reported | Malformed BibTeX: an unbalanced brace or a missing comma ends parsing of that entry early | Compare `entries_in` with the number of `@` entries in the file, fix the brace or comma near the first missing key, and rerun |
+| Accented names appear as `?` or garbled characters | The file is not UTF-8 (often Latin-1 from older reference managers) | Re-save the file as UTF-8, or keep LaTeX accent commands such as `{\"o}`, and rerun |
 
 ## Related skills
 

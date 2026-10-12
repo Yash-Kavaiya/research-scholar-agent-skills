@@ -13,6 +13,8 @@ import re
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
 ROOT = Path(__file__).resolve().parent.parent
 SKILLS = ROOT / "skills"
 SHARED = ROOT / "shared" / "scholarly_api.py"
@@ -143,8 +145,15 @@ def validate_skill(skill_dir: Path, known: set[str]) -> list[str]:
             errors.append(f"{name}: scripts/{script} is never mentioned in SKILL.md")
 
     copy = scripts_dir / SHARED_COPY_NAME
-    if copy.is_file() and copy.read_bytes() != SHARED.read_bytes():
-        errors.append(f"{name}: {SHARED_COPY_NAME} differs from shared/scholarly_api.py (run tools/sync_shared.py)")
+    if copy.is_file():
+        import sync_shared  # the per-skill client is the shared one trimmed to what the skill's scripts call
+
+        roots = sync_shared.consumers().get(scripts_dir, set())
+        expected = sync_shared.trim(SHARED.read_text(encoding="utf-8"), roots) if roots else None
+        if expected is None:
+            errors.append(f"{name}: carries {SHARED_COPY_NAME} but no script imports it")
+        elif copy.read_text(encoding="utf-8") != expected:
+            errors.append(f"{name}: {SHARED_COPY_NAME} is out of date (run python tools/sync_shared.py)")
     return errors
 
 

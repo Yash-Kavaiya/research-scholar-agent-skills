@@ -2,7 +2,7 @@
 name: novelty-checker
 description: "Checks whether a research idea has been done by finding and comparing the closest prior work. Use before committing to an idea. Not for broad reading lists; use paper-search."
 version: 1.0.0
-compatibility: "Requires Python 3.10 or later. Makes read-only HTTPS requests to arXiv, OpenAlex, Semantic Scholar, and Crossref; sends only the search terms or identifiers given to it."
+compatibility: "Requires Python 3.10 or later. Makes read-only HTTPS requests to arXiv, OpenAlex, Semantic Scholar, and Crossref (PubMed only if selected with --sources); sends only the search terms or identifiers given to it."
 allowed-tools: "Bash(python:*) Read Write"
 permissions: [network, env]
 metadata:

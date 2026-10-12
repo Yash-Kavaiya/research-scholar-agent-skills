@@ -50,7 +50,12 @@ Hand off instead when there are no seed papers yet (`paper-search`).
 
    For each seed it lists the most-cited references and the most-cited citing papers. Across seeds it ranks references by how many seeds cite them, then by citation count: the seminal-paper candidates. `--max-refs` caps references fetched per seed (default 200).
 3. **Use two or more seeds** when the goal is seminal papers. With one seed the "seminal" list is only that paper's most-cited references, which is dominated by general classics (datasets, optimizers).
-4. **Filter by role.** Mark each listed paper as foundation of the topic, general tool (dataset, metric, library), or tangential. Drop general tools unless the user wants them.
+4. **Filter by role.** Read the title and abstract of each listed paper, and how the seed cites it where the full text is available, then mark it as one of:
+   - *Foundation*: the seed builds on its idea, model, or result (it appears in the seed's method or motivation).
+   - *General tool*: a dataset, metric, optimizer, or software library cited across many unrelated topics.
+   - *Tangential*: cited in passing for background.
+
+   Keep foundations, drop general tools unless the user wants them, and list tangential papers only on request. Use `paper-summarizer` on any paper whose role is unclear from the abstract.
 5. **Look for recent follow-ups separately.** The forward list is sorted by citations, so it favours older papers. For the newest follow-ups, search with `paper-search` using the seed's method name and a recent `--year-from`.
 6. **Go one more hop** only on the two or three most relevant new papers. Unbounded snowballing grows quickly and drifts off topic.
 7. **Report** the lineage: what the seeds build on, what builds on them, and which papers the user should read first.

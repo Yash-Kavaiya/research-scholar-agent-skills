@@ -61,8 +61,14 @@ Hand off instead for citation chasing from known papers (`citation-graph-explore
 
    Options: `--sources`, `--limit` (per source), `--year-from`, `--year-to`, `--sort relevance|citations|year`, `--format json|md`, `--abstracts N`, `--out FILE`.
 4. **Check the warnings.** A source that fails (Semantic Scholar often rate-limits without a key) is reported on stderr and in the `errors` field. Retry it once after a pause, or state that it was not searched.
-5. **Screen the results.** Read titles and abstracts and drop off-topic hits. Lexical search returns papers that share words, not meaning.
-6. **Fill gaps.** If a paper you expected is missing, search its exact title. For key papers, follow up with `citation-graph-explorer`.
+5. **Screen the results.** Lexical search returns papers that share words, not meaning, so check each hit against the user's question. Keep a paper when its title or abstract addresses the same problem, method, or population; drop it when the shared words carry a different sense (for example "transformer" in electrical engineering), when it falls outside the requested years or field, or when it is a duplicate record. If more than about half the hits are dropped, the query is too loose: add a domain term and run it again.
+6. **Fill gaps.** Check the kept set for these gaps and run one targeted search for each that applies:
+   - No survey or review: search the topic with "survey" or "review".
+   - Nothing from the last two years: rerun with `--year-from` and `--sort year`.
+   - A paper the user named or that several results cite is missing: search its exact title.
+   - Only one research group or venue appears: search a synonym or the method's alternative name.
+
+   For the two or three key papers, follow up with `citation-graph-explorer`. State any gap that remains.
 7. **Present** the kept papers grouped by sub-theme or by role (survey, seminal, recent), with one line each on why it is relevant.
 
 Optional environment variables for higher rate limits: `OPENALEX_MAILTO` (contact email), `S2_API_KEY`, `NCBI_API_KEY`. Never print their values.

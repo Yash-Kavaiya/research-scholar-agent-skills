@@ -15,6 +15,8 @@ def load_script(skill: str, script: str):
     scripts_dir = ROOT / "skills" / skill / "scripts"
     path = scripts_dir / f"{script}.py"
     sys.path.insert(0, str(scripts_dir))
+    # Each skill carries its own trimmed client; drop any other skill's copy so this script imports its own.
+    sys.modules.pop("_scholarly_api", None)
     try:
         spec = importlib.util.spec_from_file_location(f"{skill.replace('-', '_')}__{script}", path)
         module = importlib.util.module_from_spec(spec)
