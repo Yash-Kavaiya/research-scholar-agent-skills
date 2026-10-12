@@ -1,5 +1,6 @@
 {
   "name": "research-scholar-agent-skills",
+  "description": "Agent skills for researchers: literature search and review, study design, analysis, academic writing, citations, submission, funding, and dissemination.",
   "owner": {
     "name": "Yash Kavaiya",
     "url": "https://github.com/Yash-Kavaiya"
@@ -8,7 +9,7 @@
     {
       "name": "research-scholar",
       "source": "./",
-      "description": "60 agent skills covering the research lifecycle, from finding a problem to defending the thesis."
+      "description": "59 agent skills covering the research lifecycle, from finding a problem to defending the thesis."
     }
   ]
 }

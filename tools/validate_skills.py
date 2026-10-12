@@ -2,7 +2,7 @@
 
 Usage:
     python tools/validate_skills.py            # full check against tools/catalog.json
-    python tools/validate_skills.py --partial  # skip the "all 60 present" check while building
+    python tools/validate_skills.py --partial  # skip the "all catalog skills present" check while building
 """
 
 from __future__ import annotations
