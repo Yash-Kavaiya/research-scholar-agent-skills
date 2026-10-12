@@ -19,6 +19,16 @@ On Claude Code 2.1.275 or later this also works in one step:
 /plugin install research-scholar --marketplace Yash-Kavaiya/research-scholar-agent-skills
 ```
 
+**npx (any agent)**
+
+The [`skills`](https://github.com/vercel-labs/skills) CLI installs straight from this repository into Claude Code, Cursor, Codex, and other agents that read `SKILL.md`:
+
+```bash
+npx skills add Yash-Kavaiya/research-scholar-agent-skills                        # choose skills interactively
+npx skills add Yash-Kavaiya/research-scholar-agent-skills --skill paper-search   # one skill
+npx skills add Yash-Kavaiya/research-scholar-agent-skills --list                 # list without installing
+```
+
 **Copy the skills you want**
 
 ```bash
