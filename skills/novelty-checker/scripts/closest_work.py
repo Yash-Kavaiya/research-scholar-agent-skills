@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Find the prior work closest to a research idea.
 
 Runs several query phrasings across the scholarly APIs, merges the results,
@@ -18,7 +19,9 @@ import math
 import re
 import sys
 
-import _scholarly_api as api
+sys.dont_write_bytecode = True  # keep the skill folder free of __pycache__
+
+import _scholarly_api as api  # noqa: E402
 
 STOPWORDS = set("""a an and are as at be by can do for from has have how in into is it its more most of on or our
 that the their this to using use used via we with which while what when where new novel approach method methods

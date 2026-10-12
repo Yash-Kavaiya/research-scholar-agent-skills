@@ -1,0 +1,47 @@
+{
+  "skill_name": "limitations-and-future-work-writer",
+  "evals": [
+    {
+      "id": "limitations-and-future-work-writer-001",
+      "prompt": "Write limitations and future work. Study: a usability test of a medication-reminder app with 24 university students over one week; main claim is that reminders reduced missed doses.",
+      "expected_output": "The agent applied limitations-and-future-work-writer: State plainly where a study's conclusions stop and what would extend them.",
+      "assertions": [
+        "The agent read the limitations-and-future-work-writer SKILL.md before acting",
+        "The agent lists the claims and audits the study by category: sample, validity, measurement, scope",
+        "The agent selects the limitations that could change a conclusion and writes each as what, consequence, and bound",
+        "The agent orders them by importance and derives future work from them",
+        "The agent notes that the abstract's wording should be narrowed",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "limitations-and-future-work-writer",
+      "expected_script": null
+    },
+    {
+      "id": "limitations-and-future-work-writer-002",
+      "prompt": "Write the limitations section for my survey study.",
+      "expected_output": "The agent applied limitations-and-future-work-writer and delivered its documented output, asking only for inputs that were missing and could not be inferred.",
+      "assertions": [
+        "The agent read the limitations-and-future-work-writer SKILL.md before acting",
+        "The response follows the skill's output format",
+        "The agent stated the limits of what it checked or could not verify",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "limitations-and-future-work-writer",
+      "expected_script": null
+    },
+    {
+      "id": "limitations-and-future-work-writer-003",
+      "prompt": "Review my whole paper critically.",
+      "expected_output": "The agent recognised that this request is outside limitations-and-future-work-writer and handled it with self-peer-reviewer or pointed the user to it.",
+      "assertions": [
+        "The agent did not apply limitations-and-future-work-writer as the main skill for this request",
+        "The agent used or recommended self-peer-reviewer",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "self-peer-reviewer",
+      "expected_script": null
+    }
+  ]
+}

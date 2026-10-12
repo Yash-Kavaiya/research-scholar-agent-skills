@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Check assumptions, pick a statistical test, run it, and report in APA style.
 
 Reads a CSV in long format (one row per observation).

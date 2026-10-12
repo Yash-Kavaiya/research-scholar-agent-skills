@@ -1,0 +1,47 @@
+{
+  "skill_name": "ethics-irb-drafter",
+  "evals": [
+    {
+      "id": "ethics-irb-drafter-001",
+      "prompt": "Draft a participant information sheet and consent form for 30-minute online interviews with adult nurses about workplace stress. Audio will be recorded and transcribed.",
+      "expected_output": "The agent applied ethics-irb-drafter: Prepare complete first drafts of the documents an ethics committee asks for, built from the researcher's actual study plan.",
+      "assertions": [
+        "The agent read the ethics-irb-drafter SKILL.md before acting",
+        "The agent collects missing facts and lists the ones the user must supply as placeholders",
+        "The agent explains the usual review route and that only the committee can confirm it",
+        "The agent drafts the information sheet in plain language and the consent form with separate optional consent for recording",
+        "The agent adds a distress protocol to the risk table and lists open questions",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "ethics-irb-drafter",
+      "expected_script": null
+    },
+    {
+      "id": "ethics-irb-drafter-002",
+      "prompt": "Write my IRB application for a survey of nurses about burnout.",
+      "expected_output": "The agent applied ethics-irb-drafter and delivered its documented output, asking only for inputs that were missing and could not be inferred.",
+      "assertions": [
+        "The agent read the ethics-irb-drafter SKILL.md before acting",
+        "The response follows the skill's output format",
+        "The agent stated the limits of what it checked or could not verify",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "ethics-irb-drafter",
+      "expected_script": null
+    },
+    {
+      "id": "ethics-irb-drafter-003",
+      "prompt": "Design the study itself.",
+      "expected_output": "The agent recognised that this request is outside ethics-irb-drafter and handled it with methodology-designer or pointed the user to it.",
+      "assertions": [
+        "The agent did not apply ethics-irb-drafter as the main skill for this request",
+        "The agent used or recommended methodology-designer",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "methodology-designer",
+      "expected_script": null
+    }
+  ]
+}

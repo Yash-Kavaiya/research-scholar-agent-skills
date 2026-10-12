@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Mechanical pre-submission checks on a paper PDF.
 
 Checks page count against a limit, page size, font embedding (Type 3 and

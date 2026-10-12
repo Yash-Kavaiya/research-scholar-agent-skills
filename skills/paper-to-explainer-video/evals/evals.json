@@ -1,0 +1,47 @@
+{
+  "skill_name": "paper-to-explainer-video",
+  "evals": [
+    {
+      "id": "paper-to-explainer-video-001",
+      "prompt": "3-minute video abstract, 16:9, for researchers in neighbouring fields, on my paper about one-shot pruning that halves a model's parameters at 98% of its accuracy.",
+      "expected_output": "The agent applied paper-to-explainer-video: Produce the two things a video is built from: what is said, second by second, and what is on screen while it is said.",
+      "assertions": [
+        "The agent read the paper-to-explainer-video SKILL.md before acting",
+        "The agent fixes the message and four beats, and budgets about 450 words",
+        "The agent writes the narration for the ear and times it",
+        "The agent storyboards 12 scenes with time, narration, on-screen objects, motion, and source asset",
+        "The agent lists assets to build and what to cut first if over time",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "paper-to-explainer-video",
+      "expected_script": null
+    },
+    {
+      "id": "paper-to-explainer-video-002",
+      "prompt": "Write a 3-minute video script explaining my paper.",
+      "expected_output": "The agent applied paper-to-explainer-video and delivered its documented output, asking only for inputs that were missing and could not be inferred.",
+      "assertions": [
+        "The agent read the paper-to-explainer-video SKILL.md before acting",
+        "The response follows the skill's output format, including: Explainer: <paper title>",
+        "The agent stated the limits of what it checked or could not verify",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "paper-to-explainer-video",
+      "expected_script": null
+    },
+    {
+      "id": "paper-to-explainer-video-003",
+      "prompt": "Make slides for a live talk.",
+      "expected_output": "The agent recognised that this request is outside paper-to-explainer-video and handled it with paper-to-slides or pointed the user to it.",
+      "assertions": [
+        "The agent did not apply paper-to-explainer-video as the main skill for this request",
+        "The agent used or recommended paper-to-slides",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "paper-to-slides",
+      "expected_script": null
+    }
+  ]
+}

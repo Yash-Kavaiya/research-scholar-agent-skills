@@ -1,0 +1,47 @@
+{
+  "skill_name": "research-gap-finder",
+  "evals": [
+    {
+      "id": "research-gap-finder-001",
+      "prompt": "Find research gaps in federated learning for medical imaging. I need a master's thesis topic I can finish in one year with public data.",
+      "expected_output": "The agent applied research-gap-finder: Give a researcher a short, ranked list of unanswered questions in a topic, with the papers that show each one is open.",
+      "assertions": [
+        "The agent read the research-gap-finder SKILL.md before acting",
+        "The agent searches for recent surveys, the most-cited work since 2022, and new preprints (about 30 papers), and records the queries",
+        "The agent reads limitations, future-work sections, and the surveys' open-challenges sections; builds a table of candidate gaps by type",
+        "The agent runs one targeted search per gap to check it is still open, and drops two that recent papers closed",
+        "The agent ranks the remaining gaps by evidence, importance, and feasibility for a one-year project with public data",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "research-gap-finder",
+      "expected_script": null
+    },
+    {
+      "id": "research-gap-finder-002",
+      "prompt": "What are the research gaps in federated learning for medical imaging?",
+      "expected_output": "The agent applied research-gap-finder and delivered its documented output, asking only for inputs that were missing and could not be inferred.",
+      "assertions": [
+        "The agent read the research-gap-finder SKILL.md before acting",
+        "The response follows the skill's output format",
+        "The agent stated the limits of what it checked or could not verify",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "research-gap-finder",
+      "expected_script": null
+    },
+    {
+      "id": "research-gap-finder-003",
+      "prompt": "Has anyone already done contrastive pretraining on ECG signals?",
+      "expected_output": "The agent recognised that this request is outside research-gap-finder and handled it with novelty-checker or pointed the user to it.",
+      "assertions": [
+        "The agent did not apply research-gap-finder as the main skill for this request",
+        "The agent used or recommended novelty-checker",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "novelty-checker",
+      "expected_script": null
+    }
+  ]
+}

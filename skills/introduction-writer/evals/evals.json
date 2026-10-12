@@ -1,0 +1,47 @@
+{
+  "skill_name": "introduction-writer",
+  "evals": [
+    {
+      "id": "introduction-writer-001",
+      "prompt": "Write a one-page introduction. Contribution: a tokenizer-free model for Hindi-English code-mixed text that beats the mBERT baseline by 3.1 F1 on two benchmarks. Refs in refs.bib.",
+      "expected_output": "The agent applied introduction-writer: Write an introduction that answers, in order, what the problem is, why it matters, what is missing, and what this paper adds.",
+      "assertions": [
+        "The agent read the introduction-writer SKILL.md before acting",
+        "The agent fixes the message and plans one paragraph per move",
+        "The agent drafts with topic sentences and places citations from refs.bib, marking one statement that needs a source",
+        "The agent writes three contributions, each naming what was done and where the evidence is",
+        "The agent checks the numbers and wording against the results",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "introduction-writer",
+      "expected_script": null
+    },
+    {
+      "id": "introduction-writer-002",
+      "prompt": "Write the introduction for my paper on low-resource translation.",
+      "expected_output": "The agent applied introduction-writer and delivered its documented output, asking only for inputs that were missing and could not be inferred.",
+      "assertions": [
+        "The agent read the introduction-writer SKILL.md before acting",
+        "The response follows the skill's output format",
+        "The agent stated the limits of what it checked or could not verify",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "introduction-writer",
+      "expected_script": null
+    },
+    {
+      "id": "introduction-writer-003",
+      "prompt": "Write the abstract.",
+      "expected_output": "The agent recognised that this request is outside introduction-writer and handled it with abstract-writer or pointed the user to it.",
+      "assertions": [
+        "The agent did not apply introduction-writer as the main skill for this request",
+        "The agent used or recommended abstract-writer",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "abstract-writer",
+      "expected_script": null
+    }
+  ]
+}

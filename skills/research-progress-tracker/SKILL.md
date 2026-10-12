@@ -1,11 +1,19 @@
 ---
 name: research-progress-tracker
-description: Maintains a research project's plan in plain Markdown files, tracking milestones against deadlines, supervisor meeting agendas and minutes, decisions, action items with owners and due dates, and a weekly review of what moved and what is blocked. Use when the user asks to "track my PhD progress", "plan my thesis timeline", "prepare for my supervisor meeting", "write up these meeting notes", "what should I work on next", "make a Gantt chart for my research", "write my progress report", or wants milestones and next actions kept across sessions.
+description: "Maintains a research plan in Markdown: milestones, supervisor meeting agendas and minutes, decisions, and action items. Use to plan and track a thesis or paper. Not for logging experiment runs."
+version: 1.0.0
+metadata:
+  author: "Yash Kavaiya <yash.kavaiya3@gmail.com>"
+  tags: [project-tracking, phd-planning, milestones, supervisor-meetings]
 ---
 
 # Research Progress Tracker
 
 Keep one small set of files that answers three questions at any time: where is the project against its deadlines, what was agreed with the supervisor, and what is the next action.
+
+## Purpose
+
+Keep one small set of files that says, at any time, where a research effort stands against its deadlines, what was agreed with the supervisor, and what the next action is. It prepares meeting agendas, writes minutes, and runs a weekly review.
 
 ## When to use
 
@@ -16,6 +24,12 @@ Keep one small set of files that answers three questions at any time: where is t
 
 Hand off instead for logging experiment runs (`experiment-logger`) or planning the experiments themselves (`experiment-planner`).
 
+## Prerequisites
+
+- The goal and hard deadlines of the thesis, paper, or funded work.
+- The current state, meeting notes, and realistic weekly time available.
+- Write access to a `research-tracker/` folder; existing tracker files are read first.
+
 ## Inputs
 
 - The project goal and hard deadlines: submission dates, funding end, committee reviews, conference deadlines.
@@ -24,7 +38,7 @@ Hand off instead for logging experiment runs (`experiment-logger`) or planning t
 - Time actually available per week, and known absences.
 - Existing tracker files, if any. Read them first.
 
-## Workflow
+## Instructions
 
 1. **Set up the tracker** in a `research-tracker/` folder in the project (or use the existing one):
 
@@ -33,8 +47,8 @@ Hand off instead for logging experiment runs (`experiment-logger`) or planning t
      PLAN.md         # goal, milestones, timeline
      ACTIONS.md      # open and done action items
      DECISIONS.md    # dated decisions with reasons
-     meetings/2026-03-09-supervisor.md
-     reviews/2026-W11.md
+     meetings/       # one file per meeting, named by date and type
+     reviews/        # one file per weekly review, named by ISO week
    ```
 
 2. **Build the plan backwards from the deadline.** List the deliverables (chapters, papers, studies), then the milestones each needs, then place them on the calendar from the deadline back to today. Include the slow items people forget: ethics approval, data access, co-author and supervisor review rounds (two to four weeks each), formatting, and administrative submission steps. Add a buffer of about 20 to 30%.
@@ -45,15 +59,15 @@ Hand off instead for logging experiment runs (`experiment-logger`) or planning t
    - Decisions needed from the supervisor, each phrased as a question with options and the user's recommendation.
    - Blockers and what would unblock them.
    - Plan until the next meeting.
-5. **After a meeting, write the minutes** from the user's notes, the same day: date and attendees, points discussed, decisions (copied to `DECISIONS.md` with the reason), and action items with owner and due date (copied to `ACTIONS.md`). Draft a short follow-up email summarising decisions and actions, for the user to send so both sides share one record.
-6. **Run the weekly review:** what was completed, what slipped and why, which milestone is at risk, and the three most important actions for the coming week. Update statuses in `PLAN.md`. If a milestone slips, move the dependent dates and say what the new end date is; do not leave an impossible plan in place.
+5. **After a meeting, write the minutes** from the user's notes, the same day: date and attendees, points discussed, decisions (copied to *DECISIONS.md* with the reason), and action items with owner and due date (copied to *ACTIONS.md*). Draft a short follow-up email summarising decisions and actions, for the user to send so both sides share one record.
+6. **Run the weekly review:** what was completed, what slipped and why, which milestone is at risk, and the three most important actions for the coming week. Update statuses in *PLAN.md*. If a milestone slips, move the dependent dates and say what the new end date is; do not leave an impossible plan in place.
 7. **Pick the next action** when the user is stuck: the smallest concrete step on the critical path that can be done in one sitting ("write the 150-word summary of paper X", not "work on chapter 2").
 8. **Write progress reports** for committees or funders from the tracker: progress against planned milestones, outputs (papers, talks, datasets), deviations with reasons, plan for the next period, and risks. Use the institution's or funder's form.
-9. **Render a timeline** when asked, as a Mermaid Gantt chart generated from `PLAN.md`.
+9. **Render a timeline** when asked, as a Mermaid Gantt chart generated from *PLAN.md*.
 
 ## Output format
 
-`PLAN.md`:
+*PLAN.md*:
 
 ```markdown
 # <Project> plan
@@ -67,7 +81,7 @@ Goal: ...  Hard deadline: 2027-06-30 (thesis submission). Updated: 2026-03-09.
 Status values: not started, in progress, done, at risk, blocked.
 ```
 
-`ACTIONS.md`:
+*ACTIONS.md*:
 
 ```markdown
 | ID | Action | Owner | Due | Status | From |
@@ -99,6 +113,46 @@ gantt
   Data collection      :m2, after m1, 120d
 ```
 
+## Examples
+
+Requests that should trigger this skill:
+
+- "Plan my thesis timeline; I must submit in 18 months."
+- "Prepare the agenda for my supervisor meeting tomorrow."
+- "Turn these rough notes into meeting minutes with action items."
+- "What should I work on next? I'm stuck."
+- "Write my six-month progress report for the committee."
+
+Requests that belong to another skill:
+
+- "Log this training run and its metrics." → use `experiment-logger`
+- "Plan which experiments to run." → use `experiment-planner`
+- "Write my thesis chapter." → use `thesis-chapter-writer`
+
+### Worked example
+
+**Request:** "Here are my notes from today's supervisor meeting: agreed to switch to dataset B because A has label noise; I send chapter 2 draft in two weeks; she will introduce me to Dr. K; next meeting in three weeks."
+
+**What the agent does:**
+
+1. Reads the existing tracker files.
+2. Writes the meeting file with discussion, decisions, and actions.
+3. Copies the decision with its reason to *DECISIONS.md* and the actions with owner and due date to *ACTIONS.md*.
+4. Updates the milestone dates affected and drafts a follow-up email.
+
+**Result (excerpt):**
+
+```markdown
+## Decisions
+- D7: Use dataset B instead of A, because of label noise in A.
+
+## Actions
+- A14 (me, due in 2 weeks): send Chapter 2 draft to supervisor
+- A15 (supervisor, date to confirm with supervisor): introduction to Dr. K
+
+PLAN.md updated: M3 "Experiments on dataset A" renamed and moved two weeks later because of the dataset change; thesis submission date unchanged, buffer reduced from 8 to 6 weeks.
+```
+
 ## Quality bar and pitfalls
 
 - Record what was actually said and decided. Do not add decisions, feedback, or commitments that are not in the user's notes; mark unclear points "to confirm with supervisor".
@@ -109,6 +163,22 @@ gantt
 - Notes may contain personal or sensitive remarks about people. Keep the tracker private to the project, and keep minutes factual.
 - Keep the system small. A tracker that takes longer to maintain than it saves will be abandoned; four files are enough.
 - Update existing files; do not create a new plan each session.
+
+## Limitations
+
+- The tracker records what the user reports. It cannot verify that work was done or that a supervisor agreed to something.
+- Plans are estimates; research timelines slip, and the tracker shows slippage without preventing it.
+- It keeps plain Markdown files and does not sync with calendars or task apps.
+- Continuity across sessions depends on the files being kept in the project.
+
+## Troubleshooting
+
+| Problem | Likely cause | Solution |
+|---|---|---|
+| A milestone has slipped | Work took longer or a dependency was late | Move the dependent dates, show the new end date and remaining buffer, and record the reason |
+| Meeting notes are ambiguous | Decisions and owners were not captured | Write the unclear points as "to confirm with supervisor" and include them in the follow-up email |
+| The plan no longer fits the deadline | Scope exceeds the time left, so the plan fails | Show which deliverable must shrink or move and ask the user and supervisor to decide |
+| Tracker files conflict with each other | A new plan was created instead of updating the old one | Merge into the existing files and keep one PLAN.md |
 
 ## Related skills
 

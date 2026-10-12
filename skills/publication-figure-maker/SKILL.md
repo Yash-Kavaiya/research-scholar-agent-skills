@@ -1,11 +1,21 @@
 ---
 name: publication-figure-maker
-description: Creates publication-quality plots with matplotlib or TikZ/pgfplots at the venue's exact column width, with readable fonts, embedded fonts, colour-blind-safe colours, error bars, and vector output. Use when the user asks to "make a figure for my paper", "plot these results", "make this plot publication ready", "fix my matplotlib figure for IEEE", "my figure text is too small", "convert this plot to TikZ", or needs a line, bar, box, scatter, or heatmap figure from data.
+description: "Creates publication-quality matplotlib or TikZ plots at a venue's column width with embedded fonts and colour-blind-safe colours. Use when plotting results for a paper. Not for architecture diagrams."
+version: 1.0.0
+compatibility: "Requires Python 3.10 or later with matplotlib and NumPy. Runs locally with no network access."
+allowed-tools: "Bash(python:*) Read Write"
+metadata:
+  author: "Yash Kavaiya <yash.kavaiya3@gmail.com>"
+  tags: [figures, matplotlib, plots, visualization]
 ---
 
 # Publication Figure Maker
 
 Produce figures that are legible at printed size, honest about the data, and accepted by the publisher's production checks.
+
+## Purpose
+
+Produce plots that are legible at printed size, honest about the measurements, and accepted by publishers' production checks. The style module sets figure size from the venue's column width, embeds TrueType fonts, and supplies a colour-blind-safe palette.
 
 ## When to use
 
@@ -14,6 +24,12 @@ Produce figures that are legible at printed size, honest about the data, and acc
 
 Hand off instead for model and pipeline schematics (`architecture-diagram-maker`) or tables (`latex-table-generator`).
 
+## Prerequisites
+
+- Python 3.10 or later with matplotlib and NumPy (`pip install matplotlib numpy`).
+- The values to plot, with variance across runs if it exists.
+- The target venue and whether the figure spans one column or the full width.
+
 ## Inputs
 
 - The data (CSV, JSON, arrays, or the experiment log), with variance across runs if it exists.
@@ -21,7 +37,7 @@ Hand off instead for model and pipeline schematics (`architecture-diagram-maker`
 - Venue and whether the figure spans one column or the full width.
 - Output needs: PDF for LaTeX, PNG for slides, greyscale-safe if the venue prints in black and white.
 
-## Workflow
+## Instructions
 
 1. **State the figure's point in one sentence.** It decides the chart type and what is emphasised.
 2. **Choose the chart type:**
@@ -65,6 +81,16 @@ Hand off instead for model and pipeline schematics (`architecture-diagram-maker`
 9. **Check the output.** Open the PDF at 100% zoom. Verify fonts are embedded (`pdffonts figure.pdf`: no Type 3) and the size matches the column.
 10. **For TikZ/pgfplots** (when the venue or user wants native LaTeX figures), export the data to CSV and write a `pgfplots` axis with the same width, `\pgfplotsset{compat=1.18}`, and the same colours. Compile it before delivering.
 
+## Available Scripts
+
+| Script | Purpose | Arguments |
+|---|---|---|
+| `scripts/pubstyle.py (import)` | Style module: `apply(venue)`, `figsize(venue, columns, aspect, height)`, `save(fig, path)`, `PALETTE`, `MARKERS`, `LINESTYLES` | import as a module after copying it next to the plotting script |
+| `scripts/pubstyle.py widths` | Lists column and text widths for each supported venue | none |
+| `scripts/pubstyle.py demo` | Draws a sample figure to check fonts and size | `--venue NAME`, `--columns 1|2`, `--out PATH` |
+
+Run a script with the agent's script tool, for example `run_script("scripts/pubstyle.py (import)", args=[...])`, or from a shell in the skill folder with `python scripts/pubstyle.py (import) ...`. Each script prints usage with `--help`, validates its arguments, and exits with a non-zero code and an `error:` message on failure.
+
 ## Output format
 
 - `figures/<name>.pdf` and `figures/<name>.png`
@@ -72,6 +98,47 @@ Hand off instead for model and pipeline schematics (`architecture-diagram-maker`
 - The caption text and the LaTeX include snippet:
 
 ```latex
+\begin{figure}[t]
+  \centering
+  \includegraphics{figures/accuracy}
+  \caption{Validation accuracy over training. Shaded bands show $\pm 1$ standard deviation over 5 seeds.}
+  \label{fig:accuracy}
+\end{figure}
+```
+
+## Examples
+
+Requests that should trigger this skill:
+
+- "Make a line plot of these accuracy curves for my IEEE paper."
+- "Plot these results as a bar chart with error bars."
+- "My figure text is too small in the PDF. Fix it."
+- "PDF eXpress complains about Type 3 fonts in my figures."
+- "Convert this matplotlib plot to pgfplots."
+
+Requests that belong to another skill:
+
+- "Draw my model architecture." → use `architecture-diagram-maker`
+- "Make a LaTeX table from this CSV." → use `latex-table-generator`
+- "Make the PRISMA flow diagram." → use `systematic-review-prisma`
+
+### Worked example
+
+**Request:** "Plot validation accuracy over 10 epochs for three methods from curves.csv (mean and sd over 5 seeds) as a single-column figure for an IEEE conference paper."
+
+**What the agent does:**
+
+1. States the figure's point: method A converges fastest.
+2. Copies `pubstyle.py` next to the script, calls `pubstyle.apply("ieee")` and `figsize("ieee", columns=1)`.
+3. Plots each series with its own colour, marker, and line style, and shaded bands for the standard deviation.
+4. Saves PDF and PNG, opens the PDF to check size and fonts, and writes the caption.
+
+**Result (excerpt):**
+
+```markdown
+wrote accuracy.pdf in figures/ (3.5 x 2.38 in, fonts embedded as TrueType)
+wrote accuracy.png in figures/
+
 \begin{figure}[t]
   \centering
   \includegraphics{figures/accuracy}
@@ -91,6 +158,22 @@ Hand off instead for model and pipeline schematics (`architecture-diagram-maker`
 - Remove chart junk: gridlines darker than the data, boxes, shadows, redundant legends.
 - Keep colours and names consistent for the same method across all figures in the paper.
 - Run the script and look at the result before delivering it.
+
+## Limitations
+
+- Venue widths in the module are taken from the standard templates and can change; the current author kit is the authority.
+- The module styles matplotlib only. TikZ or pgfplots figures are written by hand following the same sizes and colours.
+- Fonts fall back to the nearest installed family when Times or Arial is absent, which changes the look slightly.
+- The script cannot judge whether a chart type suits the message; that choice is the author's and the agent's.
+
+## Troubleshooting
+
+| Problem | Likely cause | Solution |
+|---|---|---|
+| `ValueError: unknown venue 'x'` | The venue name is not in the width table | Run `pubstyle.py widths` to list names, or pass `height` and set the width from the venue's template |
+| Text is clipped at the figure edge | Long labels with constrained layout at a small size | Shorten labels, rotate tick labels, or increase `height` |
+| The saved figure is wider or narrower than the column | `bbox_inches="tight"` was passed when saving | Save with *pubstyle.save* and no tight bounding box so the width is preserved |
+| `ModuleNotFoundError: No module named 'pubstyle'` | The module is not on the import path | Copy `scripts/pubstyle.py` next to the plotting script or add its folder to *sys.path* |
 
 ## Related skills
 

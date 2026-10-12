@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Power analysis: required sample size, achieved power, or minimum detectable effect.
 
 Give two of {sample size, power, effect size}; the third is computed.

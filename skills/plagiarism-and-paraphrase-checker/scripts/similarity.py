@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Measure how close a draft is to its source texts.
 
 For each sentence of the draft it reports the longest run of words copied from

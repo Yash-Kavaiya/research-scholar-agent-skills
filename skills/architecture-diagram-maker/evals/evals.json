@@ -1,0 +1,47 @@
+{
+  "skill_name": "architecture-diagram-maker",
+  "evals": [
+    {
+      "id": "architecture-diagram-maker-001",
+      "prompt": "TikZ diagram, single column: input image goes to a frozen CLIP encoder, then our adapter (new), then a linear classifier; the adapter also receives a text prompt embedding.",
+      "expected_output": "The agent applied architecture-diagram-maker: Draw a diagram that lets a reader grasp a method's structure in under a minute, delivered as source that can be edited and recompiled.",
+      "assertions": [
+        "The agent read the architecture-diagram-maker SKILL.md before acting",
+        "The agent lists the elements and confirms them: four blocks, two inputs, one new component",
+        "The agent chooses left-to-right flow and the visual grammar: frozen blocks grey, the new block highlighted, data as plain boxes",
+        "The agent writes the TikZ source with labelled arrows and compiles it",
+        "The agent checks names against the method section and writes the caption with a legend",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "architecture-diagram-maker",
+      "expected_script": null
+    },
+    {
+      "id": "architecture-diagram-maker-002",
+      "prompt": "Draw my model architecture as a TikZ figure.",
+      "expected_output": "The agent applied architecture-diagram-maker and delivered its documented output, asking only for inputs that were missing and could not be inferred.",
+      "assertions": [
+        "The agent read the architecture-diagram-maker SKILL.md before acting",
+        "The response follows the skill's output format",
+        "The agent stated the limits of what it checked or could not verify",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "architecture-diagram-maker",
+      "expected_script": null
+    },
+    {
+      "id": "architecture-diagram-maker-003",
+      "prompt": "Plot my accuracy results.",
+      "expected_output": "The agent recognised that this request is outside architecture-diagram-maker and handled it with publication-figure-maker or pointed the user to it.",
+      "assertions": [
+        "The agent did not apply architecture-diagram-maker as the main skill for this request",
+        "The agent used or recommended publication-figure-maker",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "publication-figure-maker",
+      "expected_script": null
+    }
+  ]
+}

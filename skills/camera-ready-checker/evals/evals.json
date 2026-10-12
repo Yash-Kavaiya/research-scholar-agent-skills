@@ -1,0 +1,48 @@
+{
+  "skill_name": "camera-ready-checker",
+  "evals": [
+    {
+      "id": "camera-ready-checker-001",
+      "prompt": "Check paper.pdf for a double-blind submission: 8 pages plus references, letter size. Authors are Jane Doe and John Roe, Example University, GitHub user janedoe.",
+      "expected_output": "The agent applied camera-ready-checker: Catch the mechanical problems that cause desk rejection or production delays: length, page size, fonts, identity leaks, and missing required parts.",
+      "assertions": [
+        "The agent read the camera-ready-checker SKILL.md before acting",
+        "The agent records the venue's rules from its current instructions",
+        "The agent runs `run_script(\"scripts/check_pdf.py\", args=\"paper.pdf --max-pages 8 --paper letter --anonymous --names 'Jane Doe,John Roe,Example University,janedoe'\")`",
+        "The agent compares the layout with the template's sample by eye and searches the sources for spacing overrides",
+        "The agent checks references resolve and required sections are present, then reports",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "camera-ready-checker",
+      "expected_script": "check_pdf.py"
+    },
+    {
+      "id": "camera-ready-checker-002",
+      "prompt": "Check my paper before I submit to CVPR.",
+      "expected_output": "The agent applied camera-ready-checker and delivered its documented output, asking only for inputs that were missing and could not be inferred.",
+      "assertions": [
+        "The agent read the camera-ready-checker SKILL.md before acting",
+        "The response follows the skill's output format",
+        "The agent ran check_pdf.py from the skill's scripts folder instead of computing the result by hand",
+        "The agent stated the limits of what it checked or could not verify",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "camera-ready-checker",
+      "expected_script": "check_pdf.py"
+    },
+    {
+      "id": "camera-ready-checker-003",
+      "prompt": "Review the content of my paper.",
+      "expected_output": "The agent recognised that this request is outside camera-ready-checker and handled it with self-peer-reviewer or pointed the user to it.",
+      "assertions": [
+        "The agent did not apply camera-ready-checker as the main skill for this request",
+        "The agent used or recommended self-peer-reviewer",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "self-peer-reviewer",
+      "expected_script": null
+    }
+  ]
+}

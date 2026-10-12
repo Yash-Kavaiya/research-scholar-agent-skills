@@ -1,0 +1,47 @@
+{
+  "skill_name": "paper-to-slides",
+  "evals": [
+    {
+      "id": "paper-to-slides-001",
+      "prompt": "12-minute talk plus 3 minutes of questions at an NLP workshop on my paper about tokenizer-free models for code-mixed text. Beamer.",
+      "expected_output": "The agent applied paper-to-slides: Design a talk that carries one main idea and enough evidence to make the audience want to read the paper, then produce the slides and timed notes.",
+      "assertions": [
+        "The agent read the paper-to-slides SKILL.md before acting",
+        "The agent budgets 11 slides and writes the takeaway sentence",
+        "The agent chooses two results and plans the arc with time per part",
+        "The agent outlines each slide with an assertion title, one visual, and notes; rebuilds the main table as a bar chart",
+        "The agent writes speaker notes, totals them at about 130 words per minute, and adds four backup slides",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "paper-to-slides",
+      "expected_script": null
+    },
+    {
+      "id": "paper-to-slides-002",
+      "prompt": "Make slides from my paper for a 12-minute conference talk.",
+      "expected_output": "The agent applied paper-to-slides and delivered its documented output, asking only for inputs that were missing and could not be inferred.",
+      "assertions": [
+        "The agent read the paper-to-slides SKILL.md before acting",
+        "The response follows the skill's output format, including: Talk: <title> (<N> min + <Q> min questions, <audience>)",
+        "The agent stated the limits of what it checked or could not verify",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "paper-to-slides",
+      "expected_script": null
+    },
+    {
+      "id": "paper-to-slides-003",
+      "prompt": "Design a poster for my paper.",
+      "expected_output": "The agent recognised that this request is outside paper-to-slides and handled it with paper-to-poster or pointed the user to it.",
+      "assertions": [
+        "The agent did not apply paper-to-slides as the main skill for this request",
+        "The agent used or recommended paper-to-poster",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "paper-to-poster",
+      "expected_script": null
+    }
+  ]
+}

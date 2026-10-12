@@ -1,0 +1,47 @@
+{
+  "skill_name": "supervisor-finder",
+  "evals": [
+    {
+      "id": "supervisor-finder-001",
+      "prompt": "I want a PhD on speech recognition for low-resource Indian languages, in Europe, starting autumn next year. I built a 40-hour Gujarati corpus. Find supervisors and draft an email.",
+      "expected_output": "The agent applied supervisor-finder: Identify researchers who are active in the user's area now, confirm the facts about each from official sources, and help the user write a short, specific first email.",
+      "assertions": [
+        "The agent read the supervisor-finder SKILL.md before acting",
+        "The agent writes four query phrasings and searches the last three years with `paper-search`, tallying senior authors",
+        "The agent verifies each candidate's current position and student instructions on institutional pages",
+        "The agent reads two recent papers from the top candidates and shortlists six with one reason each",
+        "The agent drafts a 150-word email for the first candidate citing one of their recent papers accurately",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "supervisor-finder",
+      "expected_script": null
+    },
+    {
+      "id": "supervisor-finder-002",
+      "prompt": "Find professors working on reinforcement learning for robotics in Germany.",
+      "expected_output": "The agent applied supervisor-finder and delivered its documented output, asking only for inputs that were missing and could not be inferred.",
+      "assertions": [
+        "The agent read the supervisor-finder SKILL.md before acting",
+        "The response follows the skill's output format",
+        "The agent stated the limits of what it checked or could not verify",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "supervisor-finder",
+      "expected_script": null
+    },
+    {
+      "id": "supervisor-finder-003",
+      "prompt": "Write my statement of purpose.",
+      "expected_output": "The agent recognised that this request is outside supervisor-finder and handled it with sop-and-research-statement-writer or pointed the user to it.",
+      "assertions": [
+        "The agent did not apply supervisor-finder as the main skill for this request",
+        "The agent used or recommended sop-and-research-statement-writer",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "sop-and-research-statement-writer",
+      "expected_script": null
+    }
+  ]
+}

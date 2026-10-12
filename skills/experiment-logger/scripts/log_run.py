@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Append-only experiment log: runs, configs, metrics, and decisions.
 
 Entries are stored as JSON lines (default: experiments/log.jsonl) and rendered

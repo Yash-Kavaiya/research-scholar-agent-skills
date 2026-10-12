@@ -1,0 +1,48 @@
+{
+  "skill_name": "novelty-checker",
+  "evals": [
+    {
+      "id": "novelty-checker-001",
+      "prompt": "Check whether this is new: contrastive pretraining on unlabeled ECG signals to detect arrhythmia with few labels.",
+      "expected_output": "The agent applied novelty-checker: Tell a researcher how close existing work is to their idea, with the specific papers and the specific differences, before they invest months in it.",
+      "assertions": [
+        "The agent read the novelty-checker SKILL.md before acting",
+        "The agent splits the idea into problem (arrhythmia detection), method (contrastive pretraining), setting (few labels), and benefit",
+        "The agent writes four phrasings and runs `run_script(\"scripts/closest_work.py\", ...)` with them",
+        "The agent reads the abstracts of the top 10 results and the method sections of the top 3, then checks recent papers citing the two closest",
+        "The agent fills the comparison table and gives a verdict with its limits",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "novelty-checker",
+      "expected_script": "closest_work.py"
+    },
+    {
+      "id": "novelty-checker-002",
+      "prompt": "Has anyone already used contrastive pretraining on ECG signals for arrhythmia detection?",
+      "expected_output": "The agent applied novelty-checker and delivered its documented output, asking only for inputs that were missing and could not be inferred.",
+      "assertions": [
+        "The agent read the novelty-checker SKILL.md before acting",
+        "The response follows the skill's output format",
+        "The agent ran closest_work.py from the skill's scripts folder instead of computing the result by hand",
+        "The agent stated the limits of what it checked or could not verify",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "novelty-checker",
+      "expected_script": "closest_work.py"
+    },
+    {
+      "id": "novelty-checker-003",
+      "prompt": "Find me papers on arrhythmia detection.",
+      "expected_output": "The agent recognised that this request is outside novelty-checker and handled it with paper-search or pointed the user to it.",
+      "assertions": [
+        "The agent did not apply novelty-checker as the main skill for this request",
+        "The agent used or recommended paper-search",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "paper-search",
+      "expected_script": null
+    }
+  ]
+}

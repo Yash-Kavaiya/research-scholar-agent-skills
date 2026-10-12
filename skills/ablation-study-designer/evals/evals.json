@@ -1,0 +1,47 @@
+{
+  "skill_name": "ablation-study-designer",
+  "evals": [
+    {
+      "id": "ablation-study-designer-001",
+      "prompt": "My segmentation model adds a boundary loss, a multi-scale decoder, and test-time augmentation over a U-Net baseline. One run takes 6 GPU hours and I have 150 hours.",
+      "expected_output": "The agent applied ablation-study-designer: Plan the smallest set of controlled comparisons that shows where a method's gain comes from, and lay out the table and text that report them.",
+      "assertions": [
+        "The agent read the ablation-study-designer SKILL.md before acting",
+        "The agent lists the three components with the claim each supports",
+        "The agent chooses leave-one-out from the full model plus the baseline row, with replace-type ablation for the decoder to keep capacity matched",
+        "The agent sets 3 seeds on one dataset and computes the cost",
+        "The agent writes expected directions and the empty table template",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "ablation-study-designer",
+      "expected_script": null
+    },
+    {
+      "id": "ablation-study-designer-002",
+      "prompt": "What ablations should I run for my model with three new modules?",
+      "expected_output": "The agent applied ablation-study-designer and delivered its documented output, asking only for inputs that were missing and could not be inferred.",
+      "assertions": [
+        "The agent read the ablation-study-designer SKILL.md before acting",
+        "The response follows the skill's output format",
+        "The agent stated the limits of what it checked or could not verify",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "ablation-study-designer",
+      "expected_script": null
+    },
+    {
+      "id": "ablation-study-designer-003",
+      "prompt": "Plan all experiments for my paper.",
+      "expected_output": "The agent recognised that this request is outside ablation-study-designer and handled it with experiment-planner or pointed the user to it.",
+      "assertions": [
+        "The agent did not apply ablation-study-designer as the main skill for this request",
+        "The agent used or recommended experiment-planner",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "experiment-planner",
+      "expected_script": null
+    }
+  ]
+}

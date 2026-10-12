@@ -1,0 +1,47 @@
+{
+  "skill_name": "paper-to-code-reproducer",
+  "evals": [
+    {
+      "id": "paper-to-code-reproducer-001",
+      "prompt": "Reproduce the CIFAR-10 result (Table 1) of this paper on a new regularizer. No code is released. I have one GPU.",
+      "expected_output": "The agent applied paper-to-code-reproducer: Turn a paper into working code plus an honest account of how close the reproduction is.",
+      "assertions": [
+        "The agent read the paper-to-code-reproducer SKILL.md before acting",
+        "The agent searches for existing code and finds none; fixes the target as Table 1, CIFAR-10 test accuracy",
+        "The agent writes SPEC.md with each detail's source and marks weight decay and augmentation as unspecified",
+        "The agent fills gaps from the cited predecessor and records them in ASSUMPTIONS.md",
+        "The agent builds and tests each unit (shapes, parameter count, single-batch overfit), runs 3 seeds, and compares",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "paper-to-code-reproducer",
+      "expected_script": null
+    },
+    {
+      "id": "paper-to-code-reproducer-002",
+      "prompt": "Implement this paper in PyTorch; there is no official code.",
+      "expected_output": "The agent applied paper-to-code-reproducer and delivered its documented output, asking only for inputs that were missing and could not be inferred.",
+      "assertions": [
+        "The agent read the paper-to-code-reproducer SKILL.md before acting",
+        "The response follows the skill's output format",
+        "The agent stated the limits of what it checked or could not verify",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "paper-to-code-reproducer",
+      "expected_script": null
+    },
+    {
+      "id": "paper-to-code-reproducer-003",
+      "prompt": "Explain the loss function in this paper.",
+      "expected_output": "The agent recognised that this request is outside paper-to-code-reproducer and handled it with math-and-equation-explainer or pointed the user to it.",
+      "assertions": [
+        "The agent did not apply paper-to-code-reproducer as the main skill for this request",
+        "The agent used or recommended math-and-equation-explainer",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "math-and-equation-explainer",
+      "expected_script": null
+    }
+  ]
+}

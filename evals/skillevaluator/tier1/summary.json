@@ -1,0 +1,3213 @@
+[
+ {
+  "skill": "ablation-study-designer",
+  "exit_code": null,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 95.9,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 10,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 10,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, detailed instructions, worked example, well-defined scope, and actionable troubleshooting. All criteria score 9-10."
+ },
+ {
+  "skill": "abstract-writer",
+  "exit_code": null,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 96.4,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 10,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 10,
+   "professional_tone": 10,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "The abstract-writer skill documentation is exceptionally thorough, with clear instructions, comprehensive examples, well-defined scope, and actionable error handling. It meets all criteria at a high level."
+ },
+ {
+  "skill": "academic-tone-editor",
+  "exit_code": null,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 94.1,
+  "rubric_criteria": {
+   "description_clarity": 10,
+   "instruction_clarity": 10,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 10,
+   "error_handling_quality": 8
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear scope, complete workflow, and actionable troubleshooting. All criteria exceed expectations."
+ },
+ {
+  "skill": "annotated-bibliography-builder",
+  "exit_code": null,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 99.1,
+  "rubric_criteria": {
+   "description_clarity": 10,
+   "instruction_clarity": 10,
+   "example_quality": 10,
+   "documentation_completeness": 10,
+   "scope_definition": 10,
+   "professional_tone": 10,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear scope, complete end-to-end workflow, helpful examples covering trigger variations, and actionable error handling. All criteria exceed expectations."
+ },
+ {
+  "skill": "architecture-diagram-maker",
+  "exit_code": null,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 94.5,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 10,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 10,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear scope, complete workflow, actionable troubleshooting, and strong examples enabling accurate routing."
+ },
+ {
+  "skill": "bibtex-manager",
+  "exit_code": null,
+  "passed": false,
+  "status": "incomplete",
+  "incomplete_scans": [
+   "skillspector-llm",
+   "llm-verification"
+  ],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 12
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 93.6,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "incomplete",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [
+   {
+    "validator": "Security Scan",
+    "severity": "info",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.crossref.org/",
+    "file": "_scholarly_api.py",
+    "line": 151
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "low",
+    "check": "Excessive Permissions (PE1)",
+    "message": "Privilege Escalation: permissions: [network, env, file_write",
+    "file": "SKILL.md",
+    "line": 7
+   },
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "_scholarly_api.py contains magic numbers",
+    "file": "bibtex-manager/scripts/_scholarly_api.py",
+    "line": null
+   },
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "clean_bibtex.py contains magic numbers",
+    "file": "bibtex-manager/scripts/clean_bibtex.py",
+    "line": null
+   }
+  ],
+  "rubric_summary": "Excellent skill documentation with clear purpose, complete workflow, realistic examples, and actionable troubleshooting. All criteria score 9-10."
+ },
+ {
+  "skill": "camera-ready-checker",
+  "exit_code": null,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 10
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 98.6,
+  "rubric_criteria": {
+   "description_clarity": 10,
+   "instruction_clarity": 10,
+   "example_quality": 10,
+   "documentation_completeness": 10,
+   "scope_definition": 10,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "check_pdf.py contains magic numbers",
+    "file": "camera-ready-checker/scripts/check_pdf.py",
+    "line": null
+   }
+  ],
+  "rubric_summary": "Excellent skill documentation with clear purpose, complete workflow, helpful examples, and actionable troubleshooting. Well-defined scope and professional presentation."
+ },
+ {
+  "skill": "citation-graph-explorer",
+  "exit_code": null,
+  "passed": false,
+  "status": "incomplete",
+  "incomplete_scans": [
+   "skillspector-llm"
+  ],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 11
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 92.3,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 9,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "incomplete",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [
+   {
+    "validator": "Security Scan",
+    "severity": "info",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.openalex.org/",
+    "file": "_scholarly_api.py",
+    "line": 126
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "info",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.openalex.org/",
+    "file": "_scholarly_api.py",
+    "line": 127
+   },
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "_scholarly_api.py contains magic numbers",
+    "file": "citation-graph-explorer/scripts/_scholarly_api.py",
+    "line": null
+   },
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "citation_graph.py contains magic numbers",
+    "file": "citation-graph-explorer/scripts/citation_graph.py",
+    "line": null
+   }
+  ],
+  "rubric_summary": "Excellent skill documentation with clear purpose, complete workflow, strong examples, and actionable error handling. All criteria score 9-10."
+ },
+ {
+  "skill": "citation-style-converter",
+  "exit_code": null,
+  "passed": false,
+  "status": "incomplete",
+  "incomplete_scans": [
+   "llm-verification"
+  ],
+  "severity": {
+   "critical": 0,
+   "high": 2,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 96.4,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 10,
+   "example_quality": 10,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "incomplete",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [
+   {
+    "validator": "Security Scan",
+    "severity": "high",
+    "check": "Description-Behavior Mismatch (TP4)",
+    "message": "MCP Tool Poisoning: Description-behavior mismatch: declared purpose is 'Converts reference lists and in-text citations between APA, IEEE, Vancouver, Harvard, Chicago, and MLA using pandoc and CSL.' but code also performs: Does not convert between citation styles, Does not use pandoc, Does not support IEEE, Vancouver, Harvard, Chicago, or MLA, Does not process reference lists or in-text citations.",
+    "file": "SKILL.md",
+    "line": 1
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "high",
+    "check": "Description-Behavior Mismatch (TP4)",
+    "message": "MCP Tool Poisoning: Description-behavior mismatch: declared purpose is 'Converts reference lists and in-text citations between 6 citation styles (APA, IEEE, Vancouver, Harvard, Chicago, MLA) using pandoc and CSL' but code also performs: Declares support for 6 citation styles but code only implements 2 (APA, IEEE), Claims to handle in-text citations but code only processes reference lists, Missing Vancouver, Harvard, Chicago, and MLA style conversions.",
+    "file": "SKILL.md",
+    "line": 1
+   }
+  ],
+  "rubric_summary": "Excellent skill documentation with clear purpose, complete workflow, detailed instructions, helpful examples, and realistic error handling. Well-defined scope with explicit boundaries and routing guidance."
+ },
+ {
+  "skill": "citation-verifier",
+  "exit_code": null,
+  "passed": false,
+  "status": "incomplete",
+  "incomplete_scans": [
+   "skillspector-llm",
+   "llm-verification"
+  ],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 3,
+   "low": 12
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 93.6,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "incomplete",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [
+   {
+    "validator": "Security Scan",
+    "severity": "info",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.openalex.org/",
+    "file": "_scholarly_api.py",
+    "line": 173
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.openalex.org/",
+    "file": "_scholarly_api.py",
+    "line": 174
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.crossref.org/",
+    "file": "_scholarly_api.py",
+    "line": 228
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.crossref.org/",
+    "file": "_scholarly_api.py",
+    "line": 237
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "low",
+    "check": "Excessive Permissions (PE1)",
+    "message": "Privilege Escalation: permissions: [network, env, file_write",
+    "file": "SKILL.md",
+    "line": 7
+   },
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "_scholarly_api.py contains magic numbers",
+    "file": "citation-verifier/scripts/_scholarly_api.py",
+    "line": null
+   },
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "verify_citations.py contains magic numbers",
+    "file": "citation-verifier/scripts/verify_citations.py",
+    "line": null
+   }
+  ],
+  "rubric_summary": "Excellent documentation with clear purpose, complete workflow, strong examples, and well-defined boundaries. All criteria score 9-10."
+ },
+ {
+  "skill": "cover-letter-writer",
+  "exit_code": null,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 92.3,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 9,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, comprehensive instructions, strong examples including trigger/non-trigger cases, complete workflow coverage, and actionable error handling. All criteria score 9-10."
+ },
+ {
+  "skill": "dataset-finder",
+  "exit_code": null,
+  "passed": false,
+  "status": "incomplete",
+  "incomplete_scans": [
+   "skillspector-llm",
+   "llm-verification"
+  ],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 12
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 91.4,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 9,
+   "error_handling_quality": 8
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "incomplete",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [
+   {
+    "validator": "Security Scan",
+    "severity": "low",
+    "check": "Permission 'env' is declared but no corresponding code capability (env) was detected. (LP4)",
+    "message": "MCP Least Privilege: Permission 'env' is declared but no corresponding code capability (env) was detected.",
+    "file": "SKILL.md",
+    "line": 1
+   },
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "_scholarly_api.py contains magic numbers",
+    "file": "dataset-finder/scripts/_scholarly_api.py",
+    "line": null
+   },
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "find_datasets.py contains magic numbers",
+    "file": "dataset-finder/scripts/find_datasets.py",
+    "line": null
+   }
+  ],
+  "rubric_summary": "Excellent skill documentation with clear purpose, complete workflow, good examples, and actionable error handling. All criteria score 8+ with strong trigger routing and professional presentation."
+ },
+ {
+  "skill": "ethics-irb-drafter",
+  "exit_code": null,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 95.0,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 10,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, comprehensive instructions, strong examples, well-defined scope, and practical troubleshooting. All criteria score 9-10."
+ },
+ {
+  "skill": "experiment-logger",
+  "exit_code": null,
+  "passed": false,
+  "status": "incomplete",
+  "incomplete_scans": [
+   "skillspector-llm",
+   "llm-verification"
+  ],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 1,
+   "low": 10
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 95.0,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 10,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "incomplete",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "subprocess module call (AST4)",
+    "message": "Dangerous Code Execution: subprocess.run(cmd, capture_output=True, text=True, cwd=cwd, timeout=10)",
+    "file": "log_run.py",
+    "line": 69
+   },
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "log_run.py contains magic numbers",
+    "file": "experiment-logger/scripts/log_run.py",
+    "line": null
+   }
+  ],
+  "rubric_summary": "Exceptionally well-documented skill with clear purpose, complete workflow, excellent examples, and explicit trigger guidance. Minor deductions only for very minor formatting consistency."
+ },
+ {
+  "skill": "experiment-planner",
+  "exit_code": null,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 91.4,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 9,
+   "error_handling_quality": 8
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, detailed instructions, comprehensive examples, well-defined scope, and practical troubleshooting. All criteria score 8-10."
+ },
+ {
+  "skill": "grant-proposal-writer",
+  "exit_code": null,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 93.6,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 10,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "The grant-proposal-writer skill documentation is exceptionally thorough, with clear purpose, detailed step-by-step instructions, realistic examples, and practical troubleshooting. It defines scope boundaries well and provides a complete end-to-end workflow for drafting funder-compliant proposals."
+ },
+ {
+  "skill": "idea-to-paper-pipeline",
+  "exit_code": null,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 92.3,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "The skill documentation is exceptionally thorough, with clear stage-by-stage instructions, explicit trigger/non-trigger examples, realistic error handling, and a complete end-to-end workflow that respects researcher agency at every checkpoint."
+ },
+ {
+  "skill": "introduction-writer",
+  "exit_code": null,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 94.5,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 10,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 10,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, detailed instructions, strong examples, complete workflow, and actionable troubleshooting. Well-defined scope prevents misrouting."
+ },
+ {
+  "skill": "latex-paper-formatter",
+  "exit_code": null,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 100.0,
+  "rubric_criteria": {
+   "description_clarity": 10,
+   "instruction_clarity": 10,
+   "example_quality": 10,
+   "documentation_completeness": 10,
+   "scope_definition": 10,
+   "professional_tone": 10,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 10
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Exceptionally well-structured skill documentation with clear purpose, complete workflow, excellent examples, and actionable error handling. All criteria exceed expectations."
+ },
+ {
+  "skill": "latex-table-generator",
+  "exit_code": null,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 10
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 95.0,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 10,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "csv_to_booktabs.py contains magic numbers",
+    "file": "latex-table-generator/scripts/csv_to_booktabs.py",
+    "line": null
+   }
+  ],
+  "rubric_summary": "Exceptionally well-documented skill with clear purpose, complete end-to-end workflow, excellent trigger examples, and actionable error handling. All criteria score 9-10."
+ },
+ {
+  "skill": "limitations-and-future-work-writer",
+  "exit_code": null,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 99.1,
+  "rubric_criteria": {
+   "description_clarity": 10,
+   "instruction_clarity": 10,
+   "example_quality": 10,
+   "documentation_completeness": 10,
+   "scope_definition": 10,
+   "professional_tone": 10,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Exceptionally well-structured skill documentation with clear purpose, detailed instructions, concrete examples, complete workflow, and actionable troubleshooting. All criteria exceed expectations."
+ },
+ {
+  "skill": "literature-review-writer",
+  "exit_code": null,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 97.7,
+  "rubric_criteria": {
+   "description_clarity": 10,
+   "instruction_clarity": 10,
+   "example_quality": 10,
+   "documentation_completeness": 10,
+   "scope_definition": 10,
+   "professional_tone": 10,
+   "trigger_simulation": 10,
+   "workflow_completeness": 9,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "The skill documentation is exceptionally thorough, with clear purpose, detailed instructions, excellent examples, well-defined scope, and actionable troubleshooting. It meets all criteria at a high level."
+ },
+ {
+  "skill": "math-and-equation-explainer",
+  "exit_code": null,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 96.4,
+  "rubric_criteria": {
+   "description_clarity": 10,
+   "instruction_clarity": 10,
+   "example_quality": 10,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 9,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with comprehensive coverage, clear step-by-step instructions, a detailed worked example, explicit trigger/non-trigger cases, and actionable error handling. All criteria score 9-10."
+ },
+ {
+  "skill": "methodology-designer",
+  "exit_code": null,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 94.5,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 10,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, comprehensive instructions, strong examples, well-defined scope, and actionable troubleshooting. All criteria score 9-10."
+ },
+ {
+  "skill": "novelty-checker",
+  "exit_code": null,
+  "passed": false,
+  "status": "incomplete",
+  "incomplete_scans": [
+   "skillspector-llm",
+   "llm-verification"
+  ],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 3,
+   "low": 11
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 93.6,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "incomplete",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [
+   {
+    "validator": "Security Scan",
+    "severity": "info",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.semanticscholar.org/",
+    "file": "_scholarly_api.py",
+    "line": 206
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.openalex.org/",
+    "file": "_scholarly_api.py",
+    "line": 243
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.openalex.org/",
+    "file": "_scholarly_api.py",
+    "line": 244
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.crossref.org/",
+    "file": "_scholarly_api.py",
+    "line": 327
+   },
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "_scholarly_api.py contains magic numbers",
+    "file": "novelty-checker/scripts/_scholarly_api.py",
+    "line": null
+   },
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "closest_work.py contains magic numbers",
+    "file": "novelty-checker/scripts/closest_work.py",
+    "line": null
+   }
+  ],
+  "rubric_summary": "Excellent skill documentation with clear purpose, complete workflow, strong examples, well-defined scope, and practical error handling. All criteria score 9-10."
+ },
+ {
+  "skill": "paper-comparison-matrix",
+  "exit_code": null,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 94.5,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 10,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 10,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, detailed instructions, worked examples, comprehensive troubleshooting, and well-defined scope boundaries. All criteria score 9-10."
+ },
+ {
+  "skill": "paper-critic",
+  "exit_code": null,
+  "passed": false,
+  "status": "incomplete",
+  "incomplete_scans": [
+   "skillspector-llm"
+  ],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 93.6,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 10,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "incomplete",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, detailed step-by-step instructions, comprehensive examples, well-defined scope, and actionable troubleshooting. All criteria score 9-10."
+ },
+ {
+  "skill": "paper-outline-generator",
+  "exit_code": null,
+  "passed": false,
+  "status": "incomplete",
+  "incomplete_scans": [
+   "skillspector-llm"
+  ],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 93.6,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 10,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 9,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "incomplete",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, detailed instructions, comprehensive examples, well-defined scope, and actionable troubleshooting. All criteria score 9-10."
+ },
+ {
+  "skill": "paper-search",
+  "exit_code": null,
+  "passed": false,
+  "status": "incomplete",
+  "incomplete_scans": [
+   "skillspector-llm",
+   "llm-verification"
+  ],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 7,
+   "low": 12
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 86.4,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 9,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 7,
+   "error_handling_quality": 8
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "incomplete",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.semanticscholar.org/",
+    "file": "_scholarly_api.py",
+    "line": 239
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.semanticscholar.org/",
+    "file": "_scholarly_api.py",
+    "line": 248
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.semanticscholar.org/",
+    "file": "_scholarly_api.py",
+    "line": 257
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.openalex.org/",
+    "file": "_scholarly_api.py",
+    "line": 297
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.openalex.org/",
+    "file": "_scholarly_api.py",
+    "line": 298
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.crossref.org/",
+    "file": "_scholarly_api.py",
+    "line": 404
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.crossref.org/",
+    "file": "_scholarly_api.py",
+    "line": 413
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "low",
+    "check": "Excessive Permissions (PE1)",
+    "message": "Privilege Escalation: permissions: [network, env, file_write",
+    "file": "SKILL.md",
+    "line": 7
+   },
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "_scholarly_api.py contains magic numbers",
+    "file": "paper-search/scripts/_scholarly_api.py",
+    "line": null
+   },
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "search_papers.py contains magic numbers",
+    "file": "paper-search/scripts/search_papers.py",
+    "line": null
+   }
+  ],
+  "rubric_summary": "Excellent skill documentation with clear purpose, detailed instructions, good examples, and strong error handling. Minor gaps in workflow completeness around result screening and gap-filling steps."
+ },
+ {
+  "skill": "paper-summarizer",
+  "exit_code": null,
+  "passed": false,
+  "status": "incomplete",
+  "incomplete_scans": [
+   "skillspector-llm"
+  ],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 91.4,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 10,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 9,
+   "error_handling_quality": 8
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "incomplete",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, detailed instructions, comprehensive examples, well-defined scope, and actionable error handling. All criteria score 8-10."
+ },
+ {
+  "skill": "paper-to-blog",
+  "exit_code": null,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 92.7,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 10,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 10,
+   "error_handling_quality": 8
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "The paper-to-blog skill documentation is exceptionally thorough, with clear instructions, comprehensive examples, well-defined scope, and practical troubleshooting. It enables accurate routing and provides a complete end-to-end workflow for converting research papers into accessible blog posts, lay summaries, or social threads."
+ },
+ {
+  "skill": "paper-to-code-reproducer",
+  "exit_code": null,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 96.4,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 10,
+   "example_quality": 10,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Exceptionally well-structured skill documentation with clear purpose, detailed step-by-step instructions, comprehensive examples including trigger/non-trigger cases, complete workflow coverage, and practical troubleshooting. Minimal room for improvement."
+ },
+ {
+  "skill": "paper-to-explainer-video",
+  "exit_code": null,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 97.3,
+  "rubric_criteria": {
+   "description_clarity": 10,
+   "instruction_clarity": 10,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 10,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Exceptionally well-documented skill with clear purpose, detailed instructions, complete workflow, excellent examples, and actionable troubleshooting. Scope is well-defined with explicit trigger/non-trigger guidance."
+ },
+ {
+  "skill": "paper-to-poster",
+  "exit_code": null,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 94.5,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 10,
+   "example_quality": 9,
+   "documentation_completeness": 9,
+   "scope_definition": 9,
+   "professional_tone": 10,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "The skill documentation is exceptionally thorough, with clear instructions, realistic examples, complete workflow coverage, and actionable troubleshooting. It defines scope precisely and enables accurate routing."
+ },
+ {
+  "skill": "paper-to-slides",
+  "exit_code": null,
+  "passed": false,
+  "status": "incomplete",
+  "incomplete_scans": [
+   "skillspector-llm"
+  ],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 93.6,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 10,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "incomplete",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, detailed step-by-step instructions, comprehensive examples, well-defined scope, and actionable troubleshooting. Covers complete end-to-end workflow for converting papers to conference-quality slide decks."
+ },
+ {
+  "skill": "phd-research-proposal-writer",
+  "exit_code": null,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 98.6,
+  "rubric_criteria": {
+   "description_clarity": 10,
+   "instruction_clarity": 10,
+   "example_quality": 10,
+   "documentation_completeness": 10,
+   "scope_definition": 10,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, comprehensive instructions, strong examples, well-defined scope, and practical troubleshooting. All criteria score 9-10."
+ },
+ {
+  "skill": "plagiarism-and-paraphrase-checker",
+  "exit_code": null,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 10
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 92.3,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "similarity.py contains magic numbers",
+    "file": "plagiarism-and-paraphrase-checker/scripts/similarity.py",
+    "line": null
+   }
+  ],
+  "rubric_summary": "Excellent skill documentation with clear purpose, complete workflow, realistic examples, well-defined scope, and actionable troubleshooting. All criteria score 9-10."
+ },
+ {
+  "skill": "publication-figure-maker",
+  "exit_code": null,
+  "passed": false,
+  "status": "incomplete",
+  "incomplete_scans": [
+   "skillspector-llm"
+  ],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 10
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 90.9,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 9,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "incomplete",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "pubstyle.py contains magic numbers",
+    "file": "publication-figure-maker/scripts/pubstyle.py",
+    "line": null
+   }
+  ],
+  "rubric_summary": "Excellent skill documentation with clear purpose, detailed instructions, comprehensive examples, well-defined scope, and actionable troubleshooting. Covers complete end-to-end workflow for creating publication-quality figures."
+ },
+ {
+  "skill": "qualitative-coding-assistant",
+  "exit_code": null,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 87.7,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 8,
+   "documentation_completeness": 9,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 9,
+   "error_handling_quality": 8
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, comprehensive instructions, strong examples, well-defined scope, and actionable error handling. All criteria score 8-9/10."
+ },
+ {
+  "skill": "rebuttal-writer",
+  "exit_code": null,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 97.3,
+  "rubric_criteria": {
+   "description_clarity": 10,
+   "instruction_clarity": 10,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 10,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with comprehensive instructions, clear examples, well-defined scope, and practical troubleshooting guidance for writing peer review rebuttals."
+ },
+ {
+  "skill": "related-work-writer",
+  "exit_code": null,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 92.3,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 9,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, complete workflow, helpful examples, explicit trigger/non-trigger cases, and actionable troubleshooting. All criteria score 9-10."
+ },
+ {
+  "skill": "reproducibility-checklist",
+  "exit_code": null,
+  "passed": false,
+  "status": "incomplete",
+  "incomplete_scans": [
+   "skillspector-llm"
+  ],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 95.0,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 10,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "incomplete",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, comprehensive instructions, strong examples, well-defined scope, and practical error handling. All criteria score 9-10."
+ },
+ {
+  "skill": "research-gap-finder",
+  "exit_code": null,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 92.7,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 10,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 9,
+   "error_handling_quality": 8
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, detailed instructions, comprehensive examples, well-defined scope, and actionable troubleshooting. All criteria score 8+ with strong routing guidance."
+ },
+ {
+  "skill": "research-progress-tracker",
+  "exit_code": null,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 90.0,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 9,
+   "error_handling_quality": 8
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, complete workflow, strong examples, and well-defined boundaries. All criteria score 8-10."
+ },
+ {
+  "skill": "research-question-formulator",
+  "exit_code": null,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 92.3,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "The skill documentation is exceptionally thorough with clear purpose, step-by-step instructions, worked examples, troubleshooting, and well-defined boundaries. It meets all criteria at a high level."
+ },
+ {
+  "skill": "research-scholar-orchestrator",
+  "exit_code": null,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 99.1,
+  "rubric_criteria": {
+   "description_clarity": 10,
+   "instruction_clarity": 10,
+   "example_quality": 10,
+   "documentation_completeness": 10,
+   "scope_definition": 10,
+   "professional_tone": 10,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "The research-scholar-orchestrator skill documentation is exceptionally thorough, with clear purpose, detailed routing logic, comprehensive examples, and actionable error handling. It meets all criteria at a near-exemplary level."
+ },
+ {
+  "skill": "results-interpreter",
+  "exit_code": null,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 99.1,
+  "rubric_criteria": {
+   "description_clarity": 10,
+   "instruction_clarity": 10,
+   "example_quality": 10,
+   "documentation_completeness": 10,
+   "scope_definition": 10,
+   "professional_tone": 10,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Exemplary skill documentation with exceptional clarity, completeness, and practical utility across all criteria. The skill defines a precise scope for interpreting results into evidence-graded findings, provides a thorough 10-step workflow, includes excellent worked examples with routing guidance, and offers realistic troubleshooting."
+ },
+ {
+  "skill": "sample-size-power-calculator",
+  "exit_code": null,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 10
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 90.9,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 9,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "power_calc.py contains magic numbers",
+    "file": "sample-size-power-calculator/scripts/power_calc.py",
+    "line": null
+   }
+  ],
+  "rubric_summary": "Excellent skill documentation with clear purpose, detailed instructions, comprehensive examples, well-defined scope, and actionable error handling. All criteria score 9-10/10."
+ },
+ {
+  "skill": "self-peer-reviewer",
+  "exit_code": null,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 95.9,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 10,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 10,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear description, comprehensive instructions, good examples, well-defined scope, and actionable error handling."
+ },
+ {
+  "skill": "sop-and-research-statement-writer",
+  "exit_code": null,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 87.7,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 8,
+   "documentation_completeness": 9,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 9,
+   "error_handling_quality": 8
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "The skill documentation is exceptionally thorough, with clear purpose, detailed instructions, strong examples, well-defined scope, and practical troubleshooting. It enables correct routing and provides a complete end-to-end workflow for writing SOPs and research statements."
+ },
+ {
+  "skill": "statistical-test-selector",
+  "exit_code": null,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 10
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 93.6,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 10,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 9,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "run_test.py contains magic numbers",
+    "file": "statistical-test-selector/scripts/run_test.py",
+    "line": null
+   }
+  ],
+  "rubric_summary": "Exceptionally well-documented skill with clear purpose, complete workflow, excellent examples for routing, and actionable troubleshooting. All criteria score 9-10."
+ },
+ {
+  "skill": "supervisor-finder",
+  "exit_code": null,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 98.6,
+  "rubric_criteria": {
+   "description_clarity": 10,
+   "instruction_clarity": 10,
+   "example_quality": 10,
+   "documentation_completeness": 10,
+   "scope_definition": 10,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, complete workflow, strong examples, and actionable error handling. All criteria exceed expectations."
+ },
+ {
+  "skill": "survey-questionnaire-designer",
+  "exit_code": null,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 90.0,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 9,
+   "error_handling_quality": 8
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, comprehensive instructions, strong examples, well-defined scope, and actionable troubleshooting. All criteria score 8-10."
+ },
+ {
+  "skill": "systematic-review-prisma",
+  "exit_code": null,
+  "passed": false,
+  "status": "incomplete",
+  "incomplete_scans": [
+   "skillspector-llm"
+  ],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 10
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 94.5,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 10,
+   "documentation_completeness": 10,
+   "scope_definition": 10,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 9,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "incomplete",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "prisma_flow.py contains magic numbers",
+    "file": "systematic-review-prisma/scripts/prisma_flow.py",
+    "line": null
+   }
+  ],
+  "rubric_summary": "Excellent skill documentation with clear purpose, complete workflow coverage, realistic examples, and actionable troubleshooting. All criteria score 9-10."
+ },
+ {
+  "skill": "thesis-chapter-writer",
+  "exit_code": null,
+  "passed": false,
+  "status": "incomplete",
+  "incomplete_scans": [
+   "skillspector-llm"
+  ],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 92.3,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "incomplete",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, comprehensive instructions, strong examples, well-defined scope, and actionable troubleshooting. All criteria score 9-10."
+ },
+ {
+  "skill": "topic-trend-analyzer",
+  "exit_code": null,
+  "passed": false,
+  "status": "incomplete",
+  "incomplete_scans": [
+   "llm-verification"
+  ],
+  "severity": {
+   "critical": 0,
+   "high": 3,
+   "medium": 7,
+   "low": 11
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 99.1,
+  "rubric_criteria": {
+   "description_clarity": 10,
+   "instruction_clarity": 10,
+   "example_quality": 10,
+   "documentation_completeness": 10,
+   "scope_definition": 10,
+   "professional_tone": 10,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "incomplete",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.semanticscholar.org/",
+    "file": "_scholarly_api.py",
+    "line": 239
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.semanticscholar.org/",
+    "file": "_scholarly_api.py",
+    "line": 248
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.semanticscholar.org/",
+    "file": "_scholarly_api.py",
+    "line": 257
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.openalex.org/",
+    "file": "_scholarly_api.py",
+    "line": 297
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.openalex.org/",
+    "file": "_scholarly_api.py",
+    "line": 298
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.crossref.org/",
+    "file": "_scholarly_api.py",
+    "line": 404
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.crossref.org/",
+    "file": "_scholarly_api.py",
+    "line": 413
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "high",
+    "check": "Description-Behavior Mismatch (TP4)",
+    "message": "MCP Tool Poisoning: Description-behavior mismatch: declared purpose is 'Skill claims to measure research topic trends via yearly publication counts and rising keywords in OpenAlex specifically.' but code also performs: Declared: trend measurement from yearly publication counts; Actual: no trend analysis functions exist, Declared: rising keyword detection in OpenAlex; Actual: no keyword extraction or temporal keyword analysis, Declared: OpenAlex-only; Actual: multi-source client (5 APIs) with unified search.",
+    "file": "SKILL.md",
+    "line": 1
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "high",
+    "check": "Manifest describes a narrow skill that 'Measures a research topic's trend from yearly publication counts and rising keywords in OpenAlex' (single source, trend analysis only). However, this file implements a general-purpose multi-source scholarly search库 ( (SDI-1)",
+    "message": "Excessive Agency: Manifest describes a narrow skill that 'Measures a research topic's trend from yearly publication counts and rising keywords in OpenAlex' (single source, trend analysis only). However, this file implements a general-purpose multi-source scholarly search库 (",
+    "file": "_scholarly_api.py",
+    "line": 34
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "high",
+    "check": "Capabilities for arXiv, Semantic Scholar, PubMed, and Crossref search (plus BibTeX parsing, markdown formatting, deduplication) are not justified by the skill's stated purpose of measuring trends from OpenAlex only. (SDI-2)",
+    "message": "Excessive Agency: Capabilities for arXiv, Semantic Scholar, PubMed, and Crossref search (plus BibTeX parsing, markdown formatting, deduplication) are not justified by the skill's stated purpose of measuring trends from OpenAlex only.",
+    "file": "_scholarly_api.py",
+    "line": 171
+   },
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "_scholarly_api.py contains magic numbers",
+    "file": "topic-trend-analyzer/scripts/_scholarly_api.py",
+    "line": null
+   },
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "trend_counts.py contains magic numbers",
+    "file": "topic-trend-analyzer/scripts/trend_counts.py",
+    "line": null
+   }
+  ],
+  "rubric_summary": "Exceptionally well-documented skill with clear purpose, complete workflow, excellent examples, realistic error handling, and precise scope boundaries. All criteria score 9-10."
+ },
+ {
+  "skill": "venue-recommender",
+  "exit_code": null,
+  "passed": false,
+  "status": "incomplete",
+  "incomplete_scans": [
+   "llm-verification"
+  ],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 1,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 90.0,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 9,
+   "error_handling_quality": 8
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "incomplete",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "Skill instructs agent to send user's paper title, abstract, and keywords to external search services (`paper-search`, publisher matchers like Elsevier Journal Finder, Springer Journal Suggester, etc.) and to scrape venue websites and indexing databases,, 4 (SQP-2)",
+    "message": "Output Handling: Skill instructs agent to send user's paper title, abstract, and keywords to external search services (`paper-search`, publisher matchers like Elsevier Journal Finder, Springer Journal Suggester, etc.) and to scrape venue websites and indexing databases,, 4",
+    "file": "SKILL.md",
+    "line": 41
+   }
+  ],
+  "rubric_summary": "Excellent skill documentation with clear purpose, detailed instructions, strong examples, complete workflow, and actionable error handling. All criteria score 8-10."
+ },
+ {
+  "skill": "viva-defense-prep",
+  "exit_code": null,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 90.5,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 9,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 9,
+   "error_handling_quality": 8
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "The viva-defense-prep skill documentation is exceptionally thorough, with clear purpose, detailed instructions, excellent examples including trigger/non-trigger cases, complete workflow coverage, and actionable troubleshooting. All criteria score 8-10."
+ },
+ {
+  "skill": "weekly-paper-digest",
+  "exit_code": null,
+  "passed": false,
+  "status": "incomplete",
+  "incomplete_scans": [
+   "skillspector-llm",
+   "llm-verification"
+  ],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 8,
+   "low": 12
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": 92.3,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 9,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "incomplete",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed",
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.semanticscholar.org/",
+    "file": "_scholarly_api.py",
+    "line": 239
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.semanticscholar.org/",
+    "file": "_scholarly_api.py",
+    "line": 248
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.semanticscholar.org/",
+    "file": "_scholarly_api.py",
+    "line": 257
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.openalex.org/",
+    "file": "_scholarly_api.py",
+    "line": 297
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.openalex.org/",
+    "file": "_scholarly_api.py",
+    "line": 298
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.crossref.org/",
+    "file": "_scholarly_api.py",
+    "line": 404
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.crossref.org/",
+    "file": "_scholarly_api.py",
+    "line": 413
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "Tainted flow: 'seen' from pathlib.Path.read_text (line 142, file read) → pathlib.Path.write_text (file write) (TT2)",
+    "message": "Data Flow: state_path.write_text(json.dumps(sorted(seen), indent=0), encoding=\"utf-8\")",
+    "file": "digest.py",
+    "line": 167
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "low",
+    "check": "Excessive Permissions (PE1)",
+    "message": "Privilege Escalation: permissions: [network, env, file_write",
+    "file": "SKILL.md",
+    "line": 7
+   },
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "_scholarly_api.py contains magic numbers",
+    "file": "weekly-paper-digest/scripts/_scholarly_api.py",
+    "line": null
+   },
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "digest.py contains magic numbers",
+    "file": "weekly-paper-digest/scripts/digest.py",
+    "line": null
+   }
+  ],
+  "rubric_summary": "Excellent skill documentation with clear purpose, complete workflow, strong examples, and actionable troubleshooting. All criteria score 9-10."
+ }
+]

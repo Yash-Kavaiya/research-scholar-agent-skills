@@ -1,0 +1,47 @@
+{
+  "skill_name": "paper-outline-generator",
+  "evals": [
+    {
+      "id": "paper-outline-generator-001",
+      "prompt": "Outline an 8-page conference paper. Contribution: a pruning method that keeps 98% of accuracy at half the parameters. I have results on two datasets and one ablation.",
+      "expected_output": "The agent applied paper-outline-generator: Plan a paper as an argument before prose is written: one message, the claims that support it, the evidence for each claim, and where each piece goes within the venue's limits.",
+      "assertions": [
+        "The agent read the paper-outline-generator SKILL.md before acting",
+        "The agent asks for the venue's guideline page and records the limit and required sections, marking unconfirmed items",
+        "The agent writes the one-sentence message and three claims with their evidence",
+        "The agent chooses the ML conference structure and outlines each section to paragraph level with a page budget",
+        "The agent plans Figure 1 and the main table first and lists gaps",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "paper-outline-generator",
+      "expected_script": null
+    },
+    {
+      "id": "paper-outline-generator-002",
+      "prompt": "Outline my paper on a new method for anomaly detection for ICML.",
+      "expected_output": "The agent applied paper-outline-generator and delivered its documented output, asking only for inputs that were missing and could not be inferred.",
+      "assertions": [
+        "The agent read the paper-outline-generator SKILL.md before acting",
+        "The response follows the skill's output format, including: Outline: <working title>",
+        "The agent stated the limits of what it checked or could not verify",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "paper-outline-generator",
+      "expected_script": null
+    },
+    {
+      "id": "paper-outline-generator-003",
+      "prompt": "Structure my thesis chapter.",
+      "expected_output": "The agent recognised that this request is outside paper-outline-generator and handled it with thesis-chapter-writer or pointed the user to it.",
+      "assertions": [
+        "The agent did not apply paper-outline-generator as the main skill for this request",
+        "The agent used or recommended thesis-chapter-writer",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "thesis-chapter-writer",
+      "expected_script": null
+    }
+  ]
+}

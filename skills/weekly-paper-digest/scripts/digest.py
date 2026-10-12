@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Build a digest of new papers for saved search queries.
 
 Queries arXiv (newest submissions) and OpenAlex (by publication date), keeps
@@ -23,7 +24,9 @@ import sys
 import time
 from pathlib import Path
 
-import _scholarly_api as api
+sys.dont_write_bytecode = True  # keep the skill folder free of __pycache__
+
+import _scholarly_api as api  # noqa: E402
 
 
 def paper_key(paper: dict) -> str:

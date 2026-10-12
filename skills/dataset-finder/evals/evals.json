@@ -1,0 +1,48 @@
+{
+  "skill_name": "dataset-finder",
+  "evals": [
+    {
+      "id": "dataset-finder-001",
+      "prompt": "Find datasets for financial sentiment classification that I can use in a thesis.",
+      "expected_output": "The agent applied dataset-finder: Locate candidate datasets for a research task, check that each can actually be used (licence, access, labels, size, known problems), and recommend a primary and secondary choice with reasons.",
+      "assertions": [
+        "The agent read the dataset-finder SKILL.md before acting",
+        "The agent runs `run_script(\"scripts/find_datasets.py\", args=\"'financial sentiment' --limit 10\")`",
+        "The agent checks Papers with Code and recent papers for the benchmark most often reported",
+        "The agent opens the dataset cards of the top candidates to confirm licence, size, and label source",
+        "The agent recommends a primary and secondary dataset and lists what was not verified",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "dataset-finder",
+      "expected_script": "find_datasets.py"
+    },
+    {
+      "id": "dataset-finder-002",
+      "prompt": "Find a dataset for sentiment analysis in Hindi.",
+      "expected_output": "The agent applied dataset-finder and delivered its documented output, asking only for inputs that were missing and could not be inferred.",
+      "assertions": [
+        "The agent read the dataset-finder SKILL.md before acting",
+        "The response follows the skill's output format",
+        "The agent ran find_datasets.py from the skill's scripts folder instead of computing the result by hand",
+        "The agent stated the limits of what it checked or could not verify",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "dataset-finder",
+      "expected_script": "find_datasets.py"
+    },
+    {
+      "id": "dataset-finder-003",
+      "prompt": "Design a survey to collect my own responses.",
+      "expected_output": "The agent recognised that this request is outside dataset-finder and handled it with survey-questionnaire-designer or pointed the user to it.",
+      "assertions": [
+        "The agent did not apply dataset-finder as the main skill for this request",
+        "The agent used or recommended survey-questionnaire-designer",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "survey-questionnaire-designer",
+      "expected_script": null
+    }
+  ]
+}

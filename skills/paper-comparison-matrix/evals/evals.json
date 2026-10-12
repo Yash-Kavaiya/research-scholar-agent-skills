@@ -1,0 +1,47 @@
+{
+  "skill_name": "paper-comparison-matrix",
+  "evals": [
+    {
+      "id": "paper-comparison-matrix-001",
+      "prompt": "Compare these five papers on few-shot text classification: method, datasets, metric, main result, and whether code is available.",
+      "expected_output": "The agent applied paper-comparison-matrix: Line up a set of papers on the same dimensions so that patterns, conflicts, and unreported items become visible.",
+      "assertions": [
+        "The agent read the paper-comparison-matrix SKILL.md before acting",
+        "The agent chooses the ML column set and writes a one-line definition for each column",
+        "The agent fills each row from the paper, noting the table or section for every number and writing NR where nothing is reported",
+        "The agent checks that results share dataset, split, and metric before placing them in one column, and footnotes one that does not",
+        "The agent writes the observations the table makes visible",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "paper-comparison-matrix",
+      "expected_script": null
+    },
+    {
+      "id": "paper-comparison-matrix-002",
+      "prompt": "Compare these eight papers on dataset, metric, and result.",
+      "expected_output": "The agent applied paper-comparison-matrix and delivered its documented output, asking only for inputs that were missing and could not be inferred.",
+      "assertions": [
+        "The agent read the paper-comparison-matrix SKILL.md before acting",
+        "The response follows the skill's output format",
+        "The agent stated the limits of what it checked or could not verify",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "paper-comparison-matrix",
+      "expected_script": null
+    },
+    {
+      "id": "paper-comparison-matrix-003",
+      "prompt": "Summarise this one paper.",
+      "expected_output": "The agent recognised that this request is outside paper-comparison-matrix and handled it with paper-summarizer or pointed the user to it.",
+      "assertions": [
+        "The agent did not apply paper-comparison-matrix as the main skill for this request",
+        "The agent used or recommended paper-summarizer",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "paper-summarizer",
+      "expected_script": null
+    }
+  ]
+}

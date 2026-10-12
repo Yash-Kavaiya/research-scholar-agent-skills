@@ -1,11 +1,19 @@
 ---
 name: academic-tone-editor
-description: Edits academic prose for clarity, concision, precise hedging, and formal register, removing filler, inflated vocabulary, stacked hedges, and formulaic phrasing while preserving meaning, technical terms, numbers, and citations. Use when the user asks to "improve the academic tone", "edit my paragraph", "make this more formal", "make this concise", "proofread my paper", "this sounds like AI wrote it, make it read naturally", or wants a language edit of a draft.
+description: "Edits academic prose for clarity, concision, hedging, and formal register while preserving meaning, terms, numbers, and citations. Use for language edits of a draft. Not for fixing the argument."
+version: 1.0.0
+metadata:
+  author: "Yash Kavaiya <yash.kavaiya3@gmail.com>"
+  tags: [editing, academic-writing, proofreading, style]
 ---
 
 # Academic Tone Editor
 
 Make the writing clearer and tighter without changing what it says. The author's claims, numbers, terms, and citations stay exactly as they are.
+
+## Purpose
+
+Make academic writing clearer and tighter without changing what it says. The author's claims, numbers, defined terms, and citations stay as written, and any sentence whose meaning is unclear is returned as a question instead of being rewritten.
 
 ## When to use
 
@@ -15,6 +23,12 @@ Make the writing clearer and tighter without changing what it says. The author's
 
 Hand off instead when the problem is structure or argument (`paper-outline-generator`, `self-peer-reviewer`), or when text is too close to a source (`plagiarism-and-paraphrase-checker`).
 
+## Prerequisites
+
+- The text to edit, as plain text, Markdown, or LaTeX.
+- The spelling variant (British or American), the field, and the edit depth: proofread, copyedit, or substantive.
+- No scripts or API keys are required.
+
 ## Inputs
 
 - The text.
@@ -23,7 +37,7 @@ Hand off instead when the problem is structure or argument (`paper-outline-gener
 - Anything that must not change: defined terms, quoted material, a required phrase.
 - The venue's or institution's policy on AI-assisted editing, if the user knows it.
 
-## Workflow
+## Instructions
 
 1. **Read the whole passage** before changing anything. Note the argument, the defined terms, and the author's voice.
 2. **Protect the content.** Mark what will not be altered: technical terms, numbers and units, citations, equations, quotations, and the strength of each claim.
@@ -57,6 +71,46 @@ Hand off instead when the problem is structure or argument (`paper-outline-gener
 
 For LaTeX input, return valid LaTeX and leave commands, labels, citations, and maths untouched. Offer a tracked-changes view (`latexdiff`, or bold and strikethrough) when asked.
 
+## Examples
+
+Requests that should trigger this skill:
+
+- "Improve the academic tone of this paragraph."
+- "Proofread my methods section."
+- "Make this more concise; I need to cut 100 words."
+- "This reads like AI wrote it. Make it read naturally without changing the content."
+- "Fix grammar and articles; English is my second language."
+
+Requests that belong to another skill:
+
+- "Review my paper's argument and experiments." → use `self-peer-reviewer`
+- "Is this paraphrase too close to the source?" → use `plagiarism-and-paraphrase-checker`
+- "Rewrite my abstract from scratch." → use `abstract-writer`
+
+### Worked example
+
+**Request:** "Copyedit this sentence: "It is important to note that our proposed novel approach may possibly be able to potentially achieve a significant enhancement in terms of the accuracy.""
+
+**What the agent does:**
+
+1. Marks what will not change: the claim's strength (tentative) and the term accuracy.
+2. Removes the empty opener and the stacked hedges, keeping one hedge.
+3. Queries "significant", which may mean statistically significant.
+4. Returns the edit with a change summary and the query.
+
+**Result (excerpt):**
+
+```markdown
+## Edited text
+Our approach may improve accuracy.
+
+## What changed
+- 26 words to 5. Removed "It is important to note that", "proposed novel", and three of four hedges.
+
+## Queries for the author
+1. "significant enhancement": do you mean statistically significant (then report the test) or large (then give the size)? I removed the word until you confirm.
+```
+
 ## Quality bar and pitfalls
 
 - Do not change the meaning, add content, or introduce a claim, number, example, or citation that was not in the original.
@@ -66,6 +120,21 @@ For LaTeX input, return valid LaTeX and leave commands, labels, citations, and m
 - The purpose of removing formulaic phrasing is readability. This skill is for improving the author's own writing; it is not a tool for disguising the origin of text or evading detection software. If the user asks about AI-use rules, tell them to follow their venue's or institution's disclosure policy.
 - Do not rewrite quotations or reference-list entries.
 - When the passage has a problem that editing cannot fix (a missing step in the argument, an unsupported claim), say so instead of smoothing over it.
+
+## Limitations
+
+- Editing improves expression only. It cannot repair a missing argument, weak evidence, or an unsupported claim; those are reported.
+- Field-specific phrasing can be misjudged; terms the author marks as required are kept.
+- The skill is not a means of hiding the origin of text or evading detection software, and does not replace disclosure required by a venue.
+- For LaTeX input, commands and maths are left untouched, so problems inside them are not fixed.
+
+## Troubleshooting
+
+| Problem | Likely cause | Solution |
+|---|---|---|
+| An edit changed the meaning | A hedge or qualifier was removed | Compare with the original, restore the qualifier, and treat the sentence as a query |
+| The text became too uniform | Every sentence was restructured | Use a lighter edit depth and keep sentences that were already clear |
+| LaTeX fails to compile after editing | A command, label, or brace was altered, producing an error | Diff against the original and restore the command; edits must leave LaTeX syntax unchanged |
 
 ## Related skills
 

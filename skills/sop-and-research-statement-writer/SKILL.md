@@ -1,11 +1,17 @@
 ---
 name: sop-and-research-statement-writer
-description: Helps write statements of purpose, personal statements, and research statements for graduate admission, fellowships, postdoctoral and faculty applications, built from the applicant's real experience and tailored to each programme's prompt and length limit. Use when the user asks to "write my SOP", "statement of purpose for MS or PhD", "improve my personal statement", "write a research statement for a faculty or postdoc application", "tailor my SOP to this university", or "cut my statement to 1000 words".
+description: "Helps write statements of purpose and research statements from the applicant's real experience, tailored to each prompt. Use for graduate, postdoc, or faculty applications. Not for full proposals."
+version: 1.0.0
+metadata:
+  author: "Yash Kavaiya <yash.kavaiya3@gmail.com>"
+  tags: [statement-of-purpose, research-statement, admissions, applications]
 ---
 
 # SOP and Research Statement Writer
 
-Help the applicant tell a true, specific account of what they have done, what they want to do, and why this programme or position is the place to do it.
+## Purpose
+
+Help an applicant tell a true, specific account of what they have done, what they want to do, and why a given programme or position is the place to do it. The statement is built from an interview with the applicant and stays in their voice.
 
 ## When to use
 
@@ -14,6 +20,12 @@ Help the applicant tell a true, specific account of what they have done, what th
 - Revising, tailoring, or shortening an existing statement.
 
 Hand off instead for a full research proposal (`phd-research-proposal-writer`) or the email to a professor (`supervisor-finder`).
+
+## Prerequisites
+
+- The exact prompt and length limit for each application.
+- The applicant's CV and the details behind each experience: their role, the methods, and the outcome.
+- The target programme's faculty and resources, verified on the department's site.
 
 ## Inputs
 
@@ -25,7 +37,7 @@ Hand off instead for a full research proposal (`phd-research-proposal-writer`) o
 
 Interview the applicant before drafting. Without their specifics, a statement is generic, and generic statements are the ones that fail.
 
-## Workflow
+## Instructions
 
 1. **Read the prompt** and list what it asks. Answer every part, in the order that serves the reader.
 2. **Collect the raw material.** For each significant experience ask: What was the problem? What exactly did you do, as distinct from the team? What tools or methods? What was the result (numbers, a paper, a deployed system)? What did you learn that shapes what you want to do next?
@@ -68,6 +80,43 @@ Interview the applicant before drafting. Without their specifics, a statement is
 
 For revisions, give the revised text and a short list of what changed and why.
 
+## Examples
+
+Requests that should trigger this skill:
+
+- "Write my SOP for an MS in data science."
+- "Draft a statement of purpose for a PhD in computational biology."
+- "Write a research statement for a faculty application."
+- "Tailor my SOP for a different university."
+- "Cut my personal statement from 1,400 to 1,000 words."
+
+Requests that belong to another skill:
+
+- "Write a full PhD research proposal." → use `phd-research-proposal-writer`
+- "Write an email to a professor." → use `supervisor-finder`
+- "Write a cover letter for a journal." → use `cover-letter-writer`
+
+### Worked example
+
+**Request:** "SOP, 800 words, for a PhD in NLP. My main experience: a one-year project building a Gujarati speech corpus (40 hours) and a baseline recogniser at 23% word error rate."
+
+**What the agent does:**
+
+1. Reads the prompt and interviews the applicant about the project: their role, what was hard, and what they want next.
+2. Finds the thread: low-resource language technology.
+3. Drafts opening, preparation in depth, research interests, and fit, verifying two named faculty on the department site.
+4. Lists placeholders and what to change for other universities.
+
+**Result (excerpt):**
+
+```markdown
+I want to build speech technology for languages that have little recorded data, because I have seen what its absence costs. Over the past year I collected and transcribed a 40-hour Gujarati speech corpus and trained a baseline recogniser that reaches a 23% word error rate. Most of that error came from code-switching with English, which standard pipelines treat as noise. ...
+
+Notes
+- Facts verified: Prof. [name]'s 2025 paper on code-switched ASR (department site, today)
+- To confirm: your exact role in transcription (led or contributed?)
+```
+
 ## Quality bar and pitfalls
 
 - Every experience, result, role, grade, and award in the statement must be true and the applicant's own. Never invent or inflate achievements, publications, or the applicant's share of team work. Ask when a detail is missing; do not fill it in.
@@ -77,6 +126,22 @@ For revisions, give the revised text and a short list of what changed and why.
 - Research statements need a future agenda that is distinct from the applicant's advisor's programme.
 - Do not disclose sensitive personal information the applicant has not chosen to share.
 - Respect the limit. Admissions readers stop at it.
+
+## Limitations
+
+- The statement can contain only what the applicant has actually done. Missing details are asked for, not invented.
+- Admission outcomes depend on many factors beyond the statement.
+- Faculty availability and research direction change; names are verified at the time of writing and should be rechecked.
+- Programmes differ in their rules on AI assistance; the applicant is responsible for compliance.
+
+## Troubleshooting
+
+| Problem | Likely cause | Solution |
+|---|---|---|
+| The draft sounds generic | It lacks the applicant's specifics | Interview for concrete details: what exactly they did, with what result, and what it changed |
+| A named professor has left or is not taking students | The department page was outdated or not checked | Reverify on the current faculty page and replace the name |
+| The statement is over the limit | It lists every CV item | Keep two or three experiences in depth and cut general statements |
+| A claim cannot be supported in an interview | It was inflated, making it invalid | Reword it to what the applicant actually did |
 
 ## Related skills
 

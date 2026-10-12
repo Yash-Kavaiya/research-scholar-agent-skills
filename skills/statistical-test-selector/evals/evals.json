@@ -1,0 +1,48 @@
+{
+  "skill_name": "statistical-test-selector",
+  "evals": [
+    {
+      "id": "statistical-test-selector-001",
+      "prompt": "data.csv has columns condition (control, treatment) and score for 60 different students. Is the treatment group better?",
+      "expected_output": "The agent applied statistical-test-selector: Match the statistical test to the study design and the observations, verify its assumptions, compute the result with code, and report it with an effect size and interval in APA style.",
+      "assertions": [
+        "The agent read the statistical-test-selector SKILL.md before acting",
+        "The agent classifies the design: two independent groups, continuous outcome",
+        "The agent runs `run_script(\"scripts/run_test.py\", args=\"two-groups data.csv --value score --group condition\")`",
+        "The agent reads the assumption checks and the reason for the chosen test, and looks at group sizes and outliers",
+        "The agent reports descriptives, the test, effect size, and interval",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "statistical-test-selector",
+      "expected_script": "run_test.py"
+    },
+    {
+      "id": "statistical-test-selector-002",
+      "prompt": "Which statistical test should I use to compare three teaching methods?",
+      "expected_output": "The agent applied statistical-test-selector and delivered its documented output, asking only for inputs that were missing and could not be inferred.",
+      "assertions": [
+        "The agent read the statistical-test-selector SKILL.md before acting",
+        "The response follows the skill's output format",
+        "The agent ran run_test.py from the skill's scripts folder instead of computing the result by hand",
+        "The agent stated the limits of what it checked or could not verify",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "statistical-test-selector",
+      "expected_script": "run_test.py"
+    },
+    {
+      "id": "statistical-test-selector-003",
+      "prompt": "How many participants do I need?",
+      "expected_output": "The agent recognised that this request is outside statistical-test-selector and handled it with sample-size-power-calculator or pointed the user to it.",
+      "assertions": [
+        "The agent did not apply statistical-test-selector as the main skill for this request",
+        "The agent used or recommended sample-size-power-calculator",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "sample-size-power-calculator",
+      "expected_script": null
+    }
+  ]
+}

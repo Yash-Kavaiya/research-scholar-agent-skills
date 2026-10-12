@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Chase citations backward and forward from one or more seed papers (OpenAlex).
 
 Seeds are DOIs or OpenAlex work ids. With two or more seeds, references shared
@@ -15,7 +16,9 @@ import json
 import sys
 import time
 
-import _scholarly_api as api
+sys.dont_write_bytecode = True  # keep the skill folder free of __pycache__
+
+import _scholarly_api as api  # noqa: E402
 
 BATCH = 50
 

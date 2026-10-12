@@ -1,11 +1,17 @@
 ---
 name: paper-to-explainer-video
-description: Plans an explainer video for a research paper, producing a timed narration script and a scene-by-scene storyboard that describes each visual and animation, suited to a conference video abstract, a YouTube explainer, or a short vertical clip. Use when the user asks to "make a video about my paper", "write a video script explaining this paper", "storyboard an explainer", "create a video abstract", "plan a Manim animation for my method", or "make a 60-second reel about my research".
+description: "Plans an explainer video for a paper: timed narration script and scene-by-scene storyboard with visuals and animations. Use for video abstracts and explainers. Not for live talks; use paper-to-slides."
+version: 1.0.0
+metadata:
+  author: "Yash Kavaiya <yash.kavaiya3@gmail.com>"
+  tags: [video, storyboard, science-communication, animation]
 ---
 
 # Paper to Explainer Video
 
-Produce the two documents a video is built from: what is said, second by second, and what is on screen while it is said.
+## Purpose
+
+Produce the two things a video is built from: what is said, second by second, and what is on screen while it is said. The script is written for the ear and budgeted to the target length, and every scene describes a visual precisely enough to build.
 
 ## When to use
 
@@ -14,6 +20,12 @@ Produce the two documents a video is built from: what is said, second by second,
 - Planning animations (Manim, After Effects, slides with motion) for a method.
 
 Hand off instead for a live talk (`paper-to-slides`) or a written post (`paper-to-blog`). This skill produces the script and storyboard; rendering the video needs an animation or video tool, and if the session offers one, pass the storyboard to it.
+
+## Prerequisites
+
+- The paper and its figures.
+- The target length, platform, aspect ratio, and audience.
+- The production means (slides with voice-over, Manim, or other animation tool). The skill delivers a script and storyboard; rendering needs one of those tools.
 
 ## Inputs
 
@@ -24,7 +36,7 @@ Hand off instead for a live talk (`paper-to-slides`) or a written post (`paper-t
 - Narrator: the author's voice or a synthetic voice, and the language.
 - The venue's technical requirements: duration, resolution, file size, captions.
 
-## Workflow
+## Instructions
 
 1. **Fix the single message** and the three to five beats that deliver it. A video holds less than a talk of the same length.
 2. **Budget the words.** Narration runs at about 140 to 160 words per minute; plan 150. A 3-minute video is about 450 words, less with pauses for animations. Write to the word count before anything else.
@@ -77,6 +89,45 @@ Message: <one sentence>
 
 For Manim production, add per-scene implementation notes: the objects (`Text`, `MathTex`, `Axes`, `Rectangle`, `Arrow`) and animations (`Create`, `Write`, `Transform`, `FadeIn`, `Indicate`) to use.
 
+## Examples
+
+Requests that should trigger this skill:
+
+- "Write a 3-minute video script explaining my paper."
+- "Storyboard an explainer video for this method."
+- "Create a video abstract for my journal article."
+- "Plan a Manim animation of my algorithm."
+- "Make a 60-second vertical clip script about my research."
+
+Requests that belong to another skill:
+
+- "Make slides for a live talk." → use `paper-to-slides`
+- "Write a blog post." → use `paper-to-blog`
+- "Draw a static architecture figure." → use `architecture-diagram-maker`
+
+### Worked example
+
+**Request:** "3-minute video abstract, 16:9, for researchers in neighbouring fields, on my paper about one-shot pruning that halves a model's parameters at 98% of its accuracy."
+
+**What the agent does:**
+
+1. Fixes the message and four beats, and budgets about 450 words.
+2. Writes the narration for the ear and times it.
+3. Storyboards 12 scenes with time, narration, on-screen objects, motion, and source asset.
+4. Lists assets to build and what to cut first if over time.
+
+**Result (excerpt):**
+
+```markdown
+| # | Time | Narration | On screen | Motion |
+|---|---|---|---|---|
+| 1 | 0:00–0:08 | "What if you could delete half of a neural network and barely notice?" | a dense grid of connected nodes | half the edges fade out together |
+| 5 | 1:05–1:25 | "We score every weight once, using the data the model has already seen." | weight matrix as a heat map | cells brighten in order of score |
+| 9 | 2:10–2:30 | "At half the size, accuracy stays within two percent." | bar chart from Table 1 | pruned bar grows beside the full bar |
+
+Word count: 447. Captions: from the script.
+```
+
 ## Quality bar and pitfalls
 
 - The script contains only what the paper supports. Do not invent a demonstration, a number, or an application for the sake of the hook.
@@ -88,6 +139,22 @@ For Manim production, add per-scene implementation notes: the objects (`Text`, `
 - Use only footage, images, and music the user has rights to; credit sources on the end card.
 - Follow the venue's rules on length, anonymity for review-stage videos, and file format.
 - Be clear about what is delivered: a script and storyboard, not a rendered video, unless a rendering tool was actually used.
+
+## Limitations
+
+- The deliverable is a script and storyboard. No video is rendered unless an animation or video tool is actually used.
+- Timing is estimated from word counts and must be checked by reading aloud.
+- Simplified visuals risk misrepresenting a method; they are checked against the paper but remain abstractions.
+- Music, footage, and images require rights the skill cannot grant.
+
+## Troubleshooting
+
+| Problem | Likely cause | Solution |
+|---|---|---|
+| The narration runs over the target length | Too many beats | Cut a beat, then trim sentences; do not speed up the read |
+| A scene cannot be produced with the available tools | The visual is too elaborate | Simplify to shapes, text, and one motion per scene |
+| A visual misrepresents the method | The simplification dropped a step | Check it against the method section and add the missing step or a caption |
+| Manim rendering fails with an error | An object or animation name is invalid for the installed version | Check the names against the installed Manim version's documentation and render scene by scene |
 
 ## Related skills
 

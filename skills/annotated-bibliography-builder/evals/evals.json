@@ -1,0 +1,47 @@
+{
+  "skill_name": "annotated-bibliography-builder",
+  "evals": [
+    {
+      "id": "annotated-bibliography-builder-001",
+      "prompt": "Annotated bibliography, APA 7, about 120 words each, for my project on whether green roofs reduce urban heat. Start with this DOI: 10.1016/j.example.2021.01.001.",
+      "expected_output": "The agent applied annotated-bibliography-builder: Produce entries that let a reader judge each source without opening it: what it says, how far to trust it, and what it is for in this particular project.",
+      "assertions": [
+        "The agent read the annotated-bibliography-builder SKILL.md before acting",
+        "The agent verifies the metadata against Crossref before formatting",
+        "The agent reads the source and records whether it was read in full",
+        "The agent writes the APA citation, then summary, evaluation, and relevance",
+        "The agent tags the entry by theme and method",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "annotated-bibliography-builder",
+      "expected_script": null
+    },
+    {
+      "id": "annotated-bibliography-builder-002",
+      "prompt": "Create an annotated bibliography in APA 7 for these ten sources.",
+      "expected_output": "The agent applied annotated-bibliography-builder and delivered its documented output, asking only for inputs that were missing and could not be inferred.",
+      "assertions": [
+        "The agent read the annotated-bibliography-builder SKILL.md before acting",
+        "The response follows the skill's output format, including: Annotated Bibliography: <project title>",
+        "The agent stated the limits of what it checked or could not verify",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "annotated-bibliography-builder",
+      "expected_script": null
+    },
+    {
+      "id": "annotated-bibliography-builder-003",
+      "prompt": "Write a literature review from these sources.",
+      "expected_output": "The agent recognised that this request is outside annotated-bibliography-builder and handled it with literature-review-writer or pointed the user to it.",
+      "assertions": [
+        "The agent did not apply annotated-bibliography-builder as the main skill for this request",
+        "The agent used or recommended literature-review-writer",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "literature-review-writer",
+      "expected_script": null
+    }
+  ]
+}

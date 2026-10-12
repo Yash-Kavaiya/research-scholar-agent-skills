@@ -1,0 +1,47 @@
+{
+  "skill_name": "paper-summarizer",
+  "evals": [
+    {
+      "id": "paper-summarizer-001",
+      "prompt": "Summarize the attached paper (Attention Is All You Need) in one page. I know RNNs but not attention.",
+      "expected_output": "The agent applied paper-summarizer: Report what a paper says in a fixed structure, so that papers can be compared and every statement in the summary can be checked against the source.",
+      "assertions": [
+        "The agent read the paper-summarizer SKILL.md before acting",
+        "The agent reads the abstract, contributions, and conclusion, then figures and tables, then method and experiments, then the appendix",
+        "The agent identifies it as a method paper and pulls each section's statements with their locations",
+        "The agent records results with metric, dataset, and comparison",
+        "The agent writes the one-sentence takeaway last and rechecks every number",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "paper-summarizer",
+      "expected_script": null
+    },
+    {
+      "id": "paper-summarizer-002",
+      "prompt": "Summarize this paper: https://arxiv.org/abs/1706.03762",
+      "expected_output": "The agent applied paper-summarizer and delivered its documented output, asking only for inputs that were missing and could not be inferred.",
+      "assertions": [
+        "The agent read the paper-summarizer SKILL.md before acting",
+        "The response follows the skill's output format, including: <Title> (<First author> et al., <year>, <venue>)",
+        "The agent stated the limits of what it checked or could not verify",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "paper-summarizer",
+      "expected_script": null
+    },
+    {
+      "id": "paper-summarizer-003",
+      "prompt": "Is this paper's methodology sound?",
+      "expected_output": "The agent recognised that this request is outside paper-summarizer and handled it with paper-critic or pointed the user to it.",
+      "assertions": [
+        "The agent did not apply paper-summarizer as the main skill for this request",
+        "The agent used or recommended paper-critic",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "paper-critic",
+      "expected_script": null
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "skill_name": "math-and-equation-explainer",
+  "evals": [
+    {
+      "id": "math-and-equation-explainer-001",
+      "prompt": "Explain why the gradient of softmax cross-entropy with respect to the logits is (p - y). I know the chain rule.",
+      "expected_output": "The agent applied math-and-equation-explainer: Make a piece of mathematics understandable to a particular reader: what each symbol is, what the expression says, why each step follows, and which assumptions it needs.",
+      "assertions": [
+        "The agent read the math-and-equation-explainer SKILL.md before acting",
+        "The agent writes the loss and softmax in LaTeX and builds the symbol table with shapes",
+        "The agent states the result in one plain sentence before the algebra",
+        "The agent derives it one operation per line with the rule used, marking the steps a paper would skip",
+        "The agent checks shapes and verifies numerically on a three-class example",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "math-and-equation-explainer",
+      "expected_script": null
+    },
+    {
+      "id": "math-and-equation-explainer-002",
+      "prompt": "Explain this equation from the paper: the ELBO in variational autoencoders.",
+      "expected_output": "The agent applied math-and-equation-explainer and delivered its documented output, asking only for inputs that were missing and could not be inferred.",
+      "assertions": [
+        "The agent read the math-and-equation-explainer SKILL.md before acting",
+        "The response follows the skill's output format",
+        "The agent stated the limits of what it checked or could not verify",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "math-and-equation-explainer",
+      "expected_script": null
+    },
+    {
+      "id": "math-and-equation-explainer-003",
+      "prompt": "Summarise the paper.",
+      "expected_output": "The agent recognised that this request is outside math-and-equation-explainer and handled it with paper-summarizer or pointed the user to it.",
+      "assertions": [
+        "The agent did not apply math-and-equation-explainer as the main skill for this request",
+        "The agent used or recommended paper-summarizer",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "paper-summarizer",
+      "expected_script": null
+    }
+  ]
+}

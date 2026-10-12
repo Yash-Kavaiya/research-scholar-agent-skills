@@ -211,4 +211,16 @@ python tools/validate_skills.py   # structure, frontmatter, cross-references, sc
 python -m pytest                  # offline tests; no network needed
 ```
 
-A skill's `SKILL.md` has frontmatter with `name` and `description`, then six sections in this order: When to use, Inputs, Workflow, Output format, Quality bar and pitfalls, Related skills. The validator enforces this.
+A skill's `SKILL.md` has frontmatter (`name`, a `description` of at most 200 characters, `version`, and `metadata` with `author` and `tags`; scripted skills also declare `compatibility`, `allowed-tools`, and `permissions`), then these sections in order: Purpose, When to use, Prerequisites, Inputs, Instructions, Available Scripts (scripted skills only), Output format, Examples, Quality bar and pitfalls, Limitations, Troubleshooting, Related skills. The validator enforces this.
+
+## Evaluation
+
+The skills are evaluated with [NVIDIA SkillEvaluator](https://docs.nvidia.com/skills/skillevaluator). Results and the method are in [`evals/skillevaluator/REPORT.md`](evals/skillevaluator/REPORT.md).
+
+```bash
+uv tool install --python 3.13 "skillevaluator[all] @ git+https://github.com/NVIDIA/SkillEvaluator.git"
+python tools/run_skillevaluator.py                    # static quality score for every skill
+python tools/run_skillevaluator.py --command tier1    # full Tier 1 gate (needs a provider key for the LLM rubric)
+```
+
+The LLM-backed checks read the provider key from the environment (`NVIDIA_API_KEY`, `OPENAI_API_KEY`, or `ANTHROPIC_API_KEY`). Never commit a key.

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Publication trend for a topic, from OpenAlex.
 
 Reports papers per year, the topic's share of all indexed papers (so growth of
@@ -16,7 +17,9 @@ import datetime
 import json
 import sys
 
-import _scholarly_api as api
+sys.dont_write_bytecode = True  # keep the skill folder free of __pycache__
+
+import _scholarly_api as api  # noqa: E402
 
 GROUP_LIMIT = 200  # OpenAlex returns at most this many groups per group_by call
 

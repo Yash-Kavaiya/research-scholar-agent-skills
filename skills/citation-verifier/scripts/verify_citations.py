@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Check that every entry in a BibTeX file corresponds to a real publication.
 
 Each entry is looked up in Crossref and OpenAlex (and arXiv for arXiv ids) and
@@ -27,7 +28,9 @@ import re
 import sys
 import time
 
-import _scholarly_api as api
+sys.dont_write_bytecode = True  # keep the skill folder free of __pycache__
+
+import _scholarly_api as api  # noqa: E402
 
 TITLE_MATCH = 0.9      # token Jaccard at or above this counts as the same title
 TITLE_POSSIBLE = 0.6

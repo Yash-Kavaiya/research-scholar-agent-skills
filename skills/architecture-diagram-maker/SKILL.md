@@ -1,11 +1,19 @@
 ---
 name: architecture-diagram-maker
-description: Creates model architecture, pipeline, system, and workflow diagrams for papers as editable TikZ, Mermaid, Graphviz, or SVG source, with consistent shapes, labelled data flow, and sizing for the venue's column width. Use when the user asks to "draw my model architecture", "make a pipeline diagram", "create Figure 1 for my paper", "make a system overview figure", "draw a flowchart of my method", or "turn this description into a TikZ diagram".
+description: "Creates model architecture, pipeline, and system diagrams as editable TikZ, Mermaid, Graphviz, or SVG source sized for the venue. Use when a paper needs an overview figure. Not for plots of results."
+version: 1.0.0
+metadata:
+  author: "Yash Kavaiya <yash.kavaiya3@gmail.com>"
+  tags: [diagrams, tikz, mermaid, architecture]
 ---
 
 # Architecture Diagram Maker
 
 Draw a diagram that lets a reader understand the method's structure in under a minute, from source that can be edited and recompiled.
+
+## Purpose
+
+Draw a diagram that lets a reader grasp a method's structure in under a minute, delivered as source that can be edited and recompiled. Shapes, colours, and arrow styles follow one consistent grammar, and names match the paper.
 
 ## When to use
 
@@ -14,6 +22,12 @@ Draw a diagram that lets a reader understand the method's structure in under a m
 
 Hand off instead for data plots (`publication-figure-maker`) or the PRISMA flow diagram (`systematic-review-prisma`).
 
+## Prerequisites
+
+- A description of the components, their order, and what passes between them; the method section or code is the best source.
+- For TikZ: a LaTeX installation with `tikz`. For Mermaid or Graphviz: a renderer such as the Mermaid CLI or `dot`.
+- The venue and target width.
+
 ## Inputs
 
 - A description of the method: components, their order, what passes between them, and what is new. The method section or the code is the best source.
@@ -21,7 +35,7 @@ Hand off instead for data plots (`publication-figure-maker`) or the PRISMA flow 
 - Venue and width (one column or full width), and whether colour is available.
 - Preferred format.
 
-## Workflow
+## Instructions
 
 1. **List the elements** from the method description: inputs, processing blocks, outputs, losses or objectives, and the connections with what flows along them (tensor shapes, data types, signals). Confirm the list with the user before drawing; diagram errors usually start here.
 2. **Decide the level of detail.** An overview figure shows 5 to 9 blocks. Internal detail of a block goes in a second, zoomed diagram. Highlight the novel component; draw standard components plainly.
@@ -74,6 +88,47 @@ Hand off instead for data plots (`publication-figure-maker`) or the PRISMA flow 
 - A legend line for shapes, colours, and arrow styles.
 - A short list of assumptions made about the architecture where the description was incomplete.
 
+## Examples
+
+Requests that should trigger this skill:
+
+- "Draw my model architecture as a TikZ figure."
+- "Make a pipeline diagram for the four stages of my method."
+- "Create Figure 1 for my paper: the overall system."
+- "Turn this description into a Mermaid flowchart."
+- "Draw the study procedure as a flow diagram."
+
+Requests that belong to another skill:
+
+- "Plot my accuracy results." → use `publication-figure-maker`
+- "Make a PRISMA flow diagram." → use `systematic-review-prisma`
+- "Design my poster layout." → use `paper-to-poster`
+
+### Worked example
+
+**Request:** "TikZ diagram, single column: input image goes to a frozen CLIP encoder, then our adapter (new), then a linear classifier; the adapter also receives a text prompt embedding."
+
+**What the agent does:**
+
+1. Lists the elements and confirms them: four blocks, two inputs, one new component.
+2. Chooses left-to-right flow and the visual grammar: frozen blocks grey, the new block highlighted, data as plain boxes.
+3. Writes the TikZ source with labelled arrows and compiles it.
+4. Checks names against the method section and writes the caption with a legend.
+
+**Result (excerpt):**
+
+```markdown
+\node[data] (img) {Image $x$};
+\node[block, fill=black!10, right=of img] (enc) {CLIP encoder\\(frozen)};
+\node[new, right=of enc] (adp) {Adapter};
+\node[block, right=of adp] (cls) {Linear\\classifier};
+\node[data, above=of adp] (txt) {Prompt embedding $t$};
+\draw[arr] (img) -- (enc); \draw[arr] (enc) -- node[above] {$h$} (adp);
+\draw[arr] (txt) -- (adp); \draw[arr] (adp) -- (cls);
+
+Caption: Overview. Grey: frozen; orange: trained (ours). Assumption to confirm: the prompt embedding enters the adapter, not the encoder.
+```
+
 ## Quality bar and pitfalls
 
 - Draw what the method does. Do not add components, connections, or dimensions that were not described; ask, or list the assumption.
@@ -84,6 +139,22 @@ Hand off instead for data plots (`publication-figure-maker`) or the PRISMA flow 
 - Deliver source that compiles. If it could not be compiled in this environment, say so.
 - Vector output only for line diagrams. Screenshots of drawing tools blur in print.
 - Do not copy a figure from another paper. Redraw in your own layout, and cite the source if the structure is theirs.
+
+## Limitations
+
+- The diagram reflects the description given. Details not described are listed as assumptions, not drawn as fact.
+- Automatic layout is limited; complex graphs need manual positioning or Graphviz.
+- Rendering can only be verified where the corresponding tool is installed; otherwise the source is delivered unrendered and labelled so.
+- A diagram shows structure, not behaviour over time; training dynamics need a separate figure.
+
+## Troubleshooting
+
+| Problem | Likely cause | Solution |
+|---|---|---|
+| `! Package tikz Error: Cannot parse this coordinate` or similar compile error | A node name is misspelled or a library is not loaded | Check node names and add `\usetikzlibrary{positioning,arrows.meta,fit,backgrounds}` |
+| Arrows cross or overlap labels | Blocks are not on a grid | Align nodes with `right=of` and `below=of`, and route the arrow with `|-` or `-|` |
+| The diagram is wider than the column | Too many blocks in one row | Reduce `node distance`, wrap to two rows, or split into overview and detail figures |
+| Mermaid fails to render | Unquoted special characters in a label make the syntax invalid | Put labels in double quotes and avoid parentheses outside quotes |
 
 ## Related skills
 
