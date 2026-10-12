@@ -92,6 +92,13 @@ Ask only for what is missing. Two or three questions are usually enough.
 ## Open decisions for you
 ```
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/frameworks-and-wording.md`: Read at steps 2 to 7, when choosing a framework, wording the question, and writing objectives and hypotheses.
+- `assets/research-question-worksheet.md`: Copy and fill to deliver the questions, objectives, and hypotheses.
+
 ## Examples
 
 Requests that should trigger this skill:

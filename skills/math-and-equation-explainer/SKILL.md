@@ -85,6 +85,13 @@ $$ ... $$   (source: <paper>, Eq. <n>)
 
 Use `$...$` and `$$...$$` so the maths renders. Match the paper's notation; if you must change it, say so once and keep a mapping.
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/notation-and-derivation-patterns.md`: Read at steps 2, 5, and 6, when decoding notation, justifying derivation steps, and naming the assumptions each step needs.
+- `assets/derivation-walkthrough-template.md`: Copy and fill for a step-by-step explanation of an equation or derivation.
+
 ## Examples
 
 Requests that should trigger this skill:

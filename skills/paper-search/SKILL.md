@@ -100,6 +100,13 @@ Searched: <sources> on <date>. Queries: "...", "...". Not searched: <failed sour
 
 When another skill is the consumer, pass the JSON file path instead.
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/search-syntax-and-strategy.md`: Read at steps 1 to 3 and 6, when choosing sources, writing queries in each database's syntax, and widening or narrowing a search.
+- `assets/search-log-template.md`: Copy and fill to report a search and its results.
+
 ## Examples
 
 Requests that should trigger this skill:

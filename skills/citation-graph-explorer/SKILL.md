@@ -90,6 +90,13 @@ Run a script with the agent's script tool, for example `run_script("scripts/cita
 - Hops performed
 ```
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/snowballing-method.md`: Read at steps 3 to 7, when choosing seeds, deciding how far to chase citations, and classifying what comes back.
+- `assets/citation-map-template.md`: Copy and fill to report the lineage around the seed papers.
+
 ## Examples
 
 Requests that should trigger this skill:

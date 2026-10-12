@@ -91,6 +91,13 @@ Sources: ... (failed: ...). Queries: ... Date: <today>.
 ## Ways to sharpen the idea
 ```
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/query-design-and-verdicts.md`: Read at steps 2 and 6 to 8, when writing query phrasings, comparing papers component by component, and choosing the verdict.
+- `assets/novelty-report-template.md`: Copy and fill for the novelty report.
+
 ## Examples
 
 Requests that should trigger this skill:

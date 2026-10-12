@@ -77,6 +77,13 @@ Corpus: <N> papers, <years>, sources searched, queries used. Full text read for 
 
 Give 5 to 8 gaps. Fewer, well-supported gaps are better than a long list.
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/gap-types-and-evidence.md`: Read at step 3, when classifying candidate gaps and deciding how much evidence each one needs.
+- `assets/gap-report-template.md`: Copy and fill for the final gap report.
+
 ## Examples
 
 Requests that should trigger this skill:

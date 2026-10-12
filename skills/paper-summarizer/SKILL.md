@@ -81,6 +81,13 @@ How this paper could be used or cited in the reader's work.
 
 For a one-paragraph summary keep the order: problem, approach, main result with numbers, main limitation.
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/reading-by-paper-type.md`: Read at steps 1 to 4, when deciding how to read a paper of a given type and what to extract from each section.
+- `assets/paper-summary-template.md`: Copy and fill for a one-page structured summary.
+
 ## Examples
 
 Requests that should trigger this skill:

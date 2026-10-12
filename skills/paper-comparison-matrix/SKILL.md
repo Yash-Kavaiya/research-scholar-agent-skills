@@ -73,6 +73,13 @@ Notes
 - ...
 ```
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/column-sets-and-comparability.md`: Read at steps 1 to 4, when choosing columns for the study type and deciding whether results can share a column.
+- `assets/comparison-matrix-template.md`: Copy and fill for the comparison table and its reading.
+
 ## Examples
 
 Requests that should trigger this skill:

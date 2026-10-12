@@ -92,6 +92,13 @@ Query: "<phrase>" in title and abstract (OpenAlex, retrieved <date>).
 ## Caveats
 ```
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/reading-trend-data.md`: Read at steps 2 to 6, when checking the query, classifying the stage, and interpreting rising subtopics and keywords.
+- `assets/trend-report-template.md`: Copy and fill for the trend report.
+
 ## Examples
 
 Requests that should trigger this skill:

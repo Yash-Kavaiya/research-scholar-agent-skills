@@ -84,6 +84,13 @@ What can be relied on, and under which conditions.
 1. ...
 ```
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/validity-checklists.md`: Read at step 3, when running the validity checks for the paper's study type.
+- `assets/critical-appraisal-template.md`: Copy and fill for the critical appraisal.
+
 ## Examples
 
 Requests that should trigger this skill:
