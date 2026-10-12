@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Matplotlib settings for publication figures: correct physical size, readable fonts, safe colours.
 
 Copy this file next to your plotting script (or add its folder to sys.path), then:

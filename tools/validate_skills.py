@@ -19,14 +19,22 @@ SHARED = ROOT / "shared" / "scholarly_api.py"
 SHARED_COPY_NAME = "_scholarly_api.py"
 
 REQUIRED_HEADINGS = [
+    "## Purpose",
     "## When to use",
+    "## Prerequisites",
     "## Inputs",
-    "## Workflow",
+    "## Instructions",
     "## Output format",
+    "## Examples",
     "## Quality bar and pitfalls",
+    "## Limitations",
+    "## Troubleshooting",
     "## Related skills",
 ]
-MAX_DESCRIPTION = 1024
+# NVIDIA SkillEvaluator deducts for descriptions over 200 characters; the Agent Skills limit is 1024.
+MAX_DESCRIPTION = 200
+MAX_LINES = 500
+REQUIRED_METADATA = ("author", "tags")
 NAME_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 SCRIPT_REF_RE = re.compile(r"scripts/([A-Za-z0-9_]+\.py)")
 BACKTICK_RE = re.compile(r"`([a-z0-9]+(?:-[a-z0-9]+)+)`")
@@ -38,20 +46,29 @@ def load_catalog() -> dict[str, str]:
 
 
 def parse_frontmatter(text: str) -> tuple[dict[str, str], str]:
-    """Return (frontmatter, body). Frontmatter is flat `key: value` lines."""
+    """Return (frontmatter, body).
+
+    Top-level `key: value` lines become entries; indented lines under a key with
+    no value (such as `metadata:`) are stored as `parent.child`.
+    """
     if not text.startswith("---\n"):
         raise ValueError("missing frontmatter opening '---'")
     end = text.find("\n---\n", 4)
     if end == -1:
         raise ValueError("missing frontmatter closing '---'")
     meta: dict[str, str] = {}
+    parent = ""
     for line in text[4:end].splitlines():
         if not line.strip():
             continue
         key, sep, value = line.partition(":")
         if not sep:
             raise ValueError(f"bad frontmatter line: {line!r}")
-        meta[key.strip()] = value.strip()
+        if line[0].isspace():
+            meta[f"{parent}.{key.strip()}"] = value.strip()
+        else:
+            parent = key.strip()
+            meta[parent] = value.strip().strip('"')
     return meta, text[end + 5 :]
 
 
@@ -86,10 +103,22 @@ def validate_skill(skill_dir: Path, known: set[str]) -> list[str]:
         errors.append(f"{name}: description is {len(desc)} chars (max {MAX_DESCRIPTION})")
     if "<" in desc or ">" in desc:
         errors.append(f"{name}: description contains angle brackets")
+    if not re.fullmatch(r"\d+\.\d+\.\d+", meta.get("version", "")):
+        errors.append(f"{name}: version missing or not major.minor.patch")
+    for field in REQUIRED_METADATA:
+        if not meta.get(f"metadata.{field}"):
+            errors.append(f"{name}: metadata.{field} missing")
+    if len(text.splitlines()) > MAX_LINES:
+        errors.append(f"{name}: SKILL.md has {len(text.splitlines())} lines (max {MAX_LINES})")
+    scripted = (skill_dir / "scripts").is_dir()
+    if scripted and "## Available Scripts" not in body:
+        errors.append(f"{name}: has scripts but no '## Available Scripts' section")
 
+    # Headings inside fenced code blocks are template text, not sections of the skill.
+    outline = re.sub(r"```.*?```", "", body, flags=re.S)
     last = -1
     for heading in REQUIRED_HEADINGS:
-        pos = body.find("\n" + heading)
+        pos = outline.find("\n" + heading + "\n")
         if pos == -1:
             errors.append(f"{name}: missing section {heading!r}")
         elif pos < last:

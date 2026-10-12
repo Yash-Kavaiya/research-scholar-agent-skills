@@ -1,0 +1,48 @@
+{
+  "skill_name": "sample-size-power-calculator",
+  "evals": [
+    {
+      "id": "sample-size-power-calculator-001",
+      "prompt": "Two independent groups, I expect a medium effect (d = 0.5) based on a meta-analysis, alpha 0.05, 80% power, and about 15% dropout. How many do I recruit?",
+      "expected_output": "The agent applied sample-size-power-calculator: Give a defensible answer to \"how many participants do I need\" by computing it and by justifying every input, above all the effect size.",
+      "assertions": [
+        "The agent read the sample-size-power-calculator SKILL.md before acting",
+        "The agent identifies the design as `ttest-ind` with Cohen's d from a meta-analysis",
+        "The agent runs `run_script(\"scripts/power_calc.py\", args=\"ttest-ind --effect 0.5 --power 0.8 --dropout 0.15\")`",
+        "The agent repeats for d = 0.4 and d = 0.6 to build a sensitivity table",
+        "The agent writes the justification paragraph with the effect-size source",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "sample-size-power-calculator",
+      "expected_script": "power_calc.py"
+    },
+    {
+      "id": "sample-size-power-calculator-002",
+      "prompt": "How many participants do I need to compare two teaching methods?",
+      "expected_output": "The agent applied sample-size-power-calculator and delivered its documented output, asking only for inputs that were missing and could not be inferred.",
+      "assertions": [
+        "The agent read the sample-size-power-calculator SKILL.md before acting",
+        "The response follows the skill's output format",
+        "The agent ran power_calc.py from the skill's scripts folder instead of computing the result by hand",
+        "The agent stated the limits of what it checked or could not verify",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "sample-size-power-calculator",
+      "expected_script": "power_calc.py"
+    },
+    {
+      "id": "sample-size-power-calculator-003",
+      "prompt": "Which statistical test should I use?",
+      "expected_output": "The agent recognised that this request is outside sample-size-power-calculator and handled it with statistical-test-selector or pointed the user to it.",
+      "assertions": [
+        "The agent did not apply sample-size-power-calculator as the main skill for this request",
+        "The agent used or recommended statistical-test-selector",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "statistical-test-selector",
+      "expected_script": null
+    }
+  ]
+}

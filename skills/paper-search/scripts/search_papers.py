@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Search arXiv, Semantic Scholar, OpenAlex, PubMed, and Crossref in one call.
 
 Examples:
@@ -12,7 +13,9 @@ import argparse
 import json
 import sys
 
-import _scholarly_api as api
+sys.dont_write_bytecode = True  # keep the skill folder free of __pycache__
+
+import _scholarly_api as api  # noqa: E402
 
 
 def sort_papers(papers: list[dict], key: str) -> list[dict]:

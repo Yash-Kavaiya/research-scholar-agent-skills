@@ -1,11 +1,17 @@
 ---
 name: rebuttal-writer
-description: Writes point-by-point responses to peer reviewers for conference rebuttals and journal revisions, organising every comment, deciding whether to concede, clarify, or respectfully disagree, quoting the changes made, and fitting the venue's length limit. Use when the user asks to "write my rebuttal", "respond to the reviewers", "draft a response letter", "reply to Reviewer 2", "write the response to reviewers for my major revision", or has received reviews and needs a response plan.
+description: "Writes point-by-point responses to peer reviewers for conference rebuttals and journal revisions within the venue's limit. Use when reviews have arrived. Not for pre-submission review."
+version: 1.0.0
+metadata:
+  author: "Yash Kavaiya <yash.kavaiya3@gmail.com>"
+  tags: [rebuttal, peer-review, revision, response-letter]
 ---
 
 # Rebuttal Writer
 
-Answer every reviewer comment completely, courteously, and with evidence, so the editor or area chair can see each concern was resolved.
+## Purpose
+
+Answer every reviewer comment completely, courteously, and with evidence, so the editor or area chair can see that each concern was resolved. Each response states the answer, the evidence, and the change made to the manuscript.
 
 ## When to use
 
@@ -15,6 +21,12 @@ Answer every reviewer comment completely, courteously, and with evidence, so the
 
 Hand off instead for anticipating reviews before submission (`self-peer-reviewer`).
 
+## Prerequisites
+
+- All reviews, the meta-review, and the editor's letter in full.
+- The manuscript, and what the authors can change or run in the time available.
+- The venue's response rules: length limit, whether new results or a revised PDF are allowed, and the deadline.
+
 ## Inputs
 
 - All reviews, the meta-review, and the editor's letter, in full.
@@ -22,7 +34,7 @@ Hand off instead for anticipating reviews before submission (`self-peer-reviewer
 - The venue's rules: length limit (characters, words, or one page), whether new experiments, figures, links, or a revised PDF are allowed, anonymity, and the deadline.
 - The authors' own view of which criticisms are right.
 
-## Workflow
+## Instructions
 
 1. **Read everything, then wait before writing.** Summarise each review neutrally: what the reviewer understood, their main concerns, and their score. Identify the reviewer who can be moved and the concern that drives the decision.
 2. **Split the reviews into individual comments** and number them (R1.1, R1.2, R2.1). Miss nothing, including remarks inside paragraphs and questions.
@@ -76,6 +88,47 @@ Dear Dr. <Editor>,
 
 Also deliver the response matrix and a checklist of every promised change.
 
+## Examples
+
+Requests that should trigger this skill:
+
+- "Write my rebuttal; here are three reviews."
+- "Draft a response letter for my major revision."
+- "How do I reply to Reviewer 2's comment about missing baselines?"
+- "Help me plan the response to these reviews; I have 7 days and 5,000 characters."
+- "Write the response to reviewers for my journal resubmission."
+
+Requests that belong to another skill:
+
+- "Review my paper before submission." → use `self-peer-reviewer`
+- "Write the cover letter for a new submission." → use `cover-letter-writer`
+- "Plan the new experiments reviewers asked for." → use `experiment-planner`
+
+### Worked example
+
+**Request:** "Rebuttal, 4,000 characters. R1 and R3 ask for a comparison with method X; R2 says the loss derivation is unclear. We ran X: 71.2 ± 0.3 vs our 74.8 ± 0.2."
+
+**What the agent does:**
+
+1. Summarises each review and splits them into numbered comments.
+2. Classifies each: requested experiment (done), misunderstanding (clarify and revise), minor.
+3. Leads with the shared concern and the new result, then the clarification with the change made.
+4. Checks the character count and lists promised changes.
+
+**Result (excerpt):**
+
+```markdown
+We thank the reviewers for their careful reading.
+
+**[R1, R3] Comparison with X.** We ran X under our protocol (same data, tuning budget, 5 seeds): X obtains 71.2 ± 0.3 against our 74.8 ± 0.2. This is added as a row in Table 2.
+
+**[R2] Loss derivation.** We agree the step from Eq. 3 to Eq. 4 was too terse. We now show the intermediate step and state the independence assumption (Section 3.2).
+
+(1,160 of 4,000 characters)
+
+Promised changes: Table 2 row; Section 3.2 derivation.
+```
+
 ## Quality bar and pitfalls
 
 - Never claim an experiment was run, a result obtained, or a change made unless it was. Report only real numbers supplied by the authors; where a result is pending, write a clearly marked placeholder for them to fill, or state what will be done.
@@ -86,6 +139,22 @@ Also deliver the response matrix and a checklist of every promised change.
 - Do not introduce a substantially different paper in the rebuttal; many venues disallow it. Follow the venue's rules on new results and links, and keep anonymity.
 - Respect the limit exactly; overlong rebuttals are truncated or ignored.
 - If a criticism reveals a real flaw in the main claim, tell the authors, and advise narrowing the claim over defending it.
+
+## Limitations
+
+- Responses can only report results the authors have actually obtained. Pending experiments appear as marked placeholders.
+- A rebuttal cannot rescue a flaw in the main claim; narrowing the claim may be the only honest option.
+- Venue rules on new results, links, and revised PDFs differ and must be read from the instructions.
+- The decision rests with reviewers and the editor; a good response improves the odds without guaranteeing an outcome.
+
+## Troubleshooting
+
+| Problem | Likely cause | Solution |
+|---|---|---|
+| The draft exceeds the limit | Minor points are answered at length | Lead with decisive points, merge shared concerns, and compress minor ones to a line each |
+| A requested experiment cannot be finished in time or fails | It is too costly or infeasible | Say so concretely, offer what can be done, and do not promise what cannot be delivered |
+| A reviewer misread the paper | The text was unclear | Clarify without blaming the reader and revise the passage so the next reader does not misread it |
+| The response and the revised manuscript disagree | A promised change was not made | Verify every "we have added" against the revision before sending |
 
 ## Related skills
 

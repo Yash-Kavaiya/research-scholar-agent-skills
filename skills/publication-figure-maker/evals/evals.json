@@ -1,0 +1,48 @@
+{
+  "skill_name": "publication-figure-maker",
+  "evals": [
+    {
+      "id": "publication-figure-maker-001",
+      "prompt": "Plot validation accuracy over 10 epochs for three methods from curves.csv (mean and sd over 5 seeds) as a single-column figure for an IEEE conference paper.",
+      "expected_output": "The agent applied publication-figure-maker: Produce plots that are legible at printed size, honest about the measurements, and accepted by publishers' production checks.",
+      "assertions": [
+        "The agent read the publication-figure-maker SKILL.md before acting",
+        "The agent states the figure's point: method A converges fastest",
+        "The agent copies `pubstyle.py` next to the script, calls `pubstyle.apply(\"ieee\")` and `figsize(\"ieee\", columns=1)`",
+        "The agent plots each series with its own colour, marker, and line style, and shaded bands for the standard deviation",
+        "The agent saves PDF and PNG, opens the PDF to check size and fonts, and writes the caption",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "publication-figure-maker",
+      "expected_script": "pubstyle.py"
+    },
+    {
+      "id": "publication-figure-maker-002",
+      "prompt": "Make a line plot of these accuracy curves for my IEEE paper.",
+      "expected_output": "The agent applied publication-figure-maker and delivered its documented output, asking only for inputs that were missing and could not be inferred.",
+      "assertions": [
+        "The agent read the publication-figure-maker SKILL.md before acting",
+        "The response follows the skill's output format",
+        "The agent ran pubstyle.py from the skill's scripts folder instead of computing the result by hand",
+        "The agent stated the limits of what it checked or could not verify",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "publication-figure-maker",
+      "expected_script": "pubstyle.py"
+    },
+    {
+      "id": "publication-figure-maker-003",
+      "prompt": "Draw my model architecture.",
+      "expected_output": "The agent recognised that this request is outside publication-figure-maker and handled it with architecture-diagram-maker or pointed the user to it.",
+      "assertions": [
+        "The agent did not apply publication-figure-maker as the main skill for this request",
+        "The agent used or recommended architecture-diagram-maker",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "architecture-diagram-maker",
+      "expected_script": null
+    }
+  ]
+}

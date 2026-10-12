@@ -1,11 +1,17 @@
 ---
 name: annotated-bibliography-builder
-description: Builds an annotated bibliography in which each entry has a correctly formatted citation followed by a summary, an evaluation of the source, and a note on its relevance to the user's project. Use when the user asks for an "annotated bibliography", "annotate these sources", "write annotations for my references", "reading list with notes", or has a coursework or proposal requirement for annotated entries.
+description: "Builds an annotated bibliography: a formatted citation plus summary, evaluation, and relevance note for each source. Use for coursework or proposal bibliographies. Not for synthesis across sources."
+version: 1.0.0
+metadata:
+  author: "Yash Kavaiya <yash.kavaiya3@gmail.com>"
+  tags: [annotated-bibliography, citations, reading-notes]
 ---
 
 # Annotated Bibliography Builder
 
-Produce entries that let a reader judge each source without opening it: what it says, how far to trust it, and what it is for in this project.
+## Purpose
+
+Produce entries that let a reader judge each source without opening it: what it says, how far to trust it, and what it is for in this particular project. Citations follow the required style exactly and every source is verified.
 
 ## When to use
 
@@ -13,6 +19,12 @@ Produce entries that let a reader judge each source without opening it: what it 
 - Organised reading notes before writing a review.
 
 Hand off instead for synthesis across sources (`literature-review-writer`) or a single in-depth summary (`paper-summarizer`).
+
+## Prerequisites
+
+- The sources as PDFs, links, DOIs, or a `.bib` file, or a topic to search with `paper-search`.
+- The project's research question, the citation style, and any word limit per annotation.
+- Optional: pandoc for formatting citations from BibTeX.
 
 ## Inputs
 
@@ -22,7 +34,7 @@ Hand off instead for synthesis across sources (`literature-review-writer`) or a 
 - Annotation type required: descriptive (summary only), evaluative (summary and assessment), or reflective (adds use in the project). Default: all three parts.
 - Ordering: alphabetical by author (default), chronological, or grouped by theme.
 
-## Workflow
+## Instructions
 
 1. **Verify the metadata** of each source against Crossref or the publisher page (`citation-verifier`): authors, year, title, venue, volume, pages, DOI.
 2. **Read each source** to the depth its role needs. Record whether it was read in full or as an abstract.
@@ -58,6 +70,44 @@ Author, A. A., & Author, B. B. (2023). Title of the article. *Journal Name, 12*(
 
 Offer a `.bib` export with the annotation in the `annote` field when the user works in LaTeX.
 
+## Examples
+
+Requests that should trigger this skill:
+
+- "Create an annotated bibliography in APA 7 for these ten sources."
+- "Write 150-word annotations for my references on urban heat islands."
+- "I need an annotated bibliography for my proposal on teacher burnout."
+- "Annotate these papers with summary, evaluation, and relevance."
+- "Make a reading list with notes on each paper's usefulness for my thesis."
+
+Requests that belong to another skill:
+
+- "Write a literature review from these sources." → use `literature-review-writer`
+- "Summarise this single paper in depth." → use `paper-summarizer`
+- "Convert my reference list to IEEE style." → use `citation-style-converter`
+
+### Worked example
+
+**Request:** "Annotated bibliography, APA 7, about 120 words each, for my project on whether green roofs reduce urban heat. Start with this DOI: 10.1016/j.example.2021.01.001."
+
+**What the agent does:**
+
+1. Verifies the metadata against Crossref before formatting.
+2. Reads the source and records whether it was read in full.
+3. Writes the APA citation, then summary, evaluation, and relevance.
+4. Tags the entry by theme and method.
+
+**Result (excerpt):**
+
+```markdown
+Author, A. A., & Author, B. B. (2021). Cooling effect of extensive green roofs in a temperate city. *Journal Name, 45*(2), 101–115. https://doi.org/...
+
+> **Summary.** Measures roof-surface and air temperatures on 12 paired green and conventional roofs over two summers and finds lower surface temperatures on green roofs.
+> **Evaluation.** A paired field design with two seasons of measurements; limited to one city and to extensive (shallow) roofs.
+> **Relevance.** Provides the measured effect size this project will compare with simulation studies.
+> *Tags: field measurement; core. Read: full text.*
+```
+
 ## Quality bar and pitfalls
 
 - Every entry is a real, verified source. Never fabricate an entry to reach a required count; say how many could be found.
@@ -67,6 +117,20 @@ Offer a `.bib` export with the annotation in the `annote` field when the user wo
 - Relevance must name the project. "Relevant to my topic" says nothing.
 - Follow the style manual for the citation exactly (capitalisation, italics, DOI format). Mixed styles are the most common fault.
 - Keep within the length rule. Markers count words.
+
+## Limitations
+
+- Only sources that can be retrieved and verified are included. If fewer exist than the assignment requires, the shortfall is reported.
+- Evaluation of a source's quality is a reasoned judgement from its design and venue, not a formal appraisal score.
+- Fine points of a citation style (unusual source types) should be checked against the official manual.
+
+## Troubleshooting
+
+| Problem | Likely cause | Solution |
+|---|---|---|
+| A source's metadata cannot be verified | The DOI is wrong or the work is not indexed | Search by exact title; if it still fails, ask the user for the source and mark the entry unverified |
+| Annotations exceed the word limit | The summary repeats the abstract | Cut the summary to the question, method, and main finding, and keep the evaluation and relevance |
+| The citation format looks wrong | The entry type or capitalisation in the data is invalid | Fix the underlying record and re-render with `citation-style-converter` |
 
 ## Related skills
 

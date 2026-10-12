@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Search Hugging Face Hub and OpenML for datasets.
 
 Examples:
@@ -16,7 +17,9 @@ import json
 import sys
 import urllib.parse
 
-import _scholarly_api as api
+sys.dont_write_bytecode = True  # keep the skill folder free of __pycache__
+
+import _scholarly_api as api  # noqa: E402
 
 
 def tag_values(tags: list[str], prefix: str) -> list[str]:

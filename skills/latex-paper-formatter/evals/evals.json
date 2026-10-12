@@ -1,0 +1,47 @@
+{
+  "skill_name": "latex-paper-formatter",
+  "evals": [
+    {
+      "id": "latex-paper-formatter-001",
+      "prompt": "My paper is in the ACM sigconf class. Reformat it for Springer LNCS; the files are main.tex, refs.bib, and figures/.",
+      "expected_output": "The agent applied latex-paper-formatter: Move a draft into the venue's official template without altering its content, and deliver a project that compiles cleanly.",
+      "assertions": [
+        "The agent read the latex-paper-formatter SKILL.md before acting",
+        "The agent obtains the current `llncs` template from Springer and compiles its sample unchanged",
+        "The agent keeps the body, replaces the preamble, and maps title, authors, and institutes to the LNCS commands",
+        "The agent removes conflicting packages, switches to *splncs04.bst*, and resizes full-width figures to the single-column text width",
+        "The agent compiles with `latexmk -pdf`, clears undefined references and overfull boxes, and reports the page count",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "latex-paper-formatter",
+      "expected_script": null
+    },
+    {
+      "id": "latex-paper-formatter-002",
+      "prompt": "Format my paper for the IEEE conference template.",
+      "expected_output": "The agent applied latex-paper-formatter and delivered its documented output, asking only for inputs that were missing and could not be inferred.",
+      "assertions": [
+        "The agent read the latex-paper-formatter SKILL.md before acting",
+        "The response follows the skill's output format",
+        "The agent stated the limits of what it checked or could not verify",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "latex-paper-formatter",
+      "expected_script": null
+    },
+    {
+      "id": "latex-paper-formatter-003",
+      "prompt": "Check anonymisation and fonts before upload.",
+      "expected_output": "The agent recognised that this request is outside latex-paper-formatter and handled it with camera-ready-checker or pointed the user to it.",
+      "assertions": [
+        "The agent did not apply latex-paper-formatter as the main skill for this request",
+        "The agent used or recommended camera-ready-checker",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "camera-ready-checker",
+      "expected_script": null
+    }
+  ]
+}

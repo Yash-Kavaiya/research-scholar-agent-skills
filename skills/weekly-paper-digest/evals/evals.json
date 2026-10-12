@@ -1,0 +1,48 @@
+{
+  "skill_name": "weekly-paper-digest",
+  "evals": [
+    {
+      "id": "weekly-paper-digest-001",
+      "prompt": "Weekly digest for \"retrieval augmented generation\" and arXiv cs.CL papers on hallucination; boost benchmark and survey papers.",
+      "expected_output": "The agent applied weekly-paper-digest: Keep a researcher current with a short, filtered list of new papers, generated the same way each time so nothing is repeated.",
+      "assertions": [
+        "The agent read the weekly-paper-digest SKILL.md before acting",
+        "The agent saves *digest.json* with the two queries, 7 days, both sources, and the boost terms",
+        "The agent runs `run_script(\"scripts/digest.py\", args=\"--config digest.json --out digest-latest.md\")`",
+        "The agent reads the returned titles and abstracts, selects the relevant ones, and writes why each matters",
+        "The agent flags one paper that overlaps the user's project and explains how to schedule the run",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "weekly-paper-digest",
+      "expected_script": "digest.py"
+    },
+    {
+      "id": "weekly-paper-digest-002",
+      "prompt": "Send me new papers on retrieval augmented generation every week.",
+      "expected_output": "The agent applied weekly-paper-digest and delivered its documented output, asking only for inputs that were missing and could not be inferred.",
+      "assertions": [
+        "The agent read the weekly-paper-digest SKILL.md before acting",
+        "The response follows the skill's output format, including: Paper digest: 2026-03-02 to 2026-03-09",
+        "The agent ran digest.py from the skill's scripts folder instead of computing the result by hand",
+        "The agent stated the limits of what it checked or could not verify",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "weekly-paper-digest",
+      "expected_script": "digest.py"
+    },
+    {
+      "id": "weekly-paper-digest-003",
+      "prompt": "Find the key papers on this topic from the last five years.",
+      "expected_output": "The agent recognised that this request is outside weekly-paper-digest and handled it with paper-search or pointed the user to it.",
+      "assertions": [
+        "The agent did not apply weekly-paper-digest as the main skill for this request",
+        "The agent used or recommended paper-search",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "paper-search",
+      "expected_script": null
+    }
+  ]
+}

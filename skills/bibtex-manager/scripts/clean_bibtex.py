@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Clean, de-duplicate, and check a BibTeX file.
 
 What it does:
@@ -22,7 +23,9 @@ import re
 import sys
 import time
 
-import _scholarly_api as api
+sys.dont_write_bytecode = True  # keep the skill folder free of __pycache__
+
+import _scholarly_api as api  # noqa: E402
 
 REQUIRED = {
     "article": ["author", "title", "journal", "year"],

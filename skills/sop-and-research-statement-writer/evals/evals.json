@@ -1,0 +1,47 @@
+{
+  "skill_name": "sop-and-research-statement-writer",
+  "evals": [
+    {
+      "id": "sop-and-research-statement-writer-001",
+      "prompt": "SOP, 800 words, for a PhD in NLP. My main experience: a one-year project building a Gujarati speech corpus (40 hours) and a baseline recogniser at 23% word error rate.",
+      "expected_output": "The agent applied sop-and-research-statement-writer: Help an applicant tell a true, specific account of what they have done, what they want to do, and why a given programme or position is the place to do it.",
+      "assertions": [
+        "The agent read the sop-and-research-statement-writer SKILL.md before acting",
+        "The agent reads the prompt and interviews the applicant about the project: their role, what was hard, and what they want next",
+        "The agent finds the thread: low-resource language technology",
+        "The agent drafts opening, preparation in depth, research interests, and fit, verifying two named faculty on the department site",
+        "The agent lists placeholders and what to change for other universities",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "sop-and-research-statement-writer",
+      "expected_script": null
+    },
+    {
+      "id": "sop-and-research-statement-writer-002",
+      "prompt": "Write my SOP for an MS in data science.",
+      "expected_output": "The agent applied sop-and-research-statement-writer and delivered its documented output, asking only for inputs that were missing and could not be inferred.",
+      "assertions": [
+        "The agent read the sop-and-research-statement-writer SKILL.md before acting",
+        "The response follows the skill's output format",
+        "The agent stated the limits of what it checked or could not verify",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "sop-and-research-statement-writer",
+      "expected_script": null
+    },
+    {
+      "id": "sop-and-research-statement-writer-003",
+      "prompt": "Write a full PhD research proposal.",
+      "expected_output": "The agent recognised that this request is outside sop-and-research-statement-writer and handled it with phd-research-proposal-writer or pointed the user to it.",
+      "assertions": [
+        "The agent did not apply sop-and-research-statement-writer as the main skill for this request",
+        "The agent used or recommended phd-research-proposal-writer",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "phd-research-proposal-writer",
+      "expected_script": null
+    }
+  ]
+}

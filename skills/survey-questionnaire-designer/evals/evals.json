@@ -1,0 +1,47 @@
+{
+  "skill_name": "survey-questionnaire-designer",
+  "evals": [
+    {
+      "id": "survey-questionnaire-designer-001",
+      "prompt": "I need a short questionnaire on students' acceptance of an AI tutoring app: perceived usefulness, ease of use, and intention to use. Online, under 8 minutes.",
+      "expected_output": "The agent applied survey-questionnaire-designer: Build an instrument in which every item measures something the research question needs, and plan how its validity and reliability will be shown.",
+      "assertions": [
+        "The agent read the survey-questionnaire-designer SKILL.md before acting",
+        "The agent defines the three constructs and searches for validated technology-acceptance scales",
+        "The agent builds a blueprint mapping each construct to adapted items with their source",
+        "The agent rewrites items to one idea each, sets a 5-point fully labelled agreement scale, and orders the sections",
+        "The agent plans expert review, cognitive interviews, a pilot, and reliability analysis",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "survey-questionnaire-designer",
+      "expected_script": null
+    },
+    {
+      "id": "survey-questionnaire-designer-002",
+      "prompt": "Design a questionnaire to measure job satisfaction among remote workers.",
+      "expected_output": "The agent applied survey-questionnaire-designer and delivered its documented output, asking only for inputs that were missing and could not be inferred.",
+      "assertions": [
+        "The agent read the survey-questionnaire-designer SKILL.md before acting",
+        "The response follows the skill's output format",
+        "The agent stated the limits of what it checked or could not verify",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "survey-questionnaire-designer",
+      "expected_script": null
+    },
+    {
+      "id": "survey-questionnaire-designer-003",
+      "prompt": "Which test do I use on my survey results?",
+      "expected_output": "The agent recognised that this request is outside survey-questionnaire-designer and handled it with statistical-test-selector or pointed the user to it.",
+      "assertions": [
+        "The agent did not apply survey-questionnaire-designer as the main skill for this request",
+        "The agent used or recommended statistical-test-selector",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "statistical-test-selector",
+      "expected_script": null
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "skill_name": "academic-tone-editor",
+  "evals": [
+    {
+      "id": "academic-tone-editor-001",
+      "prompt": "Copyedit this sentence: \"It is important to note that our proposed novel approach may possibly be able to potentially achieve a significant enhancement in terms of the accuracy.\"",
+      "expected_output": "The agent applied academic-tone-editor: Make academic writing clearer and tighter without changing what it says.",
+      "assertions": [
+        "The agent read the academic-tone-editor SKILL.md before acting",
+        "The agent marks what will not change: the claim's strength (tentative) and the term accuracy",
+        "The agent removes the empty opener and the stacked hedges, keeping one hedge",
+        "The agent queries \"significant\", which may mean statistically significant",
+        "The agent returns the edit with a change summary and the query",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "academic-tone-editor",
+      "expected_script": null
+    },
+    {
+      "id": "academic-tone-editor-002",
+      "prompt": "Improve the academic tone of this paragraph.",
+      "expected_output": "The agent applied academic-tone-editor and delivered its documented output, asking only for inputs that were missing and could not be inferred.",
+      "assertions": [
+        "The agent read the academic-tone-editor SKILL.md before acting",
+        "The response follows the skill's output format",
+        "The agent stated the limits of what it checked or could not verify",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "academic-tone-editor",
+      "expected_script": null
+    },
+    {
+      "id": "academic-tone-editor-003",
+      "prompt": "Review my paper's argument and experiments.",
+      "expected_output": "The agent recognised that this request is outside academic-tone-editor and handled it with self-peer-reviewer or pointed the user to it.",
+      "assertions": [
+        "The agent did not apply academic-tone-editor as the main skill for this request",
+        "The agent used or recommended self-peer-reviewer",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "self-peer-reviewer",
+      "expected_script": null
+    }
+  ]
+}

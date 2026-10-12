@@ -1,11 +1,19 @@
 ---
 name: citation-style-converter
-description: Converts reference lists and in-text citations between citation styles such as APA 7, IEEE, Vancouver, Harvard, Chicago, MLA, and AMA using pandoc with CSL style files, so the formatting comes from a citation processor instead of being typed by hand. Use when the user asks to "convert my references to APA", "change citation style from IEEE to Harvard", "format this reference in Vancouver", "the journal wants a different reference style", or "switch from numeric to author-year citations".
+description: "Converts reference lists and in-text citations between APA, IEEE, Vancouver, Harvard, Chicago, and MLA using pandoc and CSL. Use when a venue requires another style. Not for fixing metadata."
+version: 1.0.0
+metadata:
+  author: "Yash Kavaiya <yash.kavaiya3@gmail.com>"
+  tags: [citation-style, apa, ieee, csl, pandoc]
 ---
 
 # Citation Style Converter
 
 Change citation style by re-rendering structured reference data with a citation processor. Hand-reformatting hundreds of references produces errors; a CSL processor does not.
+
+## Purpose
+
+Change citation style by re-rendering structured reference records with a citation processor, so punctuation, order, and italics come from the style definition and not from retyping. In-text citations are converted through the document's own citation mechanism.
 
 ## When to use
 
@@ -15,13 +23,19 @@ Change citation style by re-rendering structured reference data with a citation 
 
 Hand off instead to fix the underlying reference data (`bibtex-manager`) or to check references are real (`citation-verifier`).
 
+## Prerequisites
+
+- pandoc 2.11 or later (`pandoc --version`).
+- The references as structured records (`.bib`, RIS, or CSL JSON).
+- The CSL style file for the target style, downloaded from the official CSL repository (network access needed once).
+
 ## Inputs
 
 - The references as structured data: `.bib`, RIS, EndNote XML, or CSL JSON. If the user has only a formatted list, see step 2.
 - The target style and edition (APA 7, IEEE, Vancouver, Harvard variant, Chicago author-date or notes, MLA 9), or the journal's name.
 - The manuscript format (LaTeX, Markdown, Word) when in-text citations must change too.
 
-## Workflow
+## Instructions
 
 1. **Identify the exact target style.** "Harvard" has no single definition; ask which institution's or journal's version. Many journals have their own CSL style; search the CSL repository by journal name.
 2. **Get structured data.** If the references exist only as formatted text:
@@ -32,13 +46,13 @@ Hand off instead to fix the underlying reference data (`bibtex-manager`) or to c
 
    | Style | File name |
    |---|---|
-   | APA 7th | `apa.csl` |
-   | IEEE | `ieee.csl` |
-   | Vancouver (NLM) | `nlm-citation-sequence.csl` |
-   | Harvard (Cite Them Right) | `harvard-cite-them-right.csl` |
-   | Chicago author-date | `chicago-author-date.csl` |
-   | MLA 9 | `modern-language-association.csl` |
-   | AMA | `american-medical-association.csl` |
+   | APA 7th | *apa.csl* |
+   | IEEE | *ieee.csl* |
+   | Vancouver (NLM) | *nlm-citation-sequence.csl* |
+   | Harvard (Cite Them Right) | *harvard-cite-them-right.csl* |
+   | Chicago author-date | *chicago-author-date.csl* |
+   | MLA 9 | *modern-language-association.csl* |
+   | AMA | *american-medical-association.csl* |
 
    ```bash
    curl -fLO https://raw.githubusercontent.com/citation-style-language/styles/master/apa.csl
@@ -75,6 +89,45 @@ Hand off instead to fix the underlying reference data (`bibtex-manager`) or to c
 - Sentences reworded for the citation form: ...
 ```
 
+## Examples
+
+Requests that should trigger this skill:
+
+- "Convert my reference list from IEEE to APA 7."
+- "The journal wants Vancouver style. Reformat my references."
+- "Format this reference in Harvard style."
+- "Switch my paper from numeric to author-year citations."
+- "Render refs.bib as a formatted reference list in Chicago style."
+
+Requests that belong to another skill:
+
+- "Clean and de-duplicate my .bib file." → use `bibtex-manager`
+- "Check my references are real." → use `citation-verifier`
+- "Write annotations for each reference." → use `annotated-bibliography-builder`
+
+### Worked example
+
+**Request:** "Render refs.bib as an APA 7 reference list, and also show the IEEE version."
+
+**What the agent does:**
+
+1. Confirms the target is APA 7th edition and downloads *apa.csl* and *ieee.csl* from the CSL repository.
+2. Runs `pandoc -f bibtex refs.bib --citeproc --csl apa.csl -t plain --wrap=none`.
+3. Repeats with *ieee.csl*.
+4. Reviews one entry of each type against the style guide and fixes a title-case problem in the `.bib` record, then re-renders.
+
+**Result (excerpt):**
+
+```markdown
+APA:
+LeCun, Y., Bengio, Y., & Hinton, G. (2015). Deep learning. Nature. https://doi.org/10.1038/nature14539
+
+IEEE:
+[1] Y. LeCun, Y. Bengio, and G. Hinton, "Deep learning," Nature, 2015, doi: 10.1038/nature14539.
+
+Entries needing your check: lecun2015 has no volume or pages in refs.bib, so they are absent from both renderings.
+```
+
 ## Quality bar and pitfalls
 
 - Do not hand-format or retype references. Formatting comes from the processor; typing introduces errors in punctuation, italics, and order.
@@ -84,6 +137,22 @@ Hand off instead to fix the underlying reference data (`bibtex-manager`) or to c
 - The style edition matters (APA 6 and 7 differ on DOIs, publisher locations, and author counts).
 - Check a sample of each reference type (article, book, chapter, conference paper, web page, thesis) against the official guide; rare types are where styles and data most often disagree.
 - If pandoc is not installed, say so and give the commands for the user to run; do not fall back to manual formatting presented as processed output.
+
+## Limitations
+
+- Output quality depends on the reference records. Missing fields and wrong capitalisation in the source carry into every style.
+- "Harvard" has many institutional variants; the exact one must be identified.
+- In Word documents with plain-text citations, in-text conversion is manual; a reference manager is needed for automatic updates.
+- Rare source types (legal cases, datasets, software) are handled unevenly by CSL styles and need checking against the manual.
+
+## Troubleshooting
+
+| Problem | Likely cause | Solution |
+|---|---|---|
+| `pandoc: command not found` | pandoc is not installed | Install pandoc, or give the user the commands to run; do not format by hand |
+| `curl: (22) The requested URL returned error: 404` when fetching a style | The style file name is wrong (there is no *vancouver.csl*) | Use *nlm-citation-sequence.csl* for Vancouver, or search the style name in the Zotero Style Repository |
+| Acronyms in titles are lowercased | The style applies sentence case and the title is unprotected | Protect the word in the record (`{BERT}`) with `bibtex-manager` and re-render |
+| An entry renders with missing parts | The record lacks volume, pages, or publisher | Complete the record from the publisher or Crossref; never type a guessed value |
 
 ## Related skills
 

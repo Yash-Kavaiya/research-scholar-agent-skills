@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Record handling and flow-diagram numbers for a PRISMA 2020 systematic review.
 
 Subcommands:

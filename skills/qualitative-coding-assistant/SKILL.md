@@ -1,11 +1,19 @@
 ---
 name: qualitative-coding-assistant
-description: Supports thematic analysis of interviews, focus groups, and open-ended responses, covering familiarisation, line-by-line coding with verbatim excerpts, a codebook, theme development, and a write-up with traceable quotes. Use when the user asks to "code these interviews", "do a thematic analysis", "find themes in these transcripts", "build a codebook", "analyse open-ended survey answers", or mentions Braun and Clarke, grounded theory coding, or NVivo-style coding.
+description: "Supports thematic analysis of interviews and open-ended responses: coding with verbatim excerpts, a codebook, themes, and write-up. Use when analysing qualitative text. Not for statistics."
+version: 1.0.0
+metadata:
+  author: "Yash Kavaiya <yash.kavaiya3@gmail.com>"
+  tags: [qualitative-research, thematic-analysis, coding, interviews]
 ---
 
 # Qualitative Coding Assistant
 
 Help the researcher code qualitative data systematically. Every code is anchored to exact words in the data, and the researcher makes the interpretive decisions.
+
+## Purpose
+
+Help a researcher code qualitative material systematically, with every code anchored to exact words from a named participant and location. The assistant produces a first pass and an audit trail; the researcher makes the interpretive decisions.
 
 ## When to use
 
@@ -14,6 +22,12 @@ Help the researcher code qualitative data systematically. Every code is anchored
 - Themes need developing, reviewing, or writing up.
 
 Hand off instead for the choice of qualitative design (`methodology-designer`) or the interview guide (`survey-questionnaire-designer`).
+
+## Prerequisites
+
+- Transcripts or responses with participant identifiers and line or turn numbers.
+- Confirmation that the material is anonymised and that the ethics approval and consent allow processing with an AI tool.
+- The research question and the chosen approach (reflexive thematic analysis, codebook, framework, grounded theory, or content analysis).
 
 ## Inputs
 
@@ -25,7 +39,7 @@ Hand off instead for the choice of qualitative design (`methodology-designer`) o
 
 **Check confidentiality first.** Ask whether the transcripts are anonymised and whether the ethics approval and consent allow processing with an AI tool. If names, places, or employers remain, replace them with placeholders before analysis.
 
-## Workflow
+## Instructions
 
 1. **Familiarise.** Read each transcript fully. Write a short memo per transcript: what stands out, and first impressions marked as impressions.
 2. **Code a first subset** (2 or 3 transcripts) line by line. For each meaningful segment record: participant, location, the verbatim excerpt, a short code, and a note. Codes describe what is in the segment (semantic) or what underlies it (latent); say which.
@@ -64,6 +78,44 @@ Negative cases: P05 (60–63)
 
 Deliver the coded-excerpt table as CSV as well, so it can be imported into NVivo, ATLAS.ti, MAXQDA, or a spreadsheet.
 
+## Examples
+
+Requests that should trigger this skill:
+
+- "Code these interview transcripts and find the themes."
+- "Do a thematic analysis of 12 interviews about remote teaching."
+- "Build a codebook from these two transcripts."
+- "Analyse 300 open-ended survey answers about campus safety."
+- "Review my themes using Braun and Clarke's approach."
+
+Requests that belong to another skill:
+
+- "Run a t test on my survey scores." → use `statistical-test-selector`
+- "Write the interview guide." → use `survey-questionnaire-designer`
+- "Which qualitative design should I use?" → use `methodology-designer`
+
+### Worked example
+
+**Request:** "Here are three anonymised interview transcripts (P01 to P03) with nurses about night shifts. Start coding inductively for my question: how do nurses cope with fatigue?"
+
+**What the agent does:**
+
+1. Confirms anonymisation and consent terms, then reads each transcript fully and writes a memo.
+2. Codes line by line, recording participant, location, verbatim excerpt, code, and note.
+3. Drafts a codebook with definitions and examples and asks the researcher to review it.
+4. Proposes candidate themes with their central ideas and negative cases.
+
+**Result (excerpt):**
+
+```markdown
+| ID | Participant | Location | Excerpt (verbatim) | Code(s) | Note |
+|---|---|---|---|---|---|
+| 7 | P02 | lines 41–43 | "We cover for each other, twenty minutes each, nobody writes it down" | Informal rest swaps | collective, unofficial |
+| 12 | P03 | lines 88–90 | "I just drink coffee till four and hope nothing happens" | Stimulant reliance | individual coping |
+
+Candidate theme: Coping is organised by the team, not the employer. Central idea: rest is arranged informally among colleagues. Negative case: P01 (lines 20–24) reports no such arrangement.
+```
+
 ## Quality bar and pitfalls
 
 - Quotes are verbatim and traceable to a participant and location. Never compose, merge, or "tidy" a quote, and never attribute one to the wrong participant. Mark any trimming with [...].
@@ -74,6 +126,22 @@ Deliver the coded-excerpt table as CSV as well, so it can be imported into NVivo
 - Do not quantify beyond what the design supports ("most participants" needs counting; percentages from 12 interviews mislead).
 - Keep contradicting cases. They strengthen the analysis.
 - Do not paste identifiable data into tools or outputs beyond what the ethics approval covers.
+
+## Limitations
+
+- The assistant's coding is a first pass that reflects the text alone. It lacks the researcher's knowledge of context, tone, and setting.
+- Themes drawn from a few transcripts are provisional until the rest are coded.
+- The analysis cannot be more trustworthy than the transcripts; errors in transcription carry through.
+- Use of an AI tool in analysis should be reported in the methods and must be permitted by the ethics approval.
+
+## Troubleshooting
+
+| Problem | Likely cause | Solution |
+|---|---|---|
+| Transcripts contain names or identifying details | Anonymisation is incomplete | Stop, replace identifiers with placeholders, and confirm the ethics terms before continuing |
+| Themes mirror the interview questions | Topic summaries were produced instead of patterns of meaning | Regroup codes across questions and write a central idea for each theme |
+| A quote cannot be found in the transcript | It was paraphrased or merged | Treat it as an error: replace it with the exact words and location, or remove it |
+| Two coders disagree often | Code definitions are ambiguous | Refine the definitions with apply and do-not-apply rules and recode a sample |
 
 ## Related skills
 

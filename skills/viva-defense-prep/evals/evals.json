@@ -1,0 +1,47 @@
+{
+  "skill_name": "viva-defense-prep",
+  "evals": [
+    {
+      "id": "viva-defense-prep-001",
+      "prompt": "My viva is in three weeks: thesis on machine learning for crop disease detection from phone photos, two examiners, one from agronomy and one from computer vision. Start with likely questions.",
+      "expected_output": "The agent applied viva-defense-prep: Get a candidate ready to explain, justify, and defend their own work aloud.",
+      "assertions": [
+        "The agent read the viva-defense-prep SKILL.md before acting",
+        "The agent establishes the format and reads the thesis as an examiner would",
+        "The agent generates questions by category, tied to chapters and figures",
+        "The agent looks up each examiner's recent work and predicts examiner-specific questions",
+        "The agent outlines answer points with page pointers and starts a mock session, one question at a time",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "viva-defense-prep",
+      "expected_script": null
+    },
+    {
+      "id": "viva-defense-prep-002",
+      "prompt": "Prepare me for my PhD viva next month.",
+      "expected_output": "The agent applied viva-defense-prep and delivered its documented output, asking only for inputs that were missing and could not be inferred.",
+      "assertions": [
+        "The agent read the viva-defense-prep SKILL.md before acting",
+        "The response follows the skill's output format, including: Defence preparation: <thesis title>",
+        "The agent stated the limits of what it checked or could not verify",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "viva-defense-prep",
+      "expected_script": null
+    },
+    {
+      "id": "viva-defense-prep-003",
+      "prompt": "Make the slides for my defence talk.",
+      "expected_output": "The agent recognised that this request is outside viva-defense-prep and handled it with paper-to-slides or pointed the user to it.",
+      "assertions": [
+        "The agent did not apply viva-defense-prep as the main skill for this request",
+        "The agent used or recommended paper-to-slides",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "paper-to-slides",
+      "expected_script": null
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "skill_name": "research-progress-tracker",
+  "evals": [
+    {
+      "id": "research-progress-tracker-001",
+      "prompt": "Here are my notes from today's supervisor meeting: agreed to switch to dataset B because A has label noise; I send chapter 2 draft in two weeks; she will introduce me to Dr. K; next meeting in three weeks.",
+      "expected_output": "The agent applied research-progress-tracker: Keep one small set of files that says, at any time, where a research effort stands against its deadlines, what was agreed with the supervisor, and what the next action is.",
+      "assertions": [
+        "The agent read the research-progress-tracker SKILL.md before acting",
+        "The agent reads the existing tracker files",
+        "The agent writes the meeting file with discussion, decisions, and actions",
+        "The agent copies the decision with its reason to *DECISIONS.md* and the actions with owner and due date to *ACTIONS.md*",
+        "The agent updates the milestone dates affected and drafts a follow-up email",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "research-progress-tracker",
+      "expected_script": null
+    },
+    {
+      "id": "research-progress-tracker-002",
+      "prompt": "Plan my thesis timeline; I must submit in 18 months.",
+      "expected_output": "The agent applied research-progress-tracker and delivered its documented output, asking only for inputs that were missing and could not be inferred.",
+      "assertions": [
+        "The agent read the research-progress-tracker SKILL.md before acting",
+        "The response follows the skill's output format, including: <Project> plan; Supervisor meeting, 2026-03-09",
+        "The agent stated the limits of what it checked or could not verify",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "research-progress-tracker",
+      "expected_script": null
+    },
+    {
+      "id": "research-progress-tracker-003",
+      "prompt": "Log this training run and its metrics.",
+      "expected_output": "The agent recognised that this request is outside research-progress-tracker and handled it with experiment-logger or pointed the user to it.",
+      "assertions": [
+        "The agent did not apply research-progress-tracker as the main skill for this request",
+        "The agent used or recommended experiment-logger",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "experiment-logger",
+      "expected_script": null
+    }
+  ]
+}

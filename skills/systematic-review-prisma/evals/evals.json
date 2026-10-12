@@ -1,0 +1,48 @@
+{
+  "skill_name": "systematic-review-prisma",
+  "evals": [
+    {
+      "id": "systematic-review-prisma-001",
+      "prompt": "I have pubmed.ris and scopus.csv for my review on ML sepsis prediction. De-duplicate them, and after I screen, give me the PRISMA diagram.",
+      "expected_output": "The agent applied systematic-review-prisma: Carry out a literature review that another team could repeat: a written protocol, documented searches, explicit eligibility criteria, recorded screening decisions, and a flow diagram whose numbers add up.",
+      "assertions": [
+        "The agent read the systematic-review-prisma SKILL.md before acting",
+        "The agent confirms the protocol and numbered eligibility criteria exist, and drafts them if not",
+        "The agent runs `run_script(\"scripts/prisma_flow.py\", args=\"dedupe pubmed.ris scopus.csv --out screening.csv --counts counts.json\")`",
+        "The agent after the user fills the decision columns, runs `tally` and then `diagram --format mermaid`",
+        "The agent reports the counts and any inconsistency the script found",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "systematic-review-prisma",
+      "expected_script": "prisma_flow.py"
+    },
+    {
+      "id": "systematic-review-prisma-002",
+      "prompt": "Help me do a systematic literature review on machine learning for sepsis prediction.",
+      "expected_output": "The agent applied systematic-review-prisma and delivered its documented output, asking only for inputs that were missing and could not be inferred.",
+      "assertions": [
+        "The agent read the systematic-review-prisma SKILL.md before acting",
+        "The response follows the skill's output format",
+        "The agent ran prisma_flow.py from the skill's scripts folder instead of computing the result by hand",
+        "The agent stated the limits of what it checked or could not verify",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "systematic-review-prisma",
+      "expected_script": "prisma_flow.py"
+    },
+    {
+      "id": "systematic-review-prisma-003",
+      "prompt": "Write a literature review chapter from these 20 papers.",
+      "expected_output": "The agent recognised that this request is outside systematic-review-prisma and handled it with literature-review-writer or pointed the user to it.",
+      "assertions": [
+        "The agent did not apply systematic-review-prisma as the main skill for this request",
+        "The agent used or recommended literature-review-writer",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "literature-review-writer",
+      "expected_script": null
+    }
+  ]
+}

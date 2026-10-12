@@ -1,11 +1,17 @@
 ---
 name: cover-letter-writer
-description: Writes the cover letter to a journal editor that accompanies a manuscript submission or revision, stating what the paper shows, why it fits the journal, and the required declarations, plus optional highlights and reviewer suggestions. Use when the user asks to "write a cover letter for my journal submission", "letter to the editor for my manuscript", "cover letter for my revised paper", "write the highlights for Elsevier", or "suggest reviewers for my submission".
+description: "Writes the cover letter to a journal editor for a submission or revision: what the paper shows, fit to the journal, and declarations. Use for journal submissions. Not for reviewer responses."
+version: 1.0.0
+metadata:
+  author: "Yash Kavaiya <yash.kavaiya3@gmail.com>"
+  tags: [cover-letter, journal-submission, editor]
 ---
 
 # Cover Letter Writer
 
-Write a one-page letter that tells the editor what the paper contributes and why it belongs in their journal, and that contains every declaration the journal requires.
+## Purpose
+
+Write a one-page letter that tells an editor what a manuscript contributes and why it belongs in their journal, and that carries every declaration the journal requires. Declarations are stated only when the author has confirmed them.
 
 ## When to use
 
@@ -14,6 +20,12 @@ Write a one-page letter that tells the editor what the paper contributes and why
 - Preparing the highlights, significance statement, or suggested-reviewer list the submission system asks for.
 
 Hand off instead for the detailed response to reviewers (`rebuttal-writer`) or choosing the journal (`venue-recommender`).
+
+## Prerequisites
+
+- The manuscript's title, abstract, and main finding.
+- The journal's aims and scope and its instructions for authors on cover letters.
+- Facts for the declarations: funding, conflicts of interest, ethics approval, availability of materials, and any preprint.
 
 ## Inputs
 
@@ -24,7 +36,7 @@ Hand off instead for the detailed response to reviewers (`rebuttal-writer`) or c
 - Facts for the declarations: funding, conflicts of interest, ethics approval, data and code availability, preprint or prior presentation, related manuscripts under review.
 - For a revision: the manuscript number and the decision letter.
 
-## Workflow
+## Instructions
 
 1. **Read the journal's instructions** for what the letter must contain. Requirements differ; some journals want specific statements verbatim.
 2. **Identify the fit**: which part of the journal's scope the paper serves, and one or two recent articles from the journal that the paper builds on or speaks to. Verify those articles exist and say what you describe (`paper-search`).
@@ -67,6 +79,45 @@ Followed, when requested, by:
 - Suggested reviewers table: name, affiliation, email, expertise, no-conflict confirmation
 - A list of placeholders the author must fill: `[ethics approval number]`, `[grant number]`
 
+## Examples
+
+Requests that should trigger this skill:
+
+- "Write a cover letter for my submission to the Journal of Hydrology."
+- "Draft the letter to the editor for my manuscript."
+- "Write a cover letter for my revised paper, manuscript ID 2025-0412."
+- "Write the highlights for an Elsevier journal."
+- "Suggest reviewers for my submission and format the list."
+
+Requests that belong to another skill:
+
+- "Write the point-by-point response to reviewers." → use `rebuttal-writer`
+- "Which journal should I choose?" → use `venue-recommender`
+- "Write a cold email to a professor." → use `supervisor-finder`
+
+### Worked example
+
+**Request:** "Cover letter to a remote-sensing journal for my paper: a method that maps flood extent from Sentinel-1 images with 91% accuracy on 14 events. No conflicts; funded by grant ABC-123; preprint on arXiv."
+
+**What the agent does:**
+
+1. Reads the journal's instructions and identifies the part of its scope the paper serves.
+2. Writes four paragraphs: submission statement, what was done and found, why it fits, declarations.
+3. States only the declarations the author confirmed and leaves a placeholder for the availability statement.
+4. Checks every fact against the abstract and keeps the letter to one page.
+
+**Result (excerpt):**
+
+```markdown
+Dear Dr. [Editor name],
+
+We submit our manuscript, "[Title]", for consideration as a research article in [Journal].
+
+Rapid flood mapping is limited by cloud cover in optical imagery. We present a method that maps flood extent from Sentinel-1 radar images and evaluate it on 14 flood events, where it reaches 91% overall accuracy.
+
+... The work was funded by grant ABC-123. The authors declare no conflicts of interest. A preprint is available on arXiv ([identifier]). [Data availability statement to be confirmed.]
+```
+
 ## Quality bar and pitfalls
 
 - Declarations are statements of fact made by the authors. Never write "no conflicts of interest", "approved by the ethics committee", or "not under review elsewhere" unless the author has confirmed it. Use a bracketed placeholder and ask.
@@ -77,6 +128,21 @@ Followed, when requested, by:
 - Suggested reviewers must be real, independent experts with verifiable institutional emails. Never invent a reviewer or an address; fabricated reviewer contacts are grounds for retraction.
 - Disclose preprints and overlapping publications. Undisclosed overlap is treated as misconduct.
 - Keep it to one page.
+
+## Limitations
+
+- The letter relies on facts the author supplies. Declarations cannot be verified by the agent.
+- Journals differ in what a cover letter must contain; the instructions for authors govern.
+- Suggested reviewers must be identified and verified by retrieval; the agent cannot vouch for the absence of conflicts.
+- A cover letter supports a submission; it does not change the editor's judgement of fit.
+
+## Troubleshooting
+
+| Problem | Likely cause | Solution |
+|---|---|---|
+| A required declaration is unknown | The author has not supplied it | Insert a bracketed placeholder and ask; never assert it |
+| The letter repeats the abstract | It was summarised instead of argued | State the advance and the fit in new wording, two to four sentences each |
+| The wrong journal or editor name appears | Text was reused from an earlier submission, which is an avoidable error | Check journal name, editor, and article type against the journal's site before sending |
 
 ## Related skills
 

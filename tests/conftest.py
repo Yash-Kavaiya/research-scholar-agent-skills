@@ -4,6 +4,7 @@ import importlib.util
 import sys
 from pathlib import Path
 
+sys.dont_write_bytecode = True  # tests must not leave __pycache__ inside skills
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "shared"))
 sys.path.insert(0, str(ROOT / "tools"))

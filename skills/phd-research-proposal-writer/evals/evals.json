@@ -1,0 +1,47 @@
+{
+  "skill_name": "phd-research-proposal-writer",
+  "evals": [
+    {
+      "id": "phd-research-proposal-writer-001",
+      "prompt": "PhD proposal, 2,000 words, for a UK computer science department. Interest: detecting dyslexia early from children's handwriting with machine learning. I have an MSc project on handwriting recognition.",
+      "expected_output": "The agent applied phd-research-proposal-writer: Help a candidate write a proposal that shows a committee there is a real gap, a workable plan to address it, and a scope that fits a doctoral timeline.",
+      "assertions": [
+        "The agent read the phd-research-proposal-writer SKILL.md before acting",
+        "The agent asks for the department's format and the candidate's own ideas, then narrows the topic to a specific problem",
+        "The agent searches the literature, establishes the gap from retrieved papers, and writes the questions and objectives",
+        "The agent proposes methodology per objective, naming a candidate public dataset to confirm",
+        "The agent drafts the timeline and contributions and verifies the references",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "phd-research-proposal-writer",
+      "expected_script": null
+    },
+    {
+      "id": "phd-research-proposal-writer-002",
+      "prompt": "Write a PhD research proposal on AI for early dyslexia detection.",
+      "expected_output": "The agent applied phd-research-proposal-writer and delivered its documented output, asking only for inputs that were missing and could not be inferred.",
+      "assertions": [
+        "The agent read the phd-research-proposal-writer SKILL.md before acting",
+        "The response follows the skill's output format, including: <Title>",
+        "The agent stated the limits of what it checked or could not verify",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "phd-research-proposal-writer",
+      "expected_script": null
+    },
+    {
+      "id": "phd-research-proposal-writer-003",
+      "prompt": "Write a grant proposal for a funding agency.",
+      "expected_output": "The agent recognised that this request is outside phd-research-proposal-writer and handled it with grant-proposal-writer or pointed the user to it.",
+      "assertions": [
+        "The agent did not apply phd-research-proposal-writer as the main skill for this request",
+        "The agent used or recommended grant-proposal-writer",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "grant-proposal-writer",
+      "expected_script": null
+    }
+  ]
+}

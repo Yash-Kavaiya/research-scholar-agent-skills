@@ -1,0 +1,47 @@
+{
+  "skill_name": "reproducibility-checklist",
+  "evals": [
+    {
+      "id": "reproducibility-checklist-001",
+      "prompt": "Complete the NeurIPS checklist for the attached paper and tell me what to add before the deadline.",
+      "expected_output": "The agent applied reproducibility-checklist: Answer each checklist item from what the paper and its artifacts actually contain, cite where, and turn every gap into a concrete fix.",
+      "assertions": [
+        "The agent read the reproducibility-checklist SKILL.md before acting",
+        "The agent obtains this year's checklist from the template and reads the paper and appendix",
+        "The agent answers each item with Yes, No, or N/A, a justification, and the location; applies the rule that Yes needs a location",
+        "The agent audits experimental details: finds seeds and error bars reported, compute and hyperparameter search missing",
+        "The agent writes the action list with draft text for each gap",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "reproducibility-checklist",
+      "expected_script": null
+    },
+    {
+      "id": "reproducibility-checklist-002",
+      "prompt": "Fill in the NeurIPS paper checklist for my submission.",
+      "expected_output": "The agent applied reproducibility-checklist and delivered its documented output, asking only for inputs that were missing and could not be inferred.",
+      "assertions": [
+        "The agent read the reproducibility-checklist SKILL.md before acting",
+        "The response follows the skill's output format",
+        "The agent stated the limits of what it checked or could not verify",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "reproducibility-checklist",
+      "expected_script": null
+    },
+    {
+      "id": "reproducibility-checklist-003",
+      "prompt": "Reimplement this paper from the PDF.",
+      "expected_output": "The agent recognised that this request is outside reproducibility-checklist and handled it with paper-to-code-reproducer or pointed the user to it.",
+      "assertions": [
+        "The agent did not apply reproducibility-checklist as the main skill for this request",
+        "The agent used or recommended paper-to-code-reproducer",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "paper-to-code-reproducer",
+      "expected_script": null
+    }
+  ]
+}

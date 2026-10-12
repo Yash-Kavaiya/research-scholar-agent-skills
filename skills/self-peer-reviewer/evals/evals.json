@@ -1,0 +1,47 @@
+{
+  "skill_name": "self-peer-reviewer",
+  "evals": [
+    {
+      "id": "self-peer-reviewer-001",
+      "prompt": "Mock review for a top ML conference, deadline in 6 days: a paper claiming a new attention variant is faster and as accurate as the standard one.",
+      "expected_output": "The agent applied self-peer-reviewer: Find the reasons a reviewer would reject a paper while there is still time to fix them.",
+      "assertions": [
+        "The agent read the self-peer-reviewer SKILL.md before acting",
+        "The agent reads in reviewer order and summarises the paper in four sentences",
+        "The agent maps each claim to evidence and reviews novelty, soundness, experiments, and clarity",
+        "The agent takes expert, methodologist, and outsider stances",
+        "The agent ranks weaknesses, scores on the venue's scale, and builds a 6-day fix plan",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "self-peer-reviewer",
+      "expected_script": null
+    },
+    {
+      "id": "self-peer-reviewer-002",
+      "prompt": "Review my paper before I submit to ACL.",
+      "expected_output": "The agent applied self-peer-reviewer and delivered its documented output, asking only for inputs that were missing and could not be inferred.",
+      "assertions": [
+        "The agent read the self-peer-reviewer SKILL.md before acting",
+        "The response follows the skill's output format, including: Mock review: <title> for <venue>",
+        "The agent stated the limits of what it checked or could not verify",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "self-peer-reviewer",
+      "expected_script": null
+    },
+    {
+      "id": "self-peer-reviewer-003",
+      "prompt": "Critique this published paper for journal club.",
+      "expected_output": "The agent recognised that this request is outside self-peer-reviewer and handled it with paper-critic or pointed the user to it.",
+      "assertions": [
+        "The agent did not apply self-peer-reviewer as the main skill for this request",
+        "The agent used or recommended paper-critic",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "paper-critic",
+      "expected_script": null
+    }
+  ]
+}

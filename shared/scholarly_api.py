@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Small standard-library client for free scholarly APIs.
 
 Sources: arXiv, Semantic Scholar, OpenAlex, PubMed (NCBI E-utilities), Crossref.
@@ -48,12 +49,15 @@ def http_get(url: str, params: dict | None = None, headers: dict | None = None,
     if params:
         clean = {k: v for k, v in params.items() if v is not None}
         url = url + ("&" if "?" in url else "?") + urllib.parse.urlencode(clean)
+    if not url.lower().startswith("https://"):
+        raise ApiError(f"refusing to fetch a non-HTTPS URL: {url}")
     request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, **(headers or {})})
     delay = 2.0
     last: Exception | None = None
     for attempt in range(retries):
         try:
-            with urllib.request.urlopen(request, timeout=timeout) as response:
+            # The scheme is checked above, so file: and custom schemes cannot reach urlopen.
+            with urllib.request.urlopen(request, timeout=timeout) as response:  # nosec B310
                 return response.read()
         except urllib.error.HTTPError as exc:
             last = exc
@@ -165,7 +169,10 @@ def dedupe(papers: list[dict]) -> list[dict]:
 
 
 def parse_arxiv(xml_bytes: bytes) -> list[dict]:
-    root = ET.fromstring(xml_bytes)
+    # Refuse documents that declare a DTD or entities, which is how XML expansion attacks are delivered.
+    if b"<!DOCTYPE" in xml_bytes or b"<!ENTITY" in xml_bytes:
+        raise ApiError("arXiv response contains a DTD or entity declaration; refusing to parse it")
+    root = ET.fromstring(xml_bytes)  # nosec B314
     papers = []
     for entry in root.findall(ATOM + "entry"):
         url = (entry.findtext(ATOM + "id") or "").strip()

@@ -1,11 +1,19 @@
 ---
 name: supervisor-finder
-description: Finds potential PhD supervisors, postdoctoral mentors, and collaborators whose current research matches the user's interests, by searching recent publications and verifying each person's position on official pages, then drafts a short personalised first-contact email. Use when the user asks to "find professors working on X", "find a PhD supervisor", "who should I contact for a PhD in X", "find labs in Germany or the US for my topic", "write a cold email to a professor", or "check whether this professor is a good fit".
+description: "Finds potential PhD supervisors or collaborators by research fit from recent publications, verifies them on official pages, and drafts a first email. Use when seeking a supervisor. Not for the SOP."
+version: 1.0.0
+metadata:
+  author: "Yash Kavaiya <yash.kavaiya3@gmail.com>"
+  tags: [phd-supervisor, academic-networking, cold-email, collaboration]
 ---
 
 # Supervisor Finder
 
 Identify researchers who are active in the user's area right now, confirm the facts about each, and help the user write to them in a way that gets read.
+
+## Purpose
+
+Identify researchers who are active in the user's area now, confirm the facts about each from official sources, and help the user write a short, specific first email. Fit is judged from recent work, not from reputation alone.
 
 ## When to use
 
@@ -15,6 +23,12 @@ Identify researchers who are active in the user's area right now, confirm the fa
 
 Hand off instead for the statement of purpose (`sop-and-research-statement-writer`) or the research proposal (`phd-research-proposal-writer`).
 
+## Prerequisites
+
+- Research interests specific enough to search: a problem and a method.
+- The user's constraints (countries, start date, funding) and background.
+- The `paper-search` skill and network access to institutional pages.
+
 ## Inputs
 
 - Research interests, specific enough to search (a problem and a method, not a field).
@@ -22,7 +36,7 @@ Hand off instead for the statement of purpose (`sop-and-research-statement-write
 - The user's background: degree, relevant projects, publications, skills.
 - Any names already under consideration.
 
-## Workflow
+## Instructions
 
 1. **Turn the interest into search queries**: 3 to 5 phrasings of the topic, as in `paper-search`.
 2. **Find who is publishing on it now.** Use `paper-search` restricted to the last 3 to 4 years (its `--year-from` option, with JSON output), and tally the authors across the results. The senior or corresponding author (often last in CS, sciences, and engineering) is usually the group leader; first authors are usually students. Also check: programme committees and recent papers of the top venues in the area, authors of key papers found with `citation-graph-explorer`, and faculty lists of target departments.
@@ -66,6 +80,46 @@ Subject: ...
 - Confirm: <facts to recheck>; attach: CV, transcript
 ```
 
+## Examples
+
+Requests that should trigger this skill:
+
+- "Find professors working on reinforcement learning for robotics in Germany."
+- "Who should I contact for a PhD on climate econometrics?"
+- "Find me potential PhD supervisors in the UK for federated learning."
+- "Write a cold email to a professor about joining their lab."
+- "Is this professor a good fit for my interests?"
+
+Requests that belong to another skill:
+
+- "Write my statement of purpose." → use `sop-and-research-statement-writer`
+- "Write my PhD research proposal." → use `phd-research-proposal-writer`
+- "Recommend a journal for my paper." → use `venue-recommender`
+
+### Worked example
+
+**Request:** "I want a PhD on speech recognition for low-resource Indian languages, in Europe, starting autumn next year. I built a 40-hour Gujarati corpus. Find supervisors and draft an email."
+
+**What the agent does:**
+
+1. Writes four query phrasings and searches the last three years with `paper-search`, tallying senior authors.
+2. Verifies each candidate's current position and student instructions on institutional pages.
+3. Reads two recent papers from the top candidates and shortlists six with one reason each.
+4. Drafts a 150-word email for the first candidate citing one of their recent papers accurately.
+
+**Result (excerpt):**
+
+```markdown
+| # | Name, position | Institution | Recent focus | Why a fit | Application notes | Source |
+|---|---|---|---|---|---|---|
+| 1 | Prof. [verified name] | [university] | multilingual ASR, code-switching | recent paper on Indic code-switched speech | page says: apply via the doctoral school; email welcome | faculty page, checked today |
+
+Subject: Prospective PhD student (autumn 2027): ASR for low-resource Indian languages
+
+Dear Prof. [name],
+I am finishing an MSc at [university], where I built a 40-hour Gujarati speech corpus. Your recent paper on code-switched ASR ...
+```
+
 ## Quality bar and pitfalls
 
 - Every person, position, and paper must be verified from a retrieved source. Never produce a professor, email address, or paper from memory; a wrong affiliation or an invented paper in a first email ends the contact.
@@ -76,6 +130,22 @@ Subject: ...
 - Citation counts and rankings do not measure supervision quality. Where the user can, they should talk to current and former students.
 - Respect stated preferences: if the page says "do not email, apply through the portal", the advice is to apply through the portal.
 - Check eligibility and deadlines of the programme itself; a willing supervisor does not replace admission.
+
+## Limitations
+
+- People move and stop taking students; every fact is verified at the time of the search and should be rechecked before sending.
+- Publication search under-represents researchers who publish in venues the indexes cover poorly.
+- Fit on paper says nothing about supervision style; current and former students are the best source for that.
+- A positive reply from a supervisor does not replace admission to the programme.
+
+## Troubleshooting
+
+| Problem | Likely cause | Solution |
+|---|---|---|
+| Few candidates are found | The interest is phrased too narrowly | Search the method and the problem separately and widen the countries |
+| A candidate's affiliation is uncertain | Recent papers list a previous institution | Check the institutional page and ORCID; drop the candidate if it cannot be verified |
+| No published contact route is found | The page gives no email or says not to email | Follow the stated application route; never guess an address, since an invalid address or unwanted contact harms the application |
+| Emails get no reply | The message is generic or too long | Shorten to about 150 words with one specific connection, and follow up once after two weeks |
 
 ## Related skills
 

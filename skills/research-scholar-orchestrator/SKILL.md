@@ -1,11 +1,19 @@
 ---
 name: research-scholar-orchestrator
-description: Routes any research or academic request to the right research-scholar skill or sequence of skills, covering topic selection, literature search and review, study design, analysis, writing, figures, citations, submission, funding, and dissemination. Use when a research request spans several stages, when it is unclear which skill applies, or when the user says "help me with my research", "I am starting a PhD or thesis", "what should I do next on my paper", "take this project from A to B", or names a goal such as "get this paper ready to submit".
+description: "Routes a research request to the right research-scholar skills in sequence, from topic selection to submission. Use when a request spans stages or the right skill is unclear. Not for single tasks."
+version: 1.0.0
+metadata:
+  author: "Yash Kavaiya <yash.kavaiya3@gmail.com>"
+  tags: [orchestration, routing, research-workflow]
 ---
 
 # Research Scholar Orchestrator
 
 Work out where the user is in the research lifecycle, pick the smallest set of skills that gets them to their stated goal, and run them in an order where each one's output feeds the next.
+
+## Purpose
+
+Work out where a researcher is in the research lifecycle, pick the smallest set of skills that reaches their stated goal, and run them in an order where each output feeds the next. It also applies the collection's integrity rules at every step.
 
 ## When to use
 
@@ -14,6 +22,12 @@ Work out where the user is in the research lifecycle, pick the smallest set of s
 - A long project needs a plan across stages.
 
 Go straight to a single skill when the request names one task that one skill covers. Use `idea-to-paper-pipeline` when the user wants the whole path from topic to reviewed draft.
+
+## Prerequisites
+
+- The other research-scholar skills installed alongside this one.
+- The user's goal, field, deadline, and what already exists (topic, papers, results, draft).
+- Whatever the routed skills need: several require Python and network access.
 
 ## Inputs
 
@@ -24,7 +38,7 @@ Go straight to a single skill when the request names one task that one skill cov
 
 Ask at most two or three questions, only for what cannot be inferred. State the assumption and proceed for everything else.
 
-## Workflow
+## Instructions
 
 1. **Locate the stage.** Identify the furthest point the user has reached: no topic; topic but no question; question but no design; data but no analysis; results but no draft; draft but not submission-ready; under review; accepted; or applying for a position or funding.
 2. **Match the request to skills** with the routing table.
@@ -86,6 +100,45 @@ Stage: <where you are now>. Deadline: <date or none>.
 - Next: ...
 ```
 
+## Examples
+
+Requests that should trigger this skill:
+
+- "Help me with my research; I'm starting a master's thesis on smart grids."
+- "I have results and a deadline in three weeks. What do I do next?"
+- "Get this paper ready to submit to a journal."
+- "Take me from this dataset to a conference paper."
+- "I don't know where to start with my literature review and methodology."
+
+Requests that belong to another skill:
+
+- "Find papers on smart grids." → use `paper-search`
+- "Check my references are real." → use `citation-verifier`
+- "Run the whole pipeline from idea to draft." → use `idea-to-paper-pipeline`
+
+### Worked example
+
+**Request:** "I have a finished draft and results for a paper on anomaly detection in smart meters. Deadline in 10 days for a journal I haven't chosen. What should I do?"
+
+**What the agent does:**
+
+1. Locates the stage: draft exists, not submission-ready, venue open.
+2. Matches the request to the submission-readiness and venue routes and trims steps already done.
+3. Presents a five-step plan with what each produces and the decisions needed, then starts with the mock review.
+4. Runs each skill, stops at the venue decision, and closes with status.
+
+**Result (excerpt):**
+
+```markdown
+| Step | Skill | Produces | Needs from you |
+|---|---|---|---|
+| 1 | self-peer-reviewer | mock review and fix list | the journal type you aim for |
+| 2 | citation-verifier | verified bibliography | refs.bib and the .tex file |
+| 3 | venue-recommender | ranked shortlist | indexing and fee constraints |
+| 4 | latex-paper-formatter | draft in the journal template | choice of journal |
+| 5 | camera-ready-checker, cover-letter-writer | checked PDF and letter | declarations |
+```
+
 ## Quality bar and pitfalls
 
 These rules hold across every skill in the collection:
@@ -103,6 +156,22 @@ Routing pitfalls:
 - Do not skip the design and analysis skills to reach the writing skills; a paper written on weak results needs the results fixed, not better prose.
 - Do not continue past a failed step (no gap found, idea already published, underpowered design, unverifiable references). Report it and replan.
 - Current facts (deadlines, page limits, scheme rules, templates) come from the source at the time of use.
+
+## Limitations
+
+- The orchestrator plans and sequences; the quality of each step depends on the routed skill and its inputs.
+- It cannot do the research itself: collecting observations, running experiments, and obtaining approvals remain with the user.
+- Long projects span sessions; continuity depends on files kept in the project folder.
+- Routing reflects the skills in this collection and does not cover tasks outside them.
+
+## Troubleshooting
+
+| Problem | Likely cause | Solution |
+|---|---|---|
+| It is unclear which stage the user is at | The request names a goal without the current state | Ask what exists (topic, papers, results, draft) in at most three questions |
+| A step fails or returns a blocking finding | For example no gap found, idea already published, or references that cannot be verified | Stop, report it, and replan from the earlier stage instead of continuing |
+| The plan is too long for the deadline | Too many skills were chained | Keep the steps that affect acceptance and integrity and drop the optional ones |
+| A routed skill is not installed | Only part of the collection was copied | Install the missing skill or follow its steps manually and say so |
 
 ## Related skills
 

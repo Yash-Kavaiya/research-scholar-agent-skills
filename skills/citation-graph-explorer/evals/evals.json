@@ -1,0 +1,48 @@
+{
+  "skill_name": "citation-graph-explorer",
+  "evals": [
+    {
+      "id": "citation-graph-explorer-001",
+      "prompt": "I have the BERT paper (10.18653/v1/N19-1423). What does it build on and what are the main follow-ups?",
+      "expected_output": "The agent applied citation-graph-explorer: Start from papers the user trusts and find what they build on and what builds on them.",
+      "assertions": [
+        "The agent read the citation-graph-explorer SKILL.md before acting",
+        "The agent confirms the DOI resolves to the BERT paper",
+        "The agent runs `run_script(\"scripts/citation_graph.py\", args=\"10.18653/v1/N19-1423 --top 10\")`",
+        "The agent labels each reference as a foundation of the topic or a general tool, and drops general tools such as ImageNet",
+        "The agent runs a dated `paper-search` for the newest follow-ups, since the forward list favours older papers",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "citation-graph-explorer",
+      "expected_script": "citation_graph.py"
+    },
+    {
+      "id": "citation-graph-explorer-002",
+      "prompt": "What are the foundational papers behind BERT?",
+      "expected_output": "The agent applied citation-graph-explorer and delivered its documented output, asking only for inputs that were missing and could not be inferred.",
+      "assertions": [
+        "The agent read the citation-graph-explorer SKILL.md before acting",
+        "The response follows the skill's output format",
+        "The agent ran citation_graph.py from the skill's scripts folder instead of computing the result by hand",
+        "The agent stated the limits of what it checked or could not verify",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "citation-graph-explorer",
+      "expected_script": "citation_graph.py"
+    },
+    {
+      "id": "citation-graph-explorer-003",
+      "prompt": "Find papers on language model pretraining.",
+      "expected_output": "The agent recognised that this request is outside citation-graph-explorer and handled it with paper-search or pointed the user to it.",
+      "assertions": [
+        "The agent did not apply citation-graph-explorer as the main skill for this request",
+        "The agent used or recommended paper-search",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "paper-search",
+      "expected_script": null
+    }
+  ]
+}

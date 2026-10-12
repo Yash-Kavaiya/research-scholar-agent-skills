@@ -1,0 +1,47 @@
+{
+  "skill_name": "venue-recommender",
+  "evals": [
+    {
+      "id": "venue-recommender-001",
+      "prompt": "Suggest journals for my paper: a deep learning model for crop disease detection from smartphone photos. My university requires Scopus or SCIE indexing; no budget for fees.",
+      "expected_output": "The agent applied venue-recommender: Produce a shortlist of venues where a paper fits and has a realistic chance, in a recommended submission order, with every fact about each venue taken from a current source.",
+      "assertions": [
+        "The agent read the venue-recommender SKILL.md before acting",
+        "The agent characterises the paper as an applied method with a solid, incremental contribution",
+        "The agent searches for the 20 closest recent papers and tallies their venues",
+        "The agent checks each candidate's scope, indexing on the index's own list, fees, and decision time, recording source and date",
+        "The agent screens for predatory signs and recommends an order",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "venue-recommender",
+      "expected_script": null
+    },
+    {
+      "id": "venue-recommender-002",
+      "prompt": "Where should I submit this paper on federated learning?",
+      "expected_output": "The agent applied venue-recommender and delivered its documented output, asking only for inputs that were missing and could not be inferred.",
+      "assertions": [
+        "The agent read the venue-recommender SKILL.md before acting",
+        "The response follows the skill's output format",
+        "The agent stated the limits of what it checked or could not verify",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "venue-recommender",
+      "expected_script": null
+    },
+    {
+      "id": "venue-recommender-003",
+      "prompt": "Format my paper for the chosen journal.",
+      "expected_output": "The agent recognised that this request is outside venue-recommender and handled it with latex-paper-formatter or pointed the user to it.",
+      "assertions": [
+        "The agent did not apply venue-recommender as the main skill for this request",
+        "The agent used or recommended latex-paper-formatter",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "latex-paper-formatter",
+      "expected_script": null
+    }
+  ]
+}

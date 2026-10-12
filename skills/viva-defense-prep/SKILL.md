@@ -1,11 +1,19 @@
 ---
 name: viva-defense-prep
-description: Prepares a candidate for a thesis viva, dissertation defence, proposal defence, or qualifying exam by generating the questions examiners are likely to ask from the candidate's own thesis, outlining answers built from its content, running mock question sessions with feedback, and planning the opening presentation. Use when the user asks to "prepare me for my viva", "what will examiners ask about my thesis", "mock defence", "practice defence questions", "prepare for my PhD defence or pre-submission seminar", or "how do I answer questions about my limitations".
+description: "Prepares a candidate for a thesis viva or defence: likely examiner questions, answer outlines, mock sessions, and a final-week plan. Use before a viva or proposal defence. Not for making slides."
+version: 1.0.0
+metadata:
+  author: "Yash Kavaiya <yash.kavaiya3@gmail.com>"
+  tags: [viva, thesis-defense, oral-exam, phd]
 ---
 
 # Viva and Defence Prep
 
 Get the candidate ready to explain, justify, and defend their own work aloud. The preparation is built from their thesis, and the answers must be ones they understand and can give themselves.
+
+## Purpose
+
+Get a candidate ready to explain, justify, and defend their own work aloud. Questions are generated from the candidate's thesis and the examiners' interests, answers are outlined for the candidate to phrase themselves, and mock sessions give feedback.
 
 ## When to use
 
@@ -15,6 +23,12 @@ Get the candidate ready to explain, justify, and defend their own work aloud. Th
 
 Hand off instead for the defence slides (`paper-to-slides`) or for a critique of the thesis as a document (`self-peer-reviewer`).
 
+## Prerequisites
+
+- The thesis or proposal, ideally in full.
+- The examination format and regulations of the university, and the examiners' names and fields if known.
+- The candidate's own list of worries and the time until the examination.
+
 ## Inputs
 
 - The thesis or proposal, in full if possible; at least the abstract, contributions, methodology, and conclusions.
@@ -23,7 +37,7 @@ Hand off instead for the defence slides (`paper-to-slides`) or for a critique of
 - The candidate's own list of what worries them.
 - Time until the exam.
 
-## Workflow
+## Instructions
 
 1. **Establish the format** from the university's regulations and the supervisor: who examines, how long, whether there is a presentation, and what outcomes are possible.
 2. **Read the thesis as an examiner would.** Note the claimed contributions, every methodological choice, the weakest evidence, anything unusual, and any inconsistency between chapters.
@@ -78,6 +92,44 @@ Format: <examiners, duration, presentation>. Date: ...
 ## Final-week checklist
 ```
 
+## Examples
+
+Requests that should trigger this skill:
+
+- "Prepare me for my PhD viva next month."
+- "What questions will examiners ask about my thesis?"
+- "Run a mock defence with me."
+- "How do I answer questions about the limitations of my study?"
+- "Help me prepare for my proposal defence."
+
+Requests that belong to another skill:
+
+- "Make the slides for my defence talk." → use `paper-to-slides`
+- "Review my thesis as a document." → use `self-peer-reviewer`
+- "Write my thesis corrections." → use `thesis-chapter-writer`
+
+### Worked example
+
+**Request:** "My viva is in three weeks: thesis on machine learning for crop disease detection from phone photos, two examiners, one from agronomy and one from computer vision. Start with likely questions."
+
+**What the agent does:**
+
+1. Establishes the format and reads the thesis as an examiner would.
+2. Generates questions by category, tied to chapters and figures.
+3. Looks up each examiner's recent work and predicts examiner-specific questions.
+4. Outlines answer points with page pointers and starts a mock session, one question at a time.
+
+**Result (excerpt):**
+
+```markdown
+| # | Question | Category | Answer points (thesis location) |
+|---|---|---|---|
+| 3 | Why did you collect photos in one season only? | Methodology | funding window (Section 3.2); effect: no seasonal variation (limitation, Section 7.1); what would fix it |
+| 9 | Walk me through Figure 5.4. | Results | axes; what the gap at low light shows; link to Section 5.3 |
+
+Mock feedback, question 3: the answer defended the choice but did not state the consequence. Add one sentence on what the single season means for generalisation, then stop.
+```
+
 ## Quality bar and pitfalls
 
 - Answers come from the candidate's thesis and understanding. Do not write polished answers to memorise; examiners detect recitation and follow-up questions break it. Give points and have the candidate phrase them.
@@ -88,6 +140,22 @@ Format: <examiners, duration, presentation>. Date: ...
 - Be honest in feedback. If an answer is weak or the candidate cannot explain a part of their thesis, say so now, while there is time to fix it.
 - Formats and outcomes differ by country and institution. Take them from the regulations, not from general knowledge.
 - Preparation covers the whole thesis, including the early chapters written years ago.
+
+## Limitations
+
+- Predicted questions are probabilities; unexpected ones will come.
+- Answer outlines come from the thesis. The candidate must phrase and own the answers; memorised text fails under follow-up.
+- Examination formats and outcomes differ by institution and are taken from its regulations.
+- Text-based mock sessions do not reproduce the pressure of speaking aloud to examiners.
+
+## Troubleshooting
+
+| Problem | Likely cause | Solution |
+|---|---|---|
+| The candidate cannot explain a part of the thesis | It was written long ago or by a co-author | Reread that chapter, re-derive the key step, and rehearse explaining it aloud |
+| Answers run too long | No structure | Answer in one sentence, give the reasoning, acknowledge the limit, and stop |
+| A question exposes a real weakness or an error | The thesis has a limitation or mistake | Agree, explain the choice, state its effect, and say what would address it; note errors on a corrections sheet |
+| Examiner information is missing | Examiners are not yet announced | Prepare the standard categories and add examiner-specific questions once names are known |
 
 ## Related skills
 

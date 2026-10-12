@@ -1,0 +1,47 @@
+{
+  "skill_name": "citation-style-converter",
+  "evals": [
+    {
+      "id": "citation-style-converter-001",
+      "prompt": "Render refs.bib as an APA 7 reference list, and also show the IEEE version.",
+      "expected_output": "The agent applied citation-style-converter: Change citation style by re-rendering structured reference records with a citation processor, so punctuation, order, and italics come from the style definition and not from retyping.",
+      "assertions": [
+        "The agent read the citation-style-converter SKILL.md before acting",
+        "The agent confirms the target is APA 7th edition and downloads *apa.csl* and *ieee.csl* from the CSL repository",
+        "The agent runs `pandoc -f bibtex refs.bib --citeproc --csl apa.csl -t plain --wrap=none`",
+        "The agent repeats with *ieee.csl*",
+        "The agent reviews one entry of each type against the style guide and fixes a title-case problem in the `.bib` record, then re-renders",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "citation-style-converter",
+      "expected_script": null
+    },
+    {
+      "id": "citation-style-converter-002",
+      "prompt": "Convert my reference list from IEEE to APA 7.",
+      "expected_output": "The agent applied citation-style-converter and delivered its documented output, asking only for inputs that were missing and could not be inferred.",
+      "assertions": [
+        "The agent read the citation-style-converter SKILL.md before acting",
+        "The response follows the skill's output format",
+        "The agent stated the limits of what it checked or could not verify",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "citation-style-converter",
+      "expected_script": null
+    },
+    {
+      "id": "citation-style-converter-003",
+      "prompt": "Clean and de-duplicate my .bib file.",
+      "expected_output": "The agent recognised that this request is outside citation-style-converter and handled it with bibtex-manager or pointed the user to it.",
+      "assertions": [
+        "The agent did not apply citation-style-converter as the main skill for this request",
+        "The agent used or recommended bibtex-manager",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "bibtex-manager",
+      "expected_script": null
+    }
+  ]
+}

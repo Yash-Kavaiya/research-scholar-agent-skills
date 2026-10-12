@@ -1,0 +1,47 @@
+{
+  "skill_name": "idea-to-paper-pipeline",
+  "evals": [
+    {
+      "id": "idea-to-paper-pipeline-001",
+      "prompt": "Start the pipeline: topic is detecting fake reviews with graph neural networks; target a mid-tier data mining conference in five months.",
+      "expected_output": "The agent applied idea-to-paper-pipeline: Chain the collection's skills into one process from topic to mock-reviewed draft, with a checkpoint after every stage where the researcher decides.",
+      "assertions": [
+        "The agent read the idea-to-paper-pipeline SKILL.md before acting",
+        "The agent creates the project folder and *pipeline-status.md*",
+        "The agent stage 1: runs trend and gap analysis and presents four gaps; the user picks one and approves the research question",
+        "The agent stage 2: runs the novelty check, finds the idea incremental, and the user narrows it to cold-start reviewers",
+        "The agent records the decision and proceeds to stage 3 after confirmation",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "idea-to-paper-pipeline",
+      "expected_script": null
+    },
+    {
+      "id": "idea-to-paper-pipeline-002",
+      "prompt": "Take my idea to a paper: energy-aware scheduling for edge devices.",
+      "expected_output": "The agent applied idea-to-paper-pipeline and delivered its documented output, asking only for inputs that were missing and could not be inferred.",
+      "assertions": [
+        "The agent read the idea-to-paper-pipeline SKILL.md before acting",
+        "The response follows the skill's output format, including: Pipeline: <working title>",
+        "The agent stated the limits of what it checked or could not verify",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "idea-to-paper-pipeline",
+      "expected_script": null
+    },
+    {
+      "id": "idea-to-paper-pipeline-003",
+      "prompt": "Just find gaps in this topic.",
+      "expected_output": "The agent recognised that this request is outside idea-to-paper-pipeline and handled it with research-gap-finder or pointed the user to it.",
+      "assertions": [
+        "The agent did not apply idea-to-paper-pipeline as the main skill for this request",
+        "The agent used or recommended research-gap-finder",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "research-gap-finder",
+      "expected_script": null
+    }
+  ]
+}

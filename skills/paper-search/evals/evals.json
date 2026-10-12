@@ -1,0 +1,48 @@
+{
+  "skill_name": "paper-search",
+  "evals": [
+    {
+      "id": "paper-search-001",
+      "prompt": "Find recent papers on retrieval augmented generation in medicine.",
+      "expected_output": "The agent applied paper-search: Retrieve real paper records, with authors, year, venue, DOI, link, abstract, and citation count, from five free scholarly indexes.",
+      "assertions": [
+        "The agent read the paper-search SKILL.md before acting",
+        "The agent chooses PubMed, OpenAlex, and Crossref because the topic is biomedical, and writes three short queries",
+        "The agent runs `run_script(\"scripts/search_papers.py\", args=\"'retrieval augmented generation medicine' --sources pubmed,openalex,crossref --year-from 2023 --format md --abstracts 300\")`",
+        "The agent reads titles and abstracts, drops off-topic hits, and groups the rest",
+        "The agent notes that Semantic Scholar was not searched",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "paper-search",
+      "expected_script": "search_papers.py"
+    },
+    {
+      "id": "paper-search-002",
+      "prompt": "Find papers on retrieval augmented generation for question answering.",
+      "expected_output": "The agent applied paper-search and delivered its documented output, asking only for inputs that were missing and could not be inferred.",
+      "assertions": [
+        "The agent read the paper-search SKILL.md before acting",
+        "The response follows the skill's output format",
+        "The agent ran search_papers.py from the skill's scripts folder instead of computing the result by hand",
+        "The agent stated the limits of what it checked or could not verify",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "paper-search",
+      "expected_script": "search_papers.py"
+    },
+    {
+      "id": "paper-search-003",
+      "prompt": "Who cited this paper?",
+      "expected_output": "The agent recognised that this request is outside paper-search and handled it with citation-graph-explorer or pointed the user to it.",
+      "assertions": [
+        "The agent did not apply paper-search as the main skill for this request",
+        "The agent used or recommended citation-graph-explorer",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "citation-graph-explorer",
+      "expected_script": null
+    }
+  ]
+}

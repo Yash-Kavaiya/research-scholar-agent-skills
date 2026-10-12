@@ -1,11 +1,19 @@
 ---
 name: paper-to-poster
-description: Designs an academic conference poster from a paper, with a headline finding, a column layout sized to the conference's dimensions, cut-down text, enlarged figures, and a QR code, delivered as a LaTeX (tikzposter or beamerposter) or PowerPoint layout. Use when the user asks to "make a poster for my paper", "design a conference poster", "create an A0 research poster", "convert my paper to a poster", "what should go on my poster", or needs a poster layout for a symposium.
+description: "Designs an academic poster from a paper: headline finding, column layout at the conference's size, trimmed text, and enlarged figures. Use for poster sessions. Not for talks; use paper-to-slides."
+version: 1.0.0
+metadata:
+  author: "Yash Kavaiya <yash.kavaiya3@gmail.com>"
+  tags: [poster, conference, tikzposter, research-communication]
 ---
 
 # Paper to Poster
 
 A poster is read from two metres away, in under a minute, by someone deciding whether to stop. Design for that reader first, then for the one who stays to talk.
+
+## Purpose
+
+Turn a paper into a poster that someone two metres away can understand in under a minute, and that supports a conversation with those who stop. Content is cut to a headline finding, one approach diagram, and two or three results.
 
 ## When to use
 
@@ -15,6 +23,12 @@ A poster is read from two metres away, in under a minute, by someone deciding wh
 
 Hand off instead for a talk (`paper-to-slides`) or a written summary (`paper-to-blog`).
 
+## Prerequisites
+
+- The paper and its figures as vector files or source values.
+- The conference's poster instructions: size, orientation, and any template.
+- LaTeX (`tikzposter` or `beamerposter`) or PowerPoint for the build, and institution logos.
+
 ## Inputs
 
 - The paper, and its figures as vector files or source data.
@@ -23,7 +37,7 @@ Hand off instead for a talk (`paper-to-slides`) or a written summary (`paper-to-
 - Output format: LaTeX or PowerPoint.
 - Whether it will be printed on paper or fabric, or shown on a screen.
 
-## Workflow
+## Instructions
 
 1. **Confirm size and orientation** from the conference. A portrait A0 and a landscape 48 × 36 in board need different layouts.
 2. **Write the headline finding**: one sentence in plain language stating the main result ("A 10-minute warm-up cuts injury rates by a third in amateur runners"). It is the most prominent text after the title, or it is the title.
@@ -70,6 +84,47 @@ Total words: <n>
 - The 30-second and 2-minute pitch scripts.
 - A print checklist: size, bleed if the printer needs it, file format, deadline.
 
+## Examples
+
+Requests that should trigger this skill:
+
+- "Make an A0 poster for my accepted paper."
+- "Design a conference poster from this manuscript."
+- "What should go on my research poster?"
+- "My poster has too much text. Redesign it."
+- "Create a 36 by 48 inch landscape poster in PowerPoint layout."
+
+Requests that belong to another skill:
+
+- "Make slides for my talk." → use `paper-to-slides`
+- "Write a blog post about my paper." → use `paper-to-blog`
+- "Make a publication figure." → use `publication-figure-maker`
+
+### Worked example
+
+**Request:** "A0 portrait poster for my paper showing that a 10-minute warm-up reduced injuries among 400 amateur runners over a season."
+
+**What the agent does:**
+
+1. Confirms size and orientation from the conference instructions.
+2. Writes the headline finding and selects content totalling about 450 words.
+3. Lays out a two-column grid with the main result largest and sets type sizes for A0.
+4. Plans remade figures, a QR code to the paper, and a 30-second pitch.
+
+**Result (excerpt):**
+
+```markdown
+Headline: A 10-minute warm-up cut injuries by a third in amateur runners.
+
+| Block | Content | Words | Visual |
+|---|---|---|---|
+| 1 Problem | why injuries matter for new runners | 50 | none |
+| 2 Approach | randomised, 400 runners, one season | 60 | study flow diagram |
+| 3 Key result | injury rate by group | 40 | large bar chart with interval |
+| 5 Conclusions | 3 bullets | 60 | QR code |
+Total words: 450. Body text 32 pt, headings 54 pt.
+```
+
 ## Quality bar and pitfalls
 
 - Take the dimensions from the conference instructions. A poster of the wrong size or orientation may not fit the board.
@@ -81,6 +136,22 @@ Total words: <n>
 - Use logos and images you are permitted to use, and follow the institution's branding rules.
 - Compile or open the file and inspect it before delivering; say so if it could not be rendered.
 - Printing takes time. Tell the user to check the print shop's turnaround before the travel date.
+
+## Limitations
+
+- Dimensions and template rules come from the conference; a wrong size cannot be fixed after printing.
+- A poster carries a fraction of the paper. Methods detail and secondary results are left to the presenter and the paper.
+- Print colour and resolution depend on the print shop and cannot be verified on screen.
+- Rendering is confirmed only where LaTeX or PowerPoint is available.
+
+## Troubleshooting
+
+| Problem | Likely cause | Solution |
+|---|---|---|
+| Text is too small to read at distance | Too much content for the area | Cut words until body text can be 28 pt or larger at A0 |
+| Figures print blurred | Low-resolution raster images were enlarged | Use vector figures, or raster at 150 to 300 dpi at final printed size |
+| The LaTeX poster fails to compile | A missing poster class or an oversized image triggers an error | Install `tikzposter` or `beamerposter` and check image paths and sizes |
+| The QR code does not scan | It is too small or low contrast | Print it at 4 cm or larger in black on white and test it on the proof |
 
 ## Related skills
 

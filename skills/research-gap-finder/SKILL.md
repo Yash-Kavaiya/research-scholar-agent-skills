@@ -1,11 +1,19 @@
 ---
 name: research-gap-finder
-description: Scans recent papers on a topic and lists open problems, contradictions between studies, and under-explored areas, each tied to the papers that reveal it. Use when the user asks "what are the research gaps in X", "what is still unsolved", "find me a thesis or paper topic in X", "where can I contribute", or wants open problems extracted from a set of papers they supply.
+description: "Lists open problems and under-explored areas in a research topic, each backed by retrieved papers. Use when choosing a thesis or paper topic. Not for testing one idea; use novelty-checker."
+version: 1.0.0
+metadata:
+  author: "Yash Kavaiya <yash.kavaiya3@gmail.com>"
+  tags: [research-gaps, literature, topic-selection]
 ---
 
 # Research Gap Finder
 
 Produce a ranked list of research gaps, each backed by evidence from named papers. A gap is a specific question the literature has not answered, and the list must show why you believe that.
+
+## Purpose
+
+Give a researcher a short, ranked list of unanswered questions in a topic, with the papers that show each one is open. It replaces vague statements such as "more research is needed" with gaps that can be defended in a proposal.
 
 ## When to use
 
@@ -17,6 +25,12 @@ Hand off instead when:
 - The user already has an idea and wants to know if it is new: use `novelty-checker`.
 - The user wants publication counts and hot subfields: use `topic-trend-analyzer`.
 
+## Prerequisites
+
+- The `paper-search` skill, or another way to retrieve real paper records.
+- Network access to the scholarly APIs, and full text of the key papers where available.
+- A topic narrow enough to search: a task, population, or method within a field.
+
 ## Inputs
 
 - Topic, as narrow as the user can state it. If it is as broad as "machine learning in healthcare", ask for one narrowing choice (task, population, modality, or method family) before searching.
@@ -24,9 +38,9 @@ Hand off instead when:
 - Field and target output (thesis, conference paper, grant), because they change which gaps are feasible.
 - Any papers the user already has.
 
-## Workflow
+## Instructions
 
-1. **Collect a corpus.** Use `paper-search` to gather 25 to 40 papers: recent surveys first, then the most-cited recent work, then the newest preprints. Record the queries used.
+1. **Collect a corpus.** Use `paper-search` to gather 25 to 40 papers: recent surveys first, then the most-cited recent work, then the newest preprints. Record the queries used. If a source fails or returns an error, say which one was not searched.
 2. **Read where gaps are stated.** For each paper read the abstract, the limitations and future-work sections, and the conclusion. For surveys read the "open challenges" section in full. Use full text when it is available; say so when only abstracts were read.
 3. **Extract candidate gaps** into a working table: paper, claim or limitation, type. Use these types:
    - *Stated*: authors name it as future work or a limitation.
@@ -63,6 +77,43 @@ Corpus: <N> papers, <years>, sources searched, queries used. Full text read for 
 
 Give 5 to 8 gaps. Fewer, well-supported gaps are better than a long list.
 
+## Examples
+
+Requests that should trigger this skill:
+
+- "What are the research gaps in federated learning for medical imaging?"
+- "Find me a PhD topic in low-resource speech recognition."
+- "What is still unsolved in graph anomaly detection?"
+- "Here are 20 papers on microplastics in soil. What has nobody studied yet?"
+- "Where can I contribute in explainable AI for credit scoring?"
+
+Requests that belong to another skill:
+
+- "Has anyone already done contrastive pretraining on ECG signals?" → use `novelty-checker`
+- "Is prompt engineering a growing research area?" → use `topic-trend-analyzer`
+- "Summarise this paper for me." → use `paper-summarizer`
+
+### Worked example
+
+**Request:** "Find research gaps in federated learning for medical imaging. I need a master's thesis topic I can finish in one year with public data."
+
+**What the agent does:**
+
+1. Searches for recent surveys, the most-cited work since 2022, and new preprints (about 30 papers), and records the queries.
+2. Reads limitations, future-work sections, and the surveys' open-challenges sections; builds a table of candidate gaps by type.
+3. Runs one targeted search per gap to check it is still open, and drops two that recent papers closed.
+4. Ranks the remaining gaps by evidence, importance, and feasibility for a one-year project with public data.
+
+**Result (excerpt):**
+
+```markdown
+### 1. Does federated training keep its accuracy when hospitals label the same finding differently?
+- Type: coverage
+- Evidence: Survey A (2023) lists label heterogeneity as open; Papers B and C evaluate only on identically labelled sites.
+- What a study would need: two public chest X-ray datasets with different labelling schemes
+- Confidence it is still open: medium (search "federated label shift radiology", 2024 onward, returned 3 papers, none multi-site)
+```
+
 ## Quality bar and pitfalls
 
 - Every gap cites at least one real paper you retrieved, with title and year. Never cite from memory without retrieving the record.
@@ -71,6 +122,20 @@ Give 5 to 8 gaps. Fewer, well-supported gaps are better than a long list.
 - A contradiction needs both sides named, with the conditions under which each result was obtained. Many apparent contradictions are differences in dataset or metric.
 - Avoid gaps that are just "apply method M to dataset D" unless there is a reason the result would be informative.
 - If only abstracts were read, say so in the corpus line. Limitations rarely appear in abstracts.
+
+## Limitations
+
+- The gaps reflect the papers that were retrieved. A gap can be closed by work the search did not find, in another language, or still under review.
+- When only abstracts are available, limitations and future-work statements are mostly missed, so stated gaps are under-counted.
+- Feasibility is judged from what the user reports about their resources; it is not verified.
+
+## Troubleshooting
+
+| Problem | Likely cause | Solution |
+|---|---|---|
+| The search returns few or no relevant papers | The topic wording is not the field's own term, or the topic is too narrow | Try the field's standard terms and synonyms, remove one qualifier, and search for a survey first |
+| Every gap found is generic ("more data needed") | Only abstracts were read | Obtain full text for the surveys and the five most relevant papers and reread their limitations sections |
+| A reported gap turns out to be already addressed | The still-open check used too narrow a query | Rerun the check with the method name alone and with a recent year filter, then drop or restate the gap |
 
 ## Related skills
 

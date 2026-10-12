@@ -1,0 +1,47 @@
+{
+  "skill_name": "methodology-designer",
+  "evals": [
+    {
+      "id": "methodology-designer-001",
+      "prompt": "I want to know why first-year engineering students drop out at my university. I have six months and access to student records and current students. Which design?",
+      "expected_output": "The agent applied methodology-designer: Choose a research design that can answer the question within the researcher's constraints, and justify each choice against the alternatives.",
+      "assertions": [
+        "The agent read the methodology-designer SKILL.md before acting",
+        "The agent classifies the question as explanatory (why) with an available quantitative pattern",
+        "The agent compares a survey-only design, interviews only, and an explanatory sequential mixed design in a table",
+        "The agent recommends the sequential design and specifies sampling, instruments, analysis, and validity for each strand",
+        "The agent builds the alignment matrix and lists risks",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "methodology-designer",
+      "expected_script": null
+    },
+    {
+      "id": "methodology-designer-002",
+      "prompt": "Which methodology should I use to study why nurses leave the profession?",
+      "expected_output": "The agent applied methodology-designer and delivered its documented output, asking only for inputs that were missing and could not be inferred.",
+      "assertions": [
+        "The agent read the methodology-designer SKILL.md before acting",
+        "The response follows the skill's output format",
+        "The agent stated the limits of what it checked or could not verify",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "methodology-designer",
+      "expected_script": null
+    },
+    {
+      "id": "methodology-designer-003",
+      "prompt": "How many participants do I need?",
+      "expected_output": "The agent recognised that this request is outside methodology-designer and handled it with sample-size-power-calculator or pointed the user to it.",
+      "assertions": [
+        "The agent did not apply methodology-designer as the main skill for this request",
+        "The agent used or recommended sample-size-power-calculator",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "sample-size-power-calculator",
+      "expected_script": null
+    }
+  ]
+}

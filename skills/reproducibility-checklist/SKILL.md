@@ -1,11 +1,17 @@
 ---
 name: reproducibility-checklist
-description: Completes reproducibility and reporting checklists for a paper, such as the NeurIPS paper checklist, the ML Reproducibility Checklist, ML Code Completeness, datasheets and model cards, and guidelines like CONSORT, STROBE, and ARRIVE, answering each item from evidence in the manuscript and listing what must be added. Use when the user asks to "fill the NeurIPS checklist", "complete the reproducibility checklist", "is my paper reproducible", "what do I need to report for reproducibility", "write a reproducibility statement", or prepares code and data for release.
+description: "Completes reproducibility and reporting checklists (NeurIPS, CONSORT, STROBE) from evidence in the manuscript and lists gaps. Use when a venue requires one. Not for reimplementing papers."
+version: 1.0.0
+metadata:
+  author: "Yash Kavaiya <yash.kavaiya3@gmail.com>"
+  tags: [reproducibility, checklist, reporting-guidelines, neurips]
 ---
 
 # Reproducibility Checklist
 
-Answer each checklist item from what the paper and its artifacts actually contain, cite where, and turn every gap into a concrete fix.
+## Purpose
+
+Answer each checklist item from what the paper and its artifacts actually contain, cite where, and turn every gap into a concrete fix. A truthful "No" with a justification is preferred to an unsupported "Yes".
 
 ## When to use
 
@@ -15,13 +21,19 @@ Answer each checklist item from what the paper and its artifacts actually contai
 
 Hand off instead for reimplementing someone else's paper (`paper-to-code-reproducer`).
 
+## Prerequisites
+
+- The manuscript with its appendix, and the venue and year.
+- The venue's current checklist text, from the call for papers or the template.
+- The code repository, configs, experiment log, and dataset documentation where they exist.
+
 ## Inputs
 
 - The manuscript with appendix, and the venue and year.
 - The venue's current checklist text. Obtain it from the call for papers or the template; items and answer formats change between years.
 - The code repository, configs, experiment log, and dataset documentation.
 
-## Workflow
+## Instructions
 
 1. **Get the right checklist** for the venue and year:
 
@@ -77,6 +89,48 @@ Hand off instead for reimplementing someone else's paper (`paper-to-code-reprodu
 
 For NeurIPS, also deliver the answers in the template's `\answerYes{}`, `\answerNo{}`, `\answerNA{}` form with justifications.
 
+## Examples
+
+Requests that should trigger this skill:
+
+- "Fill in the NeurIPS paper checklist for my submission."
+- "Complete the ML reproducibility checklist for this paper."
+- "Is my paper reproducible? What is missing?"
+- "Write a reproducibility statement for ICLR."
+- "Check my trial report against CONSORT."
+
+Requests that belong to another skill:
+
+- "Reimplement this paper from the PDF." → use `paper-to-code-reproducer`
+- "Check page limits and anonymisation." → use `camera-ready-checker`
+- "Log my experiment runs." → use `experiment-logger`
+
+### Worked example
+
+**Request:** "Complete the NeurIPS checklist for the attached paper and tell me what to add before the deadline."
+
+**What the agent does:**
+
+1. Obtains this year's checklist from the template and reads the paper and appendix.
+2. Answers each item with Yes, No, or N/A, a justification, and the location; applies the rule that Yes needs a location.
+3. Audits experimental details: finds seeds and error bars reported, compute and hyperparameter search missing.
+4. Writes the action list with draft text for each gap.
+
+**Result (excerpt):**
+
+```markdown
+| # | Item | Answer | Justification | Where |
+|---|---|---|---|---|
+| 7 | Statistical significance | Yes | Mean and s.d. over 5 seeds; defined in captions | Tables 2 and 3 |
+| 8 | Compute resources | No (to add) | GPU type is given; runtime and total compute are not | n/a |
+
+## Actions before submission
+| Priority | Gap | Text to add | Where |
+| 1 | Compute | "Each run took [hours] on one [GPU]; all experiments, including preliminary runs, used about [total] GPU hours." | Appendix B |
+
+Placeholders are for the authors to fill from their logs.
+```
+
 ## Quality bar and pitfalls
 
 - Answer truthfully. Never mark "Yes" for something not in the submission; reviewers check, and some venues desk-reject for inaccurate checklists.
@@ -86,6 +140,21 @@ For NeurIPS, also deliver the answers in the template's `\answerYes{}`, `\answer
 - Report total compute, including runs that did not make it into the paper, where the checklist asks.
 - Releasing data has conditions: licences, consent, and personal information. Check before promising release.
 - Reproducibility information in the appendix must be referenced from the main text, or readers will not find it.
+
+## Limitations
+
+- Answers are based on the manuscript and files provided. Information that exists only in the authors' heads cannot be confirmed and is recorded as a gap.
+- Checklist wording changes yearly; an outdated version leads to wrong items.
+- The skill does not run the code, so it cannot confirm that released code reproduces the results.
+- Completing a checklist documents reproducibility; it does not create it.
+
+## Troubleshooting
+
+| Problem | Likely cause | Solution |
+|---|---|---|
+| An item cannot be answered from the paper | The information is missing | Answer "No (to add)", ask the authors, and draft the text with placeholders |
+| The checklist version is uncertain | The venue's current template was not provided | Fetch the current template; do not rely on a remembered version, which may be invalid |
+| Authors want to answer Yes for unreleased code | Release is planned after acceptance | Answer No for the submission as reviewed and state the release plan in the justification |
 
 ## Related skills
 

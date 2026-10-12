@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Convert a CSV of results into a LaTeX booktabs table, with the best value in each column in bold.
 
 The first column is the row label. Numeric columns are detected automatically;

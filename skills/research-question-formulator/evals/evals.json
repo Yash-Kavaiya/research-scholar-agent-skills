@@ -1,0 +1,47 @@
+{
+  "skill_name": "research-question-formulator",
+  "evals": [
+    {
+      "id": "research-question-formulator-001",
+      "prompt": "I want to study whether short mindfulness sessions help nursing students with exam stress. Help me write the research question and hypotheses. I have one semester and access to about 120 students.",
+      "expected_output": "The agent applied research-question-formulator: Move a researcher from an area of interest to one primary question that data can answer, with secondary questions, measurable objectives, and hypotheses.",
+      "assertions": [
+        "The agent read the research-question-formulator SKILL.md before acting",
+        "The agent restates the interest and chooses PICO(T) because the study compares an intervention with a control",
+        "The agent fills the framework, marking the comparison group and outcome measure as undecided and proposing defaults",
+        "The agent drafts narrow, medium, and ambitious questions and scores each with FINER",
+        "The agent recommends the medium question and derives objectives, null and alternative hypotheses, and operational definitions",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "research-question-formulator",
+      "expected_script": null
+    },
+    {
+      "id": "research-question-formulator-002",
+      "prompt": "Help me frame a research question on social media use and teenage sleep.",
+      "expected_output": "The agent applied research-question-formulator and delivered its documented output, asking only for inputs that were missing and could not be inferred.",
+      "assertions": [
+        "The agent read the research-question-formulator SKILL.md before acting",
+        "The response follows the skill's output format",
+        "The agent stated the limits of what it checked or could not verify",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "research-question-formulator",
+      "expected_script": null
+    },
+    {
+      "id": "research-question-formulator-003",
+      "prompt": "Which research design should I use for this question?",
+      "expected_output": "The agent recognised that this request is outside research-question-formulator and handled it with methodology-designer or pointed the user to it.",
+      "assertions": [
+        "The agent did not apply research-question-formulator as the main skill for this request",
+        "The agent used or recommended methodology-designer",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "methodology-designer",
+      "expected_script": null
+    }
+  ]
+}

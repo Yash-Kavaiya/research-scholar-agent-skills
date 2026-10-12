@@ -1,0 +1,47 @@
+{
+  "skill_name": "qualitative-coding-assistant",
+  "evals": [
+    {
+      "id": "qualitative-coding-assistant-001",
+      "prompt": "Here are three anonymised interview transcripts (P01 to P03) with nurses about night shifts. Start coding inductively for my question: how do nurses cope with fatigue?",
+      "expected_output": "The agent applied qualitative-coding-assistant: Help a researcher code qualitative material systematically, with every code anchored to exact words from a named participant and location.",
+      "assertions": [
+        "The agent read the qualitative-coding-assistant SKILL.md before acting",
+        "The agent confirms anonymisation and consent terms, then reads each transcript fully and writes a memo",
+        "The agent codes line by line, recording participant, location, verbatim excerpt, code, and note",
+        "The agent drafts a codebook with definitions and examples and asks the researcher to review it",
+        "The agent proposes candidate themes with their central ideas and negative cases",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "qualitative-coding-assistant",
+      "expected_script": null
+    },
+    {
+      "id": "qualitative-coding-assistant-002",
+      "prompt": "Code these interview transcripts and find the themes.",
+      "expected_output": "The agent applied qualitative-coding-assistant and delivered its documented output, asking only for inputs that were missing and could not be inferred.",
+      "assertions": [
+        "The agent read the qualitative-coding-assistant SKILL.md before acting",
+        "The response follows the skill's output format",
+        "The agent stated the limits of what it checked or could not verify",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "qualitative-coding-assistant",
+      "expected_script": null
+    },
+    {
+      "id": "qualitative-coding-assistant-003",
+      "prompt": "Run a t test on my survey scores.",
+      "expected_output": "The agent recognised that this request is outside qualitative-coding-assistant and handled it with statistical-test-selector or pointed the user to it.",
+      "assertions": [
+        "The agent did not apply qualitative-coding-assistant as the main skill for this request",
+        "The agent used or recommended statistical-test-selector",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "statistical-test-selector",
+      "expected_script": null
+    }
+  ]
+}

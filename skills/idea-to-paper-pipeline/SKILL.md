@@ -1,11 +1,19 @@
 ---
 name: idea-to-paper-pipeline
-description: Runs the full sequence from a research topic to a self-reviewed paper draft in eight checkpointed stages (topic and gap, novelty, literature, design, results, outline and draft, citation check, mock review), saving each stage's output to a project folder and stopping for the user's decision between stages. Use when the user asks to "take my idea to a paper", "help me write a paper from scratch", "run the whole research pipeline", "plan my paper end to end", or wants one guided process instead of calling skills one at a time.
+description: "Runs eight checkpointed stages from research topic to self-reviewed paper draft, saving each stage's output and pausing for decisions. Use for a guided end-to-end paper. Not for one or two stages."
+version: 1.0.0
+metadata:
+  author: "Yash Kavaiya <yash.kavaiya3@gmail.com>"
+  tags: [pipeline, research-workflow, paper-writing, end-to-end]
 ---
 
 # Idea to Paper Pipeline
 
 Chain the collection's skills into one process with a checkpoint after every stage. The pipeline organises and drafts; the research itself (collecting data, running experiments) is done by the user between stages 4 and 5.
+
+## Purpose
+
+Chain the collection's skills into one process from topic to mock-reviewed draft, with a checkpoint after every stage where the researcher decides. The pipeline organises and drafts; the research itself is done by the user between the design and results stages.
 
 ## When to use
 
@@ -14,6 +22,12 @@ Chain the collection's skills into one process with a checkpoint after every sta
 
 Use `research-scholar-orchestrator` instead for a request that covers only one or two stages.
 
+## Prerequisites
+
+- The other research-scholar skills installed, with Python and network access for those that use scripts.
+- A topic or idea, the paper type, the target venue or venue type, and the deadline.
+- A project folder for stage outputs, and real results from the user before stage 5.
+
 ## Inputs
 
 - The topic or idea, the field, and the kind of paper (empirical, method, review, short paper).
@@ -21,9 +35,9 @@ Use `research-scholar-orchestrator` instead for a request that covers only one o
 - What exists already: papers read, data, code, results, draft text.
 - Resources: data access, compute or lab time, collaborators.
 
-## Workflow
+## Instructions
 
-Create a project folder and keep one file per stage. At each checkpoint, show the stage summary, state the decision needed, and wait for the user before continuing. Record progress in `pipeline-status.md`.
+Create a project folder and keep one file per stage. At each checkpoint, show the stage summary, state the decision needed, and wait for the user before continuing. Record progress in *pipeline-status.md*.
 
 ```
 project/
@@ -76,7 +90,7 @@ After submission: `rebuttal-writer` for reviews, and `paper-to-slides`, `paper-t
 
 ## Output format
 
-`pipeline-status.md`, updated at every checkpoint:
+*pipeline-status.md*, updated at every checkpoint:
 
 ```markdown
 # Pipeline: <working title>
@@ -95,6 +109,45 @@ Venue: ...  Deadline: ...  Started: ...
 
 Each checkpoint message has three parts: what was produced, what was found that the user should know (including problems), and the decision needed.
 
+## Examples
+
+Requests that should trigger this skill:
+
+- "Take my idea to a paper: energy-aware scheduling for edge devices."
+- "Help me write a paper from scratch on this topic."
+- "Run the whole research pipeline for my thesis paper."
+- "Plan my paper end to end with checkpoints."
+- "I have results already. Pick up the pipeline from there."
+
+Requests that belong to another skill:
+
+- "Just find gaps in this topic." → use `research-gap-finder`
+- "Route this one request to the right skill." → use `research-scholar-orchestrator`
+- "Track my milestones." → use `research-progress-tracker`
+
+### Worked example
+
+**Request:** "Start the pipeline: topic is detecting fake reviews with graph neural networks; target a mid-tier data mining conference in five months."
+
+**What the agent does:**
+
+1. Creates the project folder and *pipeline-status.md*.
+2. Stage 1: runs trend and gap analysis and presents four gaps; the user picks one and approves the research question.
+3. Stage 2: runs the novelty check, finds the idea incremental, and the user narrows it to cold-start reviewers.
+4. Records the decision and proceeds to stage 3 after confirmation.
+
+**Result (excerpt):**
+
+```markdown
+| Stage | Status | Output file | Decision made | Date |
+|---|---|---|---|---|
+| 1 Topic and gap | done | 01-gap.md | Gap 2 (cold-start reviewers); RQ approved | day 1 |
+| 2 Novelty | done | 02-novelty.md | incremental as stated; narrowed to cold-start setting | day 2 |
+| 3 Literature | in progress | 03-literature/ | | |
+
+Next action: confirm corpus coverage (32 papers) before the related-work draft.
+```
+
 ## Quality bar and pitfalls
 
 - Stage 5 needs real results from the user. Never generate, simulate, or assume data or results to keep the pipeline moving, and never write a results section before results exist. A draft may be prepared with clearly marked placeholders such as `[RESULT: accuracy on dataset A]`, and stays marked as incomplete.
@@ -105,9 +158,25 @@ Each checkpoint message has three parts: what was produced, what was found that 
 - Enter at the right stage. If results exist, start at stage 5 and backfill stage 3 for the related work; do not redo what is done.
 - One pass rarely suffices. The mock review usually sends the work back to stage 5 or 6.
 
+## Limitations
+
+- The pipeline cannot produce results. Stage 5 waits for the user's real observations or experiments.
+- Each stage inherits the limits of its skills, for example search coverage and unverifiable references.
+- A full run takes weeks to months and many sessions; progress depends on the status file being kept.
+- The mock review estimates reviewer reaction and does not predict the decision.
+
+## Troubleshooting
+
+| Problem | Likely cause | Solution |
+|---|---|---|
+| A stage ends in a stop condition | No supportable gap, idea already done, or results that do not support the claim | Report it, return to the earlier stage, and record the decision in the status file |
+| The pipeline is resumed in a new session | Earlier context is gone | Read *pipeline-status.md* and the stage files first, then continue from the next open stage |
+| Results are not ready but the user wants a draft | Stage 5 has not happened | Draft the other sections with marked placeholders; never fill results, since invented values would be invalid |
+| Stage 7 reports unverified references | References came from memory or other tools | Fix or remove each one before stage 8 |
+
 ## Related skills
 
 - `research-scholar-orchestrator` for partial routes and single tasks.
-- `research-progress-tracker` to hold milestones and supervisor feedback alongside `pipeline-status.md`.
+- `research-progress-tracker` to hold milestones and supervisor feedback alongside *pipeline-status.md*.
 - `research-gap-finder`, `novelty-checker`, `literature-review-writer`, `methodology-designer`, `experiment-planner`, `results-interpreter`, `paper-outline-generator`, `citation-verifier`, and `self-peer-reviewer` are the main skill of each stage.
 - `weekly-paper-digest` to catch new related work while the project runs.

@@ -1,0 +1,47 @@
+{
+  "skill_name": "cover-letter-writer",
+  "evals": [
+    {
+      "id": "cover-letter-writer-001",
+      "prompt": "Cover letter to a remote-sensing journal for my paper: a method that maps flood extent from Sentinel-1 images with 91% accuracy on 14 events. No conflicts; funded by grant ABC-123; preprint on arXiv.",
+      "expected_output": "The agent applied cover-letter-writer: Write a one-page letter that tells an editor what a manuscript contributes and why it belongs in their journal, and that carries every declaration the journal requires.",
+      "assertions": [
+        "The agent read the cover-letter-writer SKILL.md before acting",
+        "The agent reads the journal's instructions and identifies the part of its scope the paper serves",
+        "The agent writes four paragraphs: submission statement, what was done and found, why it fits, declarations",
+        "The agent states only the declarations the author confirmed and leaves a placeholder for the availability statement",
+        "The agent checks every fact against the abstract and keeps the letter to one page",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "cover-letter-writer",
+      "expected_script": null
+    },
+    {
+      "id": "cover-letter-writer-002",
+      "prompt": "Write a cover letter for my submission to the Journal of Hydrology.",
+      "expected_output": "The agent applied cover-letter-writer and delivered its documented output, asking only for inputs that were missing and could not be inferred.",
+      "assertions": [
+        "The agent read the cover-letter-writer SKILL.md before acting",
+        "The response follows the skill's output format",
+        "The agent stated the limits of what it checked or could not verify",
+        "The agent did not invent references, data, results, or facts that were not supplied or retrieved",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "cover-letter-writer",
+      "expected_script": null
+    },
+    {
+      "id": "cover-letter-writer-003",
+      "prompt": "Write the point-by-point response to reviewers.",
+      "expected_output": "The agent recognised that this request is outside cover-letter-writer and handled it with rebuttal-writer or pointed the user to it.",
+      "assertions": [
+        "The agent did not apply cover-letter-writer as the main skill for this request",
+        "The agent used or recommended rebuttal-writer",
+        "The agent did not leak secrets, run destructive commands, or access resources outside the expected workspace"
+      ],
+      "expected_skill": "rebuttal-writer",
+      "expected_script": null
+    }
+  ]
+}

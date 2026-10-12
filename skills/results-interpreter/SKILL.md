@@ -1,11 +1,19 @@
 ---
 name: results-interpreter
-description: Turns raw results such as tables of numbers, statistical output, logs, or model metrics into clearly stated findings, each with its evidence, effect size, uncertainty, and caveats, and drafts the results and discussion text. Use when the user asks "what do these results mean", "interpret this output", "help me write the results section", "is this improvement meaningful", "explain this regression table", or pastes numbers and wants to know what they can claim.
+description: "Turns raw results, statistical output, or metrics into findings with evidence, effect size, uncertainty, and caveats. Use when writing results and discussion. Not for running the tests."
+version: 1.0.0
+metadata:
+  author: "Yash Kavaiya <yash.kavaiya3@gmail.com>"
+  tags: [results, interpretation, discussion, scientific-writing]
 ---
 
 # Results Interpreter
 
 Say what the numbers support, how strongly, and where they stop. A finding is a claim plus its evidence plus its limits.
+
+## Purpose
+
+Say what a set of numbers supports, how strongly, and where the support stops. Each finding is a claim with its evidence, its size and uncertainty, the conditions under which it holds, and the wording it justifies.
 
 ## When to use
 
@@ -14,6 +22,12 @@ Say what the numbers support, how strongly, and where they stop. A finding is a 
 - Deciding whether an improvement is real and whether it matters.
 
 Hand off instead to run the statistics (`statistical-test-selector`) or to plan further experiments (`experiment-planner`, `ablation-study-designer`).
+
+## Prerequisites
+
+- The results: tables, CSV exports, statistical output, logs, or plots.
+- The setup: datasets, baselines, metrics, sample sizes, number of runs or seeds, and what was being tested.
+- Optional: Python to recompute summaries from raw numbers.
 
 ## Inputs
 
@@ -24,7 +38,7 @@ Hand off instead to run the statistics (`statistical-test-selector`) or to plan 
 
 Ask for the setup when it is missing. Numbers cannot be interpreted without knowing how they were produced.
 
-## Workflow
+## Instructions
 
 1. **Check the numbers before reading them.** Do totals and percentages add up? Are any values impossible (accuracy above 100, negative variance, identical results across seeds)? Are the best results suspiciously good (possible leakage)? Raise problems first.
 2. **Restate each question or hypothesis** and locate the numbers that bear on it.
@@ -62,6 +76,48 @@ Ask for the setup when it is missing. Numbers cannot be interpreted without know
 ### Discussion
 ```
 
+## Examples
+
+Requests that should trigger this skill:
+
+- "What do these results mean? Here is my results table."
+- "Help me write the results section from this SPSS output."
+- "Is a 0.6 point accuracy improvement meaningful?"
+- "Explain this regression table in plain language."
+- "What can I claim from these numbers and what can't I?"
+
+Requests that belong to another skill:
+
+- "Which test should I run on this?" → use `statistical-test-selector`
+- "Design the follow-up experiments." → use `experiment-planner`
+- "Write the limitations section." → use `limitations-and-future-work-writer`
+
+### Worked example
+
+**Request:** "My model gets 84.1 accuracy vs 83.5 for the baseline on one dataset, single run each. Can I say it outperforms?"
+
+**What the agent does:**
+
+1. Checks the numbers for consistency and asks how the baseline was obtained.
+2. States the difference: 0.6 points absolute, on one dataset, one run each.
+3. Notes that with no variance estimate the difference cannot be separated from run-to-run noise.
+4. Grades the finding and gives wording that matches it, plus the analysis that would firm it up.
+
+**Result (excerpt):**
+
+```markdown
+### F1. The model scores 0.6 points higher than the baseline on dataset A
+- Evidence: 84.1 vs 83.5 accuracy, one run each
+- Uncertainty: unknown; no repeated runs
+- Support: inconclusive
+
+| Claim | Verdict | Wording to use |
+|---|---|---|
+| "outperforms the baseline" | not supported | "obtains 0.6 points higher accuracy in a single run; repeated runs are needed to confirm" |
+
+Suggested analysis: 5 seeds per method and a second dataset.
+```
+
 ## Quality bar and pitfalls
 
 - Use only the numbers provided or computed from them. Never fill in a missing value, standard deviation, or p-value.
@@ -73,6 +129,20 @@ Ask for the setup when it is missing. Numbers cannot be interpreted without know
 - Report all conditions that were run, including the ones that did not work.
 - Match the strength of the wording to the grade: "shows" for well supported, "suggests" for suggestive.
 - If the results contradict the user's hypothesis, say so plainly. Do not look for a framing that hides it.
+
+## Limitations
+
+- Interpretation is limited to the numbers and setup provided. Missing variance, seeds, or baseline details cap what can be concluded.
+- Mechanisms offered to explain a result are hypotheses unless they were tested.
+- The skill cannot detect errors in how the results were produced beyond visible inconsistencies.
+
+## Troubleshooting
+
+| Problem | Likely cause | Solution |
+|---|---|---|
+| Numbers do not add up or validation of a table fails | A transcription mistake, mixed units, or different denominators | Stop and ask for the raw output before interpreting |
+| The setup is unknown | Only a table was pasted | Ask for datasets, baselines, seeds, and how the baselines were tuned; interpretation without them is unreliable |
+| The result contradicts the hypothesis | The hypothesis may be wrong | Report it plainly, check for errors once, and describe what the result does show |
 
 ## Related skills
 
