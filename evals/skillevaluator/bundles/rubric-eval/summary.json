@@ -1,0 +1,1890 @@
+[
+ {
+  "skill": "ablation-study-designer",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 96.4,
+  "rubric_criteria": {
+   "description_clarity": 10,
+   "instruction_clarity": 10,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 10,
+   "professional_tone": 10,
+   "trigger_simulation": 10,
+   "workflow_completeness": 9,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, detailed instructions, strong examples, well-defined scope, and actionable troubleshooting. All criteria score 9-10."
+ },
+ {
+  "skill": "abstract-writer",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 93.6,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 10,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "The abstract-writer skill documentation is exceptionally thorough, with clear purpose, detailed step-by-step instructions, excellent examples, well-defined scope, and practical error handling. It enables reliable routing and provides a complete end-to-end workflow for abstract creation and revision."
+ },
+ {
+  "skill": "academic-tone-editor",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 92.7,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 10,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 10,
+   "error_handling_quality": 8
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "The academic-tone-editor skill documentation is exceptionally thorough, with clear purpose, detailed step-by-step instructions, a worked example, well-defined scope boundaries, and actionable troubleshooting. It meets all criteria at a high level."
+ },
+ {
+  "skill": "annotated-bibliography-builder",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 91.4,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 10,
+   "error_handling_quality": 8
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "The skill documentation is exceptionally thorough with clear purpose, step-by-step instructions, realistic examples, well-defined scope, and actionable troubleshooting. All criteria score 8 or above, indicating a production-ready skill definition."
+ },
+ {
+  "skill": "architecture-diagram-maker",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 92.3,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 9,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, detailed instructions, comprehensive examples, well-defined scope, and actionable troubleshooting. All criteria score 9-10."
+ },
+ {
+  "skill": "bibtex-manager",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 95.0,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 10,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Exceptionally well-documented skill with clear purpose, complete workflow, excellent examples, and actionable troubleshooting. All criteria score 9-10."
+ },
+ {
+  "skill": "camera-ready-checker",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 90.9,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 9,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, complete workflow, helpful examples, and actionable troubleshooting. All criteria score 9-10."
+ },
+ {
+  "skill": "citation-graph-explorer",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 93.6,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 10,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 9,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Exceptionally well-documented skill with clear purpose, complete instructions, excellent examples, well-defined scope, and thorough error handling. Enables correct routing and covers the full workflow end-to-end."
+ },
+ {
+  "skill": "citation-style-converter",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 93.6,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 10,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, detailed step-by-step instructions, comprehensive examples, well-defined scope, and actionable troubleshooting. All criteria score 9-10."
+ },
+ {
+  "skill": "citation-verifier",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 97.7,
+  "rubric_criteria": {
+   "description_clarity": 10,
+   "instruction_clarity": 10,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 10,
+   "professional_tone": 10,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "The citation-verifier skill documentation is exceptionally thorough, with clear purpose, step-by-step instructions, realistic examples, well-defined boundaries, complete workflow coverage, and actionable error handling. It exceeds expectations across nearly all criteria."
+ },
+ {
+  "skill": "cover-letter-writer",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 87.7,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 8,
+   "documentation_completeness": 9,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 9,
+   "error_handling_quality": 8
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, comprehensive instructions, strong examples, well-defined scope, and practical error handling. All criteria meet or exceed the quality threshold."
+ },
+ {
+  "skill": "dataset-finder",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 93.6,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, complete workflow, strong examples, and actionable error handling. All criteria score 9-10."
+ },
+ {
+  "skill": "ethics-irb-drafter",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 87.7,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 8,
+   "documentation_completeness": 9,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 9,
+   "error_handling_quality": 8
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "The ethics-irb-drafter skill documentation is exceptionally thorough, with clear purpose, detailed step-by-step instructions, worked examples, explicit trigger/non-trigger cases, and practical troubleshooting. All criteria score 8-9/10."
+ },
+ {
+  "skill": "experiment-logger",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 93.6,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, complete workflow, actionable examples, and well-defined boundaries. All criteria score 9-10."
+ },
+ {
+  "skill": "experiment-planner",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 98.6,
+  "rubric_criteria": {
+   "description_clarity": 10,
+   "instruction_clarity": 10,
+   "example_quality": 10,
+   "documentation_completeness": 10,
+   "scope_definition": 10,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, complete workflow, helpful examples with trigger/non-trigger cases, and practical troubleshooting. Exceeds expectations on most criteria."
+ },
+ {
+  "skill": "grant-proposal-writer",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 90.0,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 9,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 9,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "The grant-proposal-writer skill documentation is exceptionally thorough, with clear purpose, detailed step-by-step instructions, high-quality examples covering both triggering and non-triggering cases, complete workflow coverage, and actionable error handling. All criteria score 9/10 or above."
+ },
+ {
+  "skill": "idea-to-paper-pipeline",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 90.0,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 9,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 9,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "The skill documentation is exceptionally thorough, with clear stage-by-stage instructions, well-defined checkpoints, realistic stop conditions, and helpful examples for both triggering and non-triggering queries. All criteria score highly."
+ },
+ {
+  "skill": "introduction-writer",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 95.0,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 10,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "The introduction-writer skill documentation is exceptionally thorough, with clear purpose, detailed step-by-step instructions, strong examples, well-defined scope, and practical troubleshooting. It enables reliable routing and provides a complete end-to-end workflow for drafting academic introductions."
+ },
+ {
+  "skill": "latex-paper-formatter",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 92.3,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, comprehensive step-by-step instructions, realistic examples, well-defined scope, and actionable error handling. All criteria score 9-10."
+ },
+ {
+  "skill": "latex-table-generator",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 93.6,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, complete workflow, helpful examples, well-defined scope, and actionable troubleshooting. All criteria score 9-10."
+ },
+ {
+  "skill": "limitations-and-future-work-writer",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 93.6,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 10,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "The skill documentation is exceptionally thorough with clear purpose, detailed step-by-step instructions, a worked example, troubleshooting guidance, and well-defined scope boundaries. It enables correct routing and covers the complete workflow for writing limitations and future-work sections."
+ },
+ {
+  "skill": "literature-review-writer",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 90.0,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 9,
+   "error_handling_quality": 8
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, detailed instructions, strong examples, well-defined scope, and actionable troubleshooting. All criteria score 8-10."
+ },
+ {
+  "skill": "math-and-equation-explainer",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 98.6,
+  "rubric_criteria": {
+   "description_clarity": 10,
+   "instruction_clarity": 10,
+   "example_quality": 10,
+   "documentation_completeness": 10,
+   "scope_definition": 10,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, detailed step-by-step instructions, comprehensive examples, well-defined scope, and practical error handling. Exceeds expectations in most criteria."
+ },
+ {
+  "skill": "methodology-designer",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 90.0,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 9,
+   "error_handling_quality": 8
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "The methodology-designer skill documentation is exceptionally clear, complete, and well-structured with strong examples, clear scope boundaries, and actionable troubleshooting guidance."
+ },
+ {
+  "skill": "novelty-checker",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 91.4,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 9,
+   "error_handling_quality": 8
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Exceptionally well-documented skill with clear purpose, complete end-to-end workflow, excellent trigger examples for routing, and actionable error handling. All criteria score 8-10."
+ },
+ {
+  "skill": "paper-comparison-matrix",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 99.1,
+  "rubric_criteria": {
+   "description_clarity": 10,
+   "instruction_clarity": 10,
+   "example_quality": 10,
+   "documentation_completeness": 10,
+   "scope_definition": 10,
+   "professional_tone": 10,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Exceptionally well-documented skill with clear purpose, detailed step-by-step instructions, comprehensive examples including trigger/non-trigger cases, complete workflow coverage, and actionable troubleshooting. Sets a high standard for skill documentation."
+ },
+ {
+  "skill": "paper-critic",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 98.6,
+  "rubric_criteria": {
+   "description_clarity": 10,
+   "instruction_clarity": 10,
+   "example_quality": 10,
+   "documentation_completeness": 10,
+   "scope_definition": 10,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "The paper-critic skill documentation is exceptionally well-structured with clear purpose, detailed instructions, worked examples, explicit trigger/non-trigger guidance, and practical troubleshooting. It meets all criteria at a high level."
+ },
+ {
+  "skill": "paper-outline-generator",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 92.3,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 9,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, detailed instructions, strong examples, complete workflow, and actionable error handling. Well-defined scope with explicit trigger/non-trigger examples for accurate routing."
+ },
+ {
+  "skill": "paper-search",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 98.6,
+  "rubric_criteria": {
+   "description_clarity": 10,
+   "instruction_clarity": 10,
+   "example_quality": 10,
+   "documentation_completeness": 10,
+   "scope_definition": 10,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, complete workflow, realistic examples, and actionable error handling. Well-defined scope prevents false triggers."
+ },
+ {
+  "skill": "paper-summarizer",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 95.0,
+  "rubric_criteria": {
+   "description_clarity": 10,
+   "instruction_clarity": 10,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 10,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 9,
+   "error_handling_quality": 8
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, detailed instructions, worked examples, explicit scope boundaries, and actionable error handling. Enables correct routing with trigger examples and covers complete end-to-end workflow."
+ },
+ {
+  "skill": "paper-to-blog",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 99.1,
+  "rubric_criteria": {
+   "description_clarity": 10,
+   "instruction_clarity": 10,
+   "example_quality": 10,
+   "documentation_completeness": 10,
+   "scope_definition": 10,
+   "professional_tone": 10,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "The paper-to-blog skill documentation is exceptionally thorough, with clear purpose, detailed step-by-step instructions, excellent examples covering trigger and non-trigger cases, complete workflow coverage, realistic troubleshooting, and well-defined scope boundaries. All criteria score at or near the maximum."
+ },
+ {
+  "skill": "paper-to-code-reproducer",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 93.6,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, detailed step-by-step instructions, comprehensive examples with trigger/non-trigger cases, complete workflow coverage, and actionable troubleshooting. All criteria score 9-10."
+ },
+ {
+  "skill": "paper-to-explainer-video",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 96.4,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 10,
+   "example_quality": 10,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "This skill documentation is exceptionally thorough, with clear purpose, detailed step-by-step instructions, excellent examples, well-defined scope, and practical troubleshooting. It enables reliable routing and provides a complete end-to-end workflow for creating video scripts and storyboards from papers."
+ },
+ {
+  "skill": "paper-to-poster",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 90.0,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 9,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 9,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, detailed instructions, strong examples, complete workflow, and actionable troubleshooting. All criteria score highly."
+ },
+ {
+  "skill": "paper-to-slides",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 95.0,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 10,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, detailed step-by-step instructions, comprehensive examples, well-defined scope, and actionable troubleshooting. All criteria score 9-10."
+ },
+ {
+  "skill": "phd-research-proposal-writer",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 95.9,
+  "rubric_criteria": {
+   "description_clarity": 10,
+   "instruction_clarity": 10,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 10,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, detailed instructions, comprehensive examples, well-defined scope, and actionable troubleshooting. Exceeds expectations on most criteria."
+ },
+ {
+  "skill": "plagiarism-and-paraphrase-checker",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 92.3,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, complete workflow, helpful examples, and thorough error handling. All criteria score 9-10."
+ },
+ {
+  "skill": "publication-figure-maker",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 92.7,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 10,
+   "trigger_simulation": 10,
+   "workflow_completeness": 9,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, complete workflow, realistic examples, and actionable troubleshooting. All criteria score 9-10."
+ },
+ {
+  "skill": "qualitative-coding-assistant",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 98.6,
+  "rubric_criteria": {
+   "description_clarity": 10,
+   "instruction_clarity": 10,
+   "example_quality": 10,
+   "documentation_completeness": 10,
+   "scope_definition": 10,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, complete workflow, strong examples, and actionable error handling. All criteria exceed expectations."
+ },
+ {
+  "skill": "rebuttal-writer",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 91.4,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 9,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 9,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "The rebuttal-writer skill documentation is exceptionally thorough, with clear purpose, detailed step-by-step instructions, excellent examples covering multiple scenarios, well-defined scope boundaries, and practical troubleshooting guidance. It enables accurate routing and provides a complete end-to-end workflow."
+ },
+ {
+  "skill": "related-work-writer",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 90.0,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 9,
+   "error_handling_quality": 8
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, detailed instructions, strong examples, complete workflow, and actionable error handling. All criteria score 8-10."
+ },
+ {
+  "skill": "reproducibility-checklist",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 93.6,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, comprehensive instructions, helpful examples, well-defined scope, and actionable error handling. All criteria score 9-10."
+ },
+ {
+  "skill": "research-gap-finder",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 93.6,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 10,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 9,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Exceptionally well-documented skill with clear purpose, detailed instructions, comprehensive examples, complete workflow, and actionable troubleshooting. All criteria score 9-10."
+ },
+ {
+  "skill": "research-progress-tracker",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 91.4,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 9,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 9,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "The research-progress-tracker skill is exceptionally well-documented with clear purpose, detailed instructions, excellent examples, and strong scope boundaries. It enables correct routing for relevant queries while explicitly excluding experiment logging and planning tasks."
+ },
+ {
+  "skill": "research-question-formulator",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 90.5,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 9,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 9,
+   "error_handling_quality": 8
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, complete workflow, strong examples, well-defined scope, and actionable troubleshooting. All criteria score 8-10."
+ },
+ {
+  "skill": "research-scholar-orchestrator",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 93.6,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent orchestration skill documentation with comprehensive routing logic, clear examples, complete workflow coverage, and actionable error handling. All criteria score 9-10."
+ },
+ {
+  "skill": "results-interpreter",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 87.7,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 8,
+   "documentation_completeness": 9,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 9,
+   "error_handling_quality": 8
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, detailed step-by-step instructions, well-defined scope, helpful examples with trigger/non-trigger cases, complete workflow coverage, and actionable troubleshooting. All criteria score 8+."
+ },
+ {
+  "skill": "sample-size-power-calculator",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 94.5,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 10,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Exceptionally well-documented skill with clear purpose, complete workflow, excellent examples for routing, and thorough error handling. All criteria score 9-10."
+ },
+ {
+  "skill": "self-peer-reviewer",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 99.1,
+  "rubric_criteria": {
+   "description_clarity": 10,
+   "instruction_clarity": 10,
+   "example_quality": 10,
+   "documentation_completeness": 10,
+   "scope_definition": 10,
+   "professional_tone": 10,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "This skill documentation is exceptionally thorough with clear purpose, detailed 9-step instructions, comprehensive examples including explicit trigger/non-trigger cases, complete workflow coverage, and actionable troubleshooting. It sets a high bar for quality and enables precise routing."
+ },
+ {
+  "skill": "sop-and-research-statement-writer",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 90.0,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 9,
+   "error_handling_quality": 8
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, complete workflow, strong examples, and actionable troubleshooting. All criteria score 8-10."
+ },
+ {
+  "skill": "statistical-test-selector",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 100.0,
+  "rubric_criteria": {
+   "description_clarity": 10,
+   "instruction_clarity": 10,
+   "example_quality": 10,
+   "documentation_completeness": 10,
+   "scope_definition": 10,
+   "professional_tone": 10,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 10
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "This skill documentation is exemplary across all criteria. It provides a clear purpose, complete workflow, explicit scope boundaries, excellent examples for routing, and actionable troubleshooting. The decision table, script specifications, and APA reporting template make it immediately usable."
+ },
+ {
+  "skill": "supervisor-finder",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 100.0,
+  "rubric_criteria": {
+   "description_clarity": 10,
+   "instruction_clarity": 10,
+   "example_quality": 10,
+   "documentation_completeness": 10,
+   "scope_definition": 10,
+   "professional_tone": 10,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 10
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Exceptionally comprehensive skill documentation with clear purpose, detailed instructions, worked examples, explicit trigger routing, complete workflow, and actionable troubleshooting."
+ },
+ {
+  "skill": "survey-questionnaire-designer",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 93.6,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 10,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, comprehensive step-by-step instructions, strong examples, well-defined scope, and practical troubleshooting. All criteria score 9-10."
+ },
+ {
+  "skill": "systematic-review-prisma",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 93.6,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Exceptionally well-documented skill with clear scope, complete end-to-end workflow, excellent positive/negative examples, and actionable error handling. Exceeds expectations in most criteria."
+ },
+ {
+  "skill": "thesis-chapter-writer",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 98.6,
+  "rubric_criteria": {
+   "description_clarity": 10,
+   "instruction_clarity": 10,
+   "example_quality": 10,
+   "documentation_completeness": 10,
+   "scope_definition": 10,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "The thesis-chapter-writer skill documentation is exceptionally thorough, with clear purpose, detailed instructions, worked examples, complete workflow coverage, and actionable troubleshooting. It sets a high bar for academic writing skills."
+ },
+ {
+  "skill": "topic-trend-analyzer",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 91.4,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 9,
+   "error_handling_quality": 8
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, complete workflow, explicit trigger/non-trigger examples, and actionable error handling. All criteria score 8+."
+ },
+ {
+  "skill": "venue-recommender",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 98.6,
+  "rubric_criteria": {
+   "description_clarity": 10,
+   "instruction_clarity": 10,
+   "example_quality": 10,
+   "documentation_completeness": 10,
+   "scope_definition": 10,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "The venue-recommender skill documentation is exceptionally thorough, with clear purpose, detailed step-by-step instructions, comprehensive examples, well-defined scope, and practical error handling. It meets all criteria at a high level."
+ },
+ {
+  "skill": "viva-defense-prep",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 93.6,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 10,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 9,
+   "workflow_completeness": 10,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "The viva-defense-prep skill documentation is exceptionally thorough, with clear purpose, detailed step-by-step instructions, realistic examples, well-defined scope, and actionable troubleshooting. It enables correct routing and covers a complete end-to-end workflow."
+ },
+ {
+  "skill": "weekly-paper-digest",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 9
+  },
+  "quality_score": null,
+  "quality_grade": null,
+  "rubric_score": 92.3,
+  "rubric_criteria": {
+   "description_clarity": 9,
+   "instruction_clarity": 9,
+   "example_quality": 9,
+   "documentation_completeness": 10,
+   "scope_definition": 9,
+   "professional_tone": 9,
+   "trigger_simulation": 10,
+   "workflow_completeness": 9,
+   "error_handling_quality": 9
+  },
+  "validators": {
+   "RUBRIC_EVAL": "passed"
+  },
+  "findings": [],
+  "rubric_summary": "Excellent skill documentation with clear purpose, complete workflow, helpful examples, well-defined scope, and actionable troubleshooting. All criteria score 9-10."
+ }
+]
