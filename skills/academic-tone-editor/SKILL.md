@@ -71,6 +71,13 @@ Hand off instead when the problem is structure or argument (`paper-outline-gener
 
 For LaTeX input, return valid LaTeX and leave commands, labels, citations, and maths untouched. Offer a tracked-changes view (`latexdiff`, or bold and strikethrough) when asked.
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/editing-catalogue.md`: Read at step 3, when making the clarity, concision, hedging, register, and mechanics passes.
+- `assets/edit-report-template.md`: Copy and fill to return the edited text with a change summary and queries.
+
 ## Examples
 
 Requests that should trigger this skill:

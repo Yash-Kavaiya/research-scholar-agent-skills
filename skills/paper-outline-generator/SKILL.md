@@ -87,6 +87,13 @@ Display: Fig. 1 (overview)
 | Item | Needed for | Priority |
 ```
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/paper-structures-by-type.md`: Read at steps 3 to 7, when choosing the structure for the paper type, planning display items, and budgeting length.
+- `assets/paper-outline-template.md`: Copy and fill for the paragraph-level outline and length budget.
+
 ## Examples
 
 Requests that should trigger this skill:
