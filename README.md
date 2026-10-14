@@ -1,6 +1,6 @@
 # Research Scholar Agent Skills
 
-59 agent skills that cover the research lifecycle, from choosing a problem to defending the thesis. Each skill is a folder with a `SKILL.md` that tells an AI agent when to use it, what to ask for, how to do the work, what to deliver, and what to avoid. Sixteen skills also ship a Python script for the parts that should be computed, not written from memory: literature search, citation checks, statistics, power analysis, tables, figures, and PDF checks.
+59 agent skills that cover the research lifecycle, from choosing a problem to defending the thesis. Each skill is a complete bundle: a `SKILL.md` that tells an AI agent when to use it, what to ask for, how to do the work, what to deliver, and what to avoid; a detailed reference guide in `references/` (decision tables, checklists, standards, worked examples) that the agent opens at the step that needs it; a fill-in output template in `assets/`; and an eval dataset in `evals/`. Sixteen skills also ship a Python script for the parts that should be computed, not written from memory: literature search, citation checks, statistics, power analysis, tables, figures, and PDF checks.
 
 The skills work in Claude Code as a plugin, and in any agent that reads the `SKILL.md` format.
 
@@ -206,7 +206,8 @@ Two skills have limits worth knowing before you rely on them. `plagiarism-and-pa
 
 ```
 .claude-plugin/        plugin and marketplace manifests
-skills/<name>/         SKILL.md, plus scripts/ and references/ where needed
+skills/<name>/         SKILL.md; references/ (detailed guide); assets/ (output template);
+                       evals/evals.json (test cases); scripts/ for the 16 scripted skills
 shared/scholarly_api.py   canonical API client and BibTeX parser
 tools/                 catalog.json, validate_skills.py, sync_shared.py
 tests/                 offline tests for every script
@@ -221,7 +222,7 @@ python tools/validate_skills.py   # structure, frontmatter, cross-references, sc
 python -m pytest                  # offline tests; no network needed
 ```
 
-A skill's `SKILL.md` has frontmatter (`name`, a `description` of at most 200 characters, `version`, and `metadata` with `author` and `tags`; scripted skills also declare `compatibility`, `allowed-tools`, and `permissions`), then these sections in order: Purpose, When to use, Prerequisites, Inputs, Instructions, Available Scripts (scripted skills only), Output format, Examples, Quality bar and pitfalls, Limitations, Troubleshooting, Related skills. The validator enforces this.
+A skill's `SKILL.md` has frontmatter (`name`, a `description` of at most 200 characters, `version`, and `metadata` with `author` and `tags`; scripted skills also declare `compatibility`, `allowed-tools`, and `permissions`), then these sections in order: Purpose, When to use, Prerequisites, Inputs, Instructions, Available Scripts (scripted skills only), Output format, Examples, Quality bar and pitfalls, Limitations, Troubleshooting, Related skills, plus a Reference files section that lists every file in `references/` and `assets/` with the step at which to open it. The validator enforces all of this, including that every skill has at least one reference guide and one template.
 
 ## Evaluation
 

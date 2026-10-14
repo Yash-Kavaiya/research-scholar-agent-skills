@@ -47,8 +47,8 @@ Wording and numbering change by year; map these topics onto the current form.
 
 | Guideline | Study type | Key items |
 |---|---|---|
-| CONSORT 2010 (and CONSORT-AI) | Randomised trials | Flow diagram, randomisation, allocation concealment, blinding, prespecified outcomes, registration, harms |
-| SPIRIT | Trial protocols | Schedule of enrolment and assessments |
+| CONSORT 2025 (replaces CONSORT 2010; CONSORT-AI extension for AI interventions) | Randomised trials | Flow diagram, randomisation, allocation concealment, blinding, prespecified outcomes, registration, harms |
+| SPIRIT 2025 (replaces SPIRIT 2013) | Trial protocols | Schedule of enrolment and assessments; outcomes; sample size; data management |
 | STROBE | Observational studies | Setting, participants, variables, bias, study size, statistical methods, missing data |
 | PRISMA 2020 | Systematic reviews | Search, selection, flow diagram, risk of bias, synthesis |
 | STARD | Diagnostic accuracy | Reference standard, cross-tabulation, flow |

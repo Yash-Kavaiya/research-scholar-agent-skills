@@ -54,7 +54,7 @@ Formal normality tests reject trivial departures in large samples and miss real 
 | Paired t | dz | 0.2, 0.5, 0.8 |
 | ANOVA | Eta squared; partial eta squared; omega squared | 0.01, 0.06, 0.14 |
 | Mann-Whitney, Wilcoxon | Rank-biserial r | 0.1, 0.3, 0.5 |
-| Kruskal-Wallis | Epsilon squared | 0.01, 0.08, 0.26 |
+| Kruskal-Wallis | Epsilon squared | read like eta squared (0.01, 0.06, 0.14) as a rough guide |
 | Correlation | r | 0.1, 0.3, 0.5 |
 | Chi-square | Cramér's V (depends on df); phi for 2×2 | for df = 1: 0.1, 0.3, 0.5 |
 | 2×2 tables | Odds ratio, risk ratio, risk difference | context-dependent |

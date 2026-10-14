@@ -31,7 +31,7 @@ Use a causal verb only if the design can support it. "Effect of" in the question
 | Feasible | Can this person get the participants, data, time, and skills? | Needs a sample or access they do not have |
 | Interesting | Would the answer matter to anyone besides the researcher? | A result that is obvious in either direction |
 | Novel | Does it confirm, refute, or extend what is known? Checked by search? | Already answered; novelty asserted without a search |
-| Ethical | Would a committee approve it? Are risks proportionate? | Vulnerable group without safeguards |
+| Ethical | Would a committee approve it? Are risks proportionate? | Vulnerable participants with protections not yet planned |
 | Relevant | Does it advance knowledge, practice, or policy? | No path from answer to use |
 
 ## 4. From question to objectives

@@ -75,4 +75,4 @@ Refer to the supervisor's recent work specifically: the method or dataset you wo
 
 ## 8. Common weaknesses noted by committees
 
-Too broad; gap asserted without evidence; objectives that do not match the questions; methodology too vague to evaluate; unrealistic timeline; references unverified or outdated; no ethical consideration where people are involved.
+Too broad; gap asserted without evidence; objectives that do not match the questions; methodology too vague to evaluate; unrealistic timeline; references unverified or outdated; ethics left unaddressed where people are involved.
