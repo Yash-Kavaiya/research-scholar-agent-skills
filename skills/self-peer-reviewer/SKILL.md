@@ -86,6 +86,13 @@ Overall: <score>, confidence <level>. Likely outcome: <range>, because ...
 | Priority | Fix | Effort | Addresses |
 ```
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/review-criteria-and-questions.md`: Read at steps 2 to 7, when reviewing along each axis, simulating reviewer stances, rating severity, and scoring against venue criteria.
+- `assets/mock-review-template.md`: Copy and fill for the mock review and the fix plan.
+
 ## Examples
 
 Requests that should trigger this skill:

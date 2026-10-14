@@ -100,6 +100,13 @@ Entries: 142 in, 135 out.
 ### Manual changes made
 ```
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/bibtex-field-guide.md`: Read at steps 3 and 4, when fixing entry types, author names, title capitalisation, special characters, and creating entries from authoritative sources.
+- `assets/bibliography-cleanup-template.md`: Copy and fill for the cleanup report.
+
 ## Examples
 
 Requests that should trigger this skill:
