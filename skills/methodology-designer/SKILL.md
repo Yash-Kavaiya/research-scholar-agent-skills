@@ -84,6 +84,13 @@ Why this design: ...
 
 Follow with the prose methodology section when asked.
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/design-catalogue.md`: Read at steps 1 to 4, when matching the question to a design, choosing sampling, and listing validity threats and their remedies.
+- `assets/methodology-plan-template.md`: Copy and fill for the design specification and alignment matrix.
+
 ## Examples
 
 Requests that should trigger this skill:

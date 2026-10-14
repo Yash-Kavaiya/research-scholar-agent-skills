@@ -68,6 +68,13 @@ Or the same in Markdown. Alongside the section deliver:
 - A list of cited keys that are missing from the `.bib` file.
 - Any claims about prior work you could not verify from the sources.
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/positioning-patterns.md`: Read at steps 2 to 6, when grouping prior work, writing contrast sentences, and handling the closest and concurrent papers.
+- `assets/positioning-table-template.md`: Copy and fill to plan the section and deliver the positioning table.
+
 ## Examples
 
 Requests that should trigger this skill:

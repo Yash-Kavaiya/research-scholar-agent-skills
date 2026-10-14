@@ -70,6 +70,13 @@ Author, A. A., & Author, B. B. (2023). Title of the article. *Journal Name, 12*(
 
 Offer a `.bib` export with the annotation in the `annote` field when the user works in LaTeX.
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/annotation-types-and-styles.md`: Read at steps 3 to 7, when formatting the citation in the required style and writing the summary, evaluation, and relevance parts.
+- `assets/annotated-entry-template.md`: Copy and fill for each entry and for the coverage summary.
+
 ## Examples
 
 Requests that should trigger this skill:

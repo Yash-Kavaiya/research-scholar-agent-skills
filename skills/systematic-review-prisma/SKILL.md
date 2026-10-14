@@ -93,6 +93,13 @@ Deliver these files, plus the manuscript sections on request:
 - *extraction.csv* and the quality-appraisal table.
 - A PRISMA checklist table: item, where reported.
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/prisma-2020-and-search-building.md`: Read at steps 1 to 3 and 10 to 12, when writing the protocol, building database search strings, choosing an appraisal tool, and checking the report against PRISMA 2020.
+- `assets/review-protocol-template.md`: Copy and fill for the review protocol and search log.
+
 ## Examples
 
 Requests that should trigger this skill:
