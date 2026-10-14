@@ -109,6 +109,13 @@ Venue: ...  Deadline: ...  Started: ...
 
 Each checkpoint message has three parts: what was produced, what was found that the user should know (including problems), and the decision needed.
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/stage-gates.md`: Read at each checkpoint, to apply the entry criteria, exit criteria, and stop conditions for the stage.
+- `assets/pipeline-status-template.md`: Copy and fill to create pipeline-status.md in the project folder.
+
 ## Examples
 
 Requests that should trigger this skill:

@@ -104,6 +104,13 @@ Queries: `...`; `...`. Sources: arXiv, OpenAlex. <N> new papers; <k> selected.
 - <source that failed, or none>
 ```
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/alert-design-and-curation.md`: Read at steps 1, 2, 5, and 9, when designing queries, choosing arXiv categories, curating results, and tuning the digest over time.
+- `assets/digest-config-and-issue-template.md`: Copy and fill for the digest configuration and the curated weekly issue.
+
 ## Examples
 
 Requests that should trigger this skill:

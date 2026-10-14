@@ -30,6 +30,7 @@ Define the grammar once in a legend if it is not obvious, and keep it the same a
 ## 3. TikZ building blocks
 
 ```latex
+% \usepackage{tikz,amssymb}   (amssymb provides \mathbb used in arrow labels)
 % \usetikzlibrary{positioning,arrows.meta,fit,backgrounds,shapes.geometric,calc}
 \tikzset{
   block/.style={draw, rounded corners=2pt, minimum height=7mm, minimum width=16mm, align=center, font=\footnotesize},

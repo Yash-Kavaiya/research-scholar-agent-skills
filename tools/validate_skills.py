@@ -154,6 +154,17 @@ def validate_skill(skill_dir: Path, known: set[str]) -> list[str]:
             errors.append(f"{name}: carries {SHARED_COPY_NAME} but no script imports it")
         elif copy.read_text(encoding="utf-8") != expected:
             errors.append(f"{name}: {SHARED_COPY_NAME} is out of date (run python tools/sync_shared.py)")
+
+    # Bundled resources: every skill ships a reference guide and a template, each listed in SKILL.md.
+    listed = set(re.findall(r"^- `((?:references|assets)/[^`]+)`: ", section(body, "## Reference files"), re.M))
+    for folder in ("references", "assets"):
+        files = {f"{folder}/{p.name}" for p in (skill_dir / folder).glob("*.md")} if (skill_dir / folder).is_dir() else set()
+        if not files:
+            errors.append(f"{name}: no {folder}/*.md file")
+        for missing in sorted(files - listed):
+            errors.append(f"{name}: {missing} is not listed under '## Reference files'")
+    for ghost in sorted(p for p in listed if not (skill_dir / p).is_file()):
+        errors.append(f"{name}: '## Reference files' lists {ghost}, which does not exist")
     return errors
 
 

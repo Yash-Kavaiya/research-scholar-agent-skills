@@ -113,6 +113,13 @@ gantt
   Data collection      :m2, after m1, 120d
 ```
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/planning-and-meeting-practices.md`: Read at steps 2 to 9, when building a backward plan, writing agendas and minutes, running weekly reviews, and preparing progress reports.
+- `assets/tracker-starter-template.md`: Copy and fill to start PLAN, ACTIONS, DECISIONS, and meeting files for a project.
+
 ## Examples
 
 Requests that should trigger this skill:
