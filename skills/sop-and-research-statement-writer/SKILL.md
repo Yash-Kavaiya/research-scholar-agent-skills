@@ -80,6 +80,13 @@ Interview the applicant before drafting. Without their specifics, a statement is
 
 For revisions, give the revised text and a short list of what changed and why.
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/statement-craft.md`: Read at steps 2 to 9, when collecting experiences, structuring the statement, tailoring it to a programme, and revising to the limit.
+- `assets/statement-planner-template.md`: Copy and fill to plan the statement and track tailored versions.
+
 ## Examples
 
 Requests that should trigger this skill:

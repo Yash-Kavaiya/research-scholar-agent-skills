@@ -88,6 +88,13 @@ Dear Dr. <Editor>,
 
 Also deliver the response matrix and a checklist of every promised change.
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/response-strategies-and-phrasing.md`: Read at steps 3 to 8, when classifying comments, choosing a response strategy, phrasing concessions and disagreements, and fitting the format.
+- `assets/response-matrix-template.md`: Copy and fill for the response matrix and the response letter.
+
 ## Examples
 
 Requests that should trigger this skill:

@@ -80,6 +80,14 @@ Scheme: <funder, scheme, call year>. Duration: <months>. Budget: <total>.
 ## Facts to confirm on the funder's site
 ```
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/indian-schemes.md`: Read at step 1 when the applicant is in India, to shortlist ANRF, DST, UGC, and other schemes before checking each call.
+- `references/proposal-sections-and-review-criteria.md`: Read at steps 2 to 8, when mapping the call's review criteria to sections, writing aims, building the work plan and budget, and self-reviewing as a panel would.
+- `assets/proposal-skeleton-and-budget.md`: Copy and fill for the proposal skeleton, budget table, and compliance checklist.
+
 ## Examples
 
 Requests that should trigger this skill:

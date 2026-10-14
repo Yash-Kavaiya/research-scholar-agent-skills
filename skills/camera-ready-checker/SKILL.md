@@ -92,6 +92,13 @@ Rules taken from: <URL, date>
 ## Could not check (needs your confirmation)
 ```
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/submission-compliance-guide.md`: Read at steps 3 to 9, when interpreting page counts, checking template compliance, anonymising, fixing fonts, and preparing camera-ready extras.
+- `assets/compliance-report-template.md`: Copy and fill for the pre-submission or camera-ready compliance report.
+
 ## Examples
 
 Requests that should trigger this skill:

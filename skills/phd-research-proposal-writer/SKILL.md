@@ -76,6 +76,13 @@ Word count: <n> of <limit>
 To confirm or supply: ...
 ```
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/proposal-expectations-by-stage.md`: Read at steps 1 to 11, when deciding the expected depth for admission, registration, or confirmation, and when writing objectives, methodology, and the timeline.
+- `assets/phd-proposal-template.md`: Copy and fill for the PhD proposal or synopsis.
+
 ## Examples
 
 Requests that should trigger this skill:
