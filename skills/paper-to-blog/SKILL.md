@@ -87,6 +87,13 @@ Hand off instead for a talk (`paper-to-slides`) or a video (`paper-to-explainer-
 
 For a thread: numbered posts, each within the platform's limit, with the character count.
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/plain-language-guide.md`: Read at steps 1 to 9, when choosing the audience level, translating numbers and terms, keeping caveats, and writing for each platform.
+- `assets/blog-post-template.md`: Copy and fill for a blog post or thread, with the accuracy check.
+
 ## Examples
 
 Requests that should trigger this skill:

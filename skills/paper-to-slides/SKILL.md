@@ -83,6 +83,13 @@ B1. ...
 
 Then the deck itself: Beamer `.tex`, `.pptx`, or Markdown for Marp, reveal.js, or Quarto.
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/talk-design-guide.md`: Read at steps 1 to 10, when budgeting time, writing assertion titles, rebuilding figures for projection, writing speaker notes, and preparing backup slides.
+- `assets/slide-plan-template.md`: Copy and fill for the slide plan, timing, notes, and backup slides.
+
 ## Examples
 
 Requests that should trigger this skill:

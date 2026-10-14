@@ -97,6 +97,13 @@ Checked <N> references on <date> against Crossref, OpenAlex, arXiv.
 ### Could not verify (no full-text access)
 ```
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/fabrication-patterns-and-claim-checks.md`: Read at steps 2 to 6, when investigating not-found and mismatched references and judging whether a source supports the citing sentence.
+- `assets/verification-report-template.md`: Copy and fill for the citation verification report.
+
 ## Examples
 
 Requests that should trigger this skill:

@@ -83,6 +83,13 @@ Hand off instead for a full critique of the draft (`self-peer-reviewer`).
 - Any limitation serious enough that a claim in the abstract or introduction should be reworded
 ```
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/threats-to-validity-catalogue.md`: Read at steps 2 to 6, when auditing the study for limitations, writing each with its consequence, and deriving future work.
+- `assets/limitations-audit-template.md`: Copy and fill for the limitations audit and the drafted sections.
+
 ## Examples
 
 Requests that should trigger this skill:

@@ -79,6 +79,13 @@ Followed, when requested, by:
 - Suggested reviewers table: name, affiliation, email, expertise, no-conflict confirmation
 - A list of placeholders the author must fill: `[ethics approval number]`, `[grant number]`
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/cover-letter-elements.md`: Read at steps 1 to 7, when deciding what the letter must contain, writing the significance and fit, and preparing declarations, highlights, and reviewer suggestions.
+- `assets/cover-letter-template.md`: Copy and fill for the cover letter, declarations, highlights, and reviewer suggestions.
+
 ## Examples
 
 Requests that should trigger this skill:

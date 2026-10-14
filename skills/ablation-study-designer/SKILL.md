@@ -85,6 +85,13 @@ Total cost: ... Budget: ...
 One paragraph per component: what was changed, the difference with its variation, and what it shows.
 ```
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/ablation-design-patterns.md`: Read at steps 2 to 5 and 8, when choosing ablation types and structure, controlling confounds, and reading the finished table.
+- `assets/ablation-plan-template.md`: Copy and fill for the ablation plan and the empty results table.
+
 ## Examples
 
 Requests that should trigger this skill:

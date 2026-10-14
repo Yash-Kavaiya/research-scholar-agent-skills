@@ -100,6 +100,13 @@ Stage: <where you are now>. Deadline: <date or none>.
 - Next: ...
 ```
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/routing-playbooks.md`: Read at steps 1 to 3, when locating the user's stage, choosing a route for a multi-stage goal, and handling handoffs and stop conditions between skills.
+- `assets/project-plan-template.md`: Copy and fill for the routed plan and the status report.
+
 ## Examples
 
 Requests that should trigger this skill:

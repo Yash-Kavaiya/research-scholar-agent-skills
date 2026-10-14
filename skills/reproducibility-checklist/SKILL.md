@@ -89,6 +89,13 @@ Hand off instead for reimplementing someone else's paper (`paper-to-code-reprodu
 
 For NeurIPS, also deliver the answers in the template's `\answerYes{}`, `\answerNo{}`, `\answerNA{}` form with justifications.
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/checklist-items-explained.md`: Read at steps 1 to 6, when interpreting checklist items, finding the evidence for each, and deciding between Yes, No, and N/A.
+- `assets/checklist-answer-template.md`: Copy and fill for the checklist answers, the action list, and the reproducibility statement.
+
 ## Examples
 
 Requests that should trigger this skill:

@@ -80,6 +80,13 @@ Subject: ...
 - Confirm: <facts to recheck>; attach: CV, transcript
 ```
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/finding-and-approaching-supervisors.md`: Read at steps 2 to 8, when identifying active researchers, verifying their status, judging fit, and writing the first email.
+- `assets/supervisor-shortlist-template.md`: Copy and fill for the shortlist, verification notes, and email drafts.
+
 ## Examples
 
 Requests that should trigger this skill:

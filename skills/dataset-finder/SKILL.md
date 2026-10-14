@@ -96,6 +96,13 @@ Commands or steps, including any application.
 - <details taken from listings that still need checking on the dataset page>
 ```
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/dataset-due-diligence.md`: Read at steps 2 to 5, when searching sources without an API and checking licence, access, provenance, and suitability.
+- `assets/dataset-comparison-template.md`: Copy and fill for the dataset comparison and recommendation.
+
 ## Examples
 
 Requests that should trigger this skill:

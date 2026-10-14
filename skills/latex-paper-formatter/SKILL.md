@@ -82,6 +82,13 @@ Plus a report:
 - Needs your decision: <items>
 ```
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/template-porting-and-errors.md`: Read at steps 3 to 8, when mapping front matter to a template, resolving package conflicts, setting up the bibliography, and fixing compile errors.
+- `assets/porting-checklist-template.md`: Copy and fill to track the conversion and report the result.
+
 ## Examples
 
 Requests that should trigger this skill:

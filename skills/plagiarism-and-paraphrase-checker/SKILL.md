@@ -102,6 +102,13 @@ Flagged: <a> verbatim, <b> close paraphrase, <c> quoted. Overall trigram overlap
 - Sources not supplied: ...; no web or database comparison was run.
 ```
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/attribution-and-paraphrase-guide.md`: Read at steps 3 to 7, when interpreting matches, recognising forms of misattribution, fixing passages, and handling reuse of the author's own work.
+- `assets/similarity-review-template.md`: Copy and fill for the similarity review and the fix log.
+
 ## Examples
 
 Requests that should trigger this skill:

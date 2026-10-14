@@ -71,6 +71,13 @@ Our contributions are:
 - Claims to verify against results: <list with section pointers>
 ```
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/introduction-moves.md`: Read at steps 2 to 7, when planning the moves, writing the gap and contributions, and calibrating claims.
+- `assets/introduction-plan-template.md`: Copy and fill to plan the introduction before drafting.
+
 ## Examples
 
 Requests that should trigger this skill:

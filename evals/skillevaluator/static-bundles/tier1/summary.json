@@ -1,0 +1,2323 @@
+[
+ {
+  "skill": "ablation-study-designer",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "abstract-writer",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "academic-tone-editor",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "annotated-bibliography-builder",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "architecture-diagram-maker",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "bibtex-manager",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 1,
+   "low": 3
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": [
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.crossref.org/",
+    "file": "_scholarly_api.py",
+    "line": 151
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "low",
+    "check": "Excessive Permissions (PE1)",
+    "message": "Privilege Escalation: permissions: [network, env, file_write",
+    "file": "SKILL.md",
+    "line": 7
+   },
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "_scholarly_api.py contains magic numbers",
+    "file": "bibtex-manager/scripts/_scholarly_api.py",
+    "line": null
+   },
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "clean_bibtex.py contains magic numbers",
+    "file": "bibtex-manager/scripts/clean_bibtex.py",
+    "line": null
+   }
+  ]
+ },
+ {
+  "skill": "camera-ready-checker",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 1
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": [
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "check_pdf.py contains magic numbers",
+    "file": "camera-ready-checker/scripts/check_pdf.py",
+    "line": null
+   }
+  ]
+ },
+ {
+  "skill": "citation-graph-explorer",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 2,
+   "low": 2
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": [
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.openalex.org/",
+    "file": "_scholarly_api.py",
+    "line": 126
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.openalex.org/",
+    "file": "_scholarly_api.py",
+    "line": 127
+   },
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "_scholarly_api.py contains magic numbers",
+    "file": "citation-graph-explorer/scripts/_scholarly_api.py",
+    "line": null
+   },
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "citation_graph.py contains magic numbers",
+    "file": "citation-graph-explorer/scripts/citation_graph.py",
+    "line": null
+   }
+  ]
+ },
+ {
+  "skill": "citation-style-converter",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "citation-verifier",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 4,
+   "low": 3
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": [
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.openalex.org/",
+    "file": "_scholarly_api.py",
+    "line": 173
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.openalex.org/",
+    "file": "_scholarly_api.py",
+    "line": 174
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.crossref.org/",
+    "file": "_scholarly_api.py",
+    "line": 228
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.crossref.org/",
+    "file": "_scholarly_api.py",
+    "line": 237
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "low",
+    "check": "Excessive Permissions (PE1)",
+    "message": "Privilege Escalation: permissions: [network, env, file_write",
+    "file": "SKILL.md",
+    "line": 7
+   },
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "_scholarly_api.py contains magic numbers",
+    "file": "citation-verifier/scripts/_scholarly_api.py",
+    "line": null
+   },
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "verify_citations.py contains magic numbers",
+    "file": "citation-verifier/scripts/verify_citations.py",
+    "line": null
+   }
+  ]
+ },
+ {
+  "skill": "cover-letter-writer",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "dataset-finder",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 1,
+   "low": 3
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": [
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "Autonomous Decision Making (EA2)",
+    "message": "Excessive Agency: no consent",
+    "file": "dataset-due-diligence.md",
+    "line": 66
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "low",
+    "check": "Permission 'env' is declared but no corresponding code capability (env) was detected. (LP4)",
+    "message": "MCP Least Privilege: Permission 'env' is declared but no corresponding code capability (env) was detected.",
+    "file": "SKILL.md",
+    "line": 1
+   },
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "_scholarly_api.py contains magic numbers",
+    "file": "dataset-finder/scripts/_scholarly_api.py",
+    "line": null
+   },
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "find_datasets.py contains magic numbers",
+    "file": "dataset-finder/scripts/find_datasets.py",
+    "line": null
+   }
+  ]
+ },
+ {
+  "skill": "ethics-irb-drafter",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "experiment-logger",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 1,
+   "low": 1
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": [
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "subprocess module call (AST4)",
+    "message": "Dangerous Code Execution: subprocess.run(cmd, capture_output=True, text=True, cwd=cwd, timeout=10)",
+    "file": "log_run.py",
+    "line": 69
+   },
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "log_run.py contains magic numbers",
+    "file": "experiment-logger/scripts/log_run.py",
+    "line": null
+   }
+  ]
+ },
+ {
+  "skill": "experiment-planner",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "grant-proposal-writer",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "idea-to-paper-pipeline",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "introduction-writer",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "latex-paper-formatter",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "latex-table-generator",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 1
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": [
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "csv_to_booktabs.py contains magic numbers",
+    "file": "latex-table-generator/scripts/csv_to_booktabs.py",
+    "line": null
+   }
+  ]
+ },
+ {
+  "skill": "limitations-and-future-work-writer",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "literature-review-writer",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "math-and-equation-explainer",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 1,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": [
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "Unknown (AE4)",
+    "message": "analysis-evasion: Suspicious Unicode normalization or mixed-script content",
+    "file": "notation-and-derivation-patterns.md",
+    "line": 1
+   }
+  ]
+ },
+ {
+  "skill": "methodology-designer",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "novelty-checker",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 4,
+   "low": 2
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": [
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.semanticscholar.org/",
+    "file": "_scholarly_api.py",
+    "line": 206
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.openalex.org/",
+    "file": "_scholarly_api.py",
+    "line": 243
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.openalex.org/",
+    "file": "_scholarly_api.py",
+    "line": 244
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.crossref.org/",
+    "file": "_scholarly_api.py",
+    "line": 327
+   },
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "_scholarly_api.py contains magic numbers",
+    "file": "novelty-checker/scripts/_scholarly_api.py",
+    "line": null
+   },
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "closest_work.py contains magic numbers",
+    "file": "novelty-checker/scripts/closest_work.py",
+    "line": null
+   }
+  ]
+ },
+ {
+  "skill": "paper-comparison-matrix",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "paper-critic",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "paper-outline-generator",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "paper-search",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 4,
+   "low": 3
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": [
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.semanticscholar.org/",
+    "file": "_scholarly_api.py",
+    "line": 206
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.openalex.org/",
+    "file": "_scholarly_api.py",
+    "line": 243
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.openalex.org/",
+    "file": "_scholarly_api.py",
+    "line": 244
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.crossref.org/",
+    "file": "_scholarly_api.py",
+    "line": 327
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "low",
+    "check": "Excessive Permissions (PE1)",
+    "message": "Privilege Escalation: permissions: [network, env, file_write",
+    "file": "SKILL.md",
+    "line": 7
+   },
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "_scholarly_api.py contains magic numbers",
+    "file": "paper-search/scripts/_scholarly_api.py",
+    "line": null
+   },
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "search_papers.py contains magic numbers",
+    "file": "paper-search/scripts/search_papers.py",
+    "line": null
+   }
+  ]
+ },
+ {
+  "skill": "paper-summarizer",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "paper-to-blog",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "paper-to-code-reproducer",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "paper-to-explainer-video",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "paper-to-poster",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "paper-to-slides",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "phd-research-proposal-writer",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "plagiarism-and-paraphrase-checker",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 1
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": [
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "similarity.py contains magic numbers",
+    "file": "plagiarism-and-paraphrase-checker/scripts/similarity.py",
+    "line": null
+   }
+  ]
+ },
+ {
+  "skill": "publication-figure-maker",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 1
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": [
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "pubstyle.py contains magic numbers",
+    "file": "publication-figure-maker/scripts/pubstyle.py",
+    "line": null
+   }
+  ]
+ },
+ {
+  "skill": "qualitative-coding-assistant",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "rebuttal-writer",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "related-work-writer",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "reproducibility-checklist",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "research-gap-finder",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "research-progress-tracker",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "research-question-formulator",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "research-scholar-orchestrator",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "results-interpreter",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "sample-size-power-calculator",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 1
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": [
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "power_calc.py contains magic numbers",
+    "file": "sample-size-power-calculator/scripts/power_calc.py",
+    "line": null
+   }
+  ]
+ },
+ {
+  "skill": "self-peer-reviewer",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "sop-and-research-statement-writer",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "statistical-test-selector",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 1
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": [
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "run_test.py contains magic numbers",
+    "file": "statistical-test-selector/scripts/run_test.py",
+    "line": null
+   }
+  ]
+ },
+ {
+  "skill": "supervisor-finder",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "survey-questionnaire-designer",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "systematic-review-prisma",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 1
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": [
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "prisma_flow.py contains magic numbers",
+    "file": "systematic-review-prisma/scripts/prisma_flow.py",
+    "line": null
+   }
+  ]
+ },
+ {
+  "skill": "thesis-chapter-writer",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "topic-trend-analyzer",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 2,
+   "low": 2
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": [
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.openalex.org/",
+    "file": "_scholarly_api.py",
+    "line": 71
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.openalex.org/",
+    "file": "_scholarly_api.py",
+    "line": 72
+   },
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "_scholarly_api.py contains magic numbers",
+    "file": "topic-trend-analyzer/scripts/_scholarly_api.py",
+    "line": null
+   },
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "trend_counts.py contains magic numbers",
+    "file": "topic-trend-analyzer/scripts/trend_counts.py",
+    "line": null
+   }
+  ]
+ },
+ {
+  "skill": "venue-recommender",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "viva-defense-prep",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 0,
+   "low": 0
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": []
+ },
+ {
+  "skill": "weekly-paper-digest",
+  "exit_code": 0,
+  "passed": true,
+  "status": "passed",
+  "incomplete_scans": [],
+  "severity": {
+   "critical": 0,
+   "high": 0,
+   "medium": 3,
+   "low": 3
+  },
+  "quality_score": 100.0,
+  "quality_grade": "A",
+  "rubric_score": null,
+  "rubric_criteria": {},
+  "validators": {
+   "Schema & Repository Governance": "passed",
+   "Semantic Version Validation": "passed",
+   "Security Scan": "passed",
+   "PII Scan": "passed",
+   "License Compliance": "passed",
+   "Code Risk Analysis": "passed",
+   "Secrets Detection": "passed",
+   "Code Integrity & Hygiene": "passed",
+   "Dependency Vulnerability Audit": "passed",
+   "Unicode Smuggling Detection": "passed",
+   "QUALITY": "passed",
+   "SCRIPT_LINT": "passed"
+  },
+  "findings": [
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.openalex.org/",
+    "file": "_scholarly_api.py",
+    "line": 208
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "External Transmission (E1)",
+    "message": "Data Exfiltration: https://api.openalex.org/",
+    "file": "_scholarly_api.py",
+    "line": 209
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "medium",
+    "check": "Tainted flow: 'seen' from pathlib.Path.read_text (line 142, file read) → pathlib.Path.write_text (file write) (TT2)",
+    "message": "Data Flow: state_path.write_text(json.dumps(sorted(seen), indent=0), encoding=\"utf-8\")",
+    "file": "digest.py",
+    "line": 167
+   },
+   {
+    "validator": "Security Scan",
+    "severity": "low",
+    "check": "Excessive Permissions (PE1)",
+    "message": "Privilege Escalation: permissions: [network, env, file_write",
+    "file": "SKILL.md",
+    "line": 7
+   },
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "_scholarly_api.py contains magic numbers",
+    "file": "weekly-paper-digest/scripts/_scholarly_api.py",
+    "line": null
+   },
+   {
+    "validator": "SCRIPT_LINT",
+    "severity": "low",
+    "check": "magic_numbers",
+    "message": "digest.py contains magic numbers",
+    "file": "weekly-paper-digest/scripts/digest.py",
+    "line": null
+   }
+  ]
+ }
+]

@@ -78,6 +78,13 @@ Negative cases: P05 (60–63)
 
 Deliver the coded-excerpt table as CSV as well, so it can be imported into NVivo, ATLAS.ti, MAXQDA, or a spreadsheet.
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/thematic-analysis-guide.md`: Read at steps 1 to 10, when choosing the analytic approach, coding, building the codebook, developing themes, and writing up.
+- `assets/codebook-and-theme-template.md`: Copy and fill for coded excerpts, the codebook, and the theme definitions.
+
 ## Examples
 
 Requests that should trigger this skill:

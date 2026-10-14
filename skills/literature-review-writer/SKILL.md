@@ -76,6 +76,13 @@ Established / contested / unknown, then the gap and the study that follows.
 
 Also deliver the synthesis matrix, and a list of claims you could not support from the supplied sources.
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/synthesis-patterns.md`: Read at steps 3 to 7, when choosing a structure, drafting synthesised paragraphs, and writing transitions and the closing gap.
+- `assets/review-outline-and-matrix.md`: Copy and fill to plan the review before drafting.
+
 ## Examples
 
 Requests that should trigger this skill:

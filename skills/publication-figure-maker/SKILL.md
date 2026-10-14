@@ -106,6 +106,13 @@ Run a script with the agent's script tool, for example `run_script("scripts/pubs
 \end{figure}
 ```
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/chart-choice-and-styling.md`: Read at steps 1, 2, and 5 to 10, when choosing a chart, encoding series, showing uncertainty, writing captions, and building pgfplots versions.
+- `assets/figure-spec-template.md`: Copy and fill to specify a figure before plotting and to record its caption and source.
+
 ## Examples
 
 Requests that should trigger this skill:

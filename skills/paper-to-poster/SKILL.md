@@ -84,6 +84,13 @@ Total words: <n>
 - The 30-second and 2-minute pitch scripts.
 - A print checklist: size, bleed if the printer needs it, file format, deadline.
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/poster-layout-guide.md`: Read at steps 1 to 10, when confirming size, writing the headline, laying out the grid, setting type sizes, and preparing the file for print.
+- `assets/poster-content-plan-template.md`: Copy and fill for the poster content plan and the pitches.
+
 ## Examples
 
 Requests that should trigger this skill:

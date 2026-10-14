@@ -79,6 +79,13 @@ A1. <item>   ( ) Strongly disagree ( ) Disagree ( ) Neutral ( ) Agree ( ) Strong
 ## Notes for the methods section
 ```
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/item-writing-and-validation.md`: Read at steps 4 to 8, when writing or reviewing items, choosing response scales, and planning validity and reliability checks.
+- `assets/instrument-blueprint-template.md`: Copy and fill for the blueprint, questionnaire, scoring key, and validation plan.
+
 ## Examples
 
 Requests that should trigger this skill:

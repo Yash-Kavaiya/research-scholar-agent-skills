@@ -89,6 +89,13 @@ Message: <one sentence>
 
 For Manim production, add per-scene implementation notes: the objects (`Text`, `MathTex`, `Axes`, `Rectangle`, `Arrow`) and animations (`Create`, `Write`, `Transform`, `FadeIn`, `Indicate`) to use.
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/video-scripting-and-storyboarding.md`: Read at steps 1 to 10, when budgeting narration, structuring scenes, designing animations, and planning captions and assets.
+- `assets/storyboard-template.md`: Copy and fill for the script and scene-by-scene storyboard.
+
 ## Examples
 
 Requests that should trigger this skill:

@@ -101,6 +101,13 @@ Run a script with the agent's script tool, for example `run_script("scripts/powe
 ## Assumptions and cautions
 ```
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/effect-sizes-and-adjustments.md`: Read at steps 2, 5, and 7, when choosing or converting an effect size and adjusting the sample for attrition, clustering, or multiple outcomes.
+- `assets/sample-size-justification-template.md`: Copy and fill for the sample-size section of a proposal, ethics form, or methods section.
+
 ## Examples
 
 Requests that should trigger this skill:

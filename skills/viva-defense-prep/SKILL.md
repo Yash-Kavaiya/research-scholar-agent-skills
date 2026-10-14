@@ -92,6 +92,13 @@ Format: <examiners, duration, presentation>. Date: ...
 ## Final-week checklist
 ```
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/examiner-question-bank.md`: Read at steps 2 to 9, when generating likely questions, preparing answers to hard questions, and running mock sessions.
+- `assets/defense-prep-template.md`: Copy and fill for the question bank, weak-point table, mock log, and final-week checklist.
+
 ## Examples
 
 Requests that should trigger this skill:

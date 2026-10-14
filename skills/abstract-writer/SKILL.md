@@ -73,6 +73,13 @@ a; b; c; d; e
 
 When revising, also give a short list of what changed and why.
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/abstract-patterns.md`: Read at steps 2 to 8, when choosing the abstract form, allocating words, making results specific, and writing titles and keywords.
+- `assets/abstract-worksheet.md`: Copy and fill to build the abstract, titles, and keywords.
+
 ## Examples
 
 Requests that should trigger this skill:

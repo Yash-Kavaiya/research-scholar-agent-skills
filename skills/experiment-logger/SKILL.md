@@ -107,6 +107,13 @@ Each line of *log.jsonl* in the *experiments* folder is one entry:
 
 *NOTEBOOK.md* contains a runs table (id, date, name, status, one column per metric, commit, tags) followed by a chronological log of runs and decisions.
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/logging-practices.md`: Read at steps 1 to 7, when deciding what to record, writing decision entries, integrating other trackers, and mapping paper numbers to runs.
+- `assets/results-provenance-template.md`: Copy and fill to map every reported number to the runs it came from.
+
 ## Examples
 
 Requests that should trigger this skill:

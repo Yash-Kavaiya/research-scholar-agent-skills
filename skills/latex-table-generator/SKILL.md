@@ -97,6 +97,13 @@ Run a script with the agent's script tool, for example `run_script("scripts/csv_
 
 Deliver the `.tex` file, the CSV it was generated from, and the command used, so the table can be regenerated when numbers change.
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/table-design-rules.md`: Read at steps 4 to 7, when adding column groups, aligning decimals, fitting width, and writing captions.
+- `assets/table-spec-template.md`: Copy and fill to specify a results table and record the command that generated it.
+
 ## Examples
 
 Requests that should trigger this skill:

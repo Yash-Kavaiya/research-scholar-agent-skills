@@ -78,6 +78,13 @@ Fallback: ...
 ## Confirm before submitting
 ```
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/venue-evaluation-and-predatory-checks.md`: Read at steps 2 to 7, when finding where similar work is published, gathering venue facts, checking legitimacy, and building the submission ladder.
+- `assets/venue-shortlist-template.md`: Copy and fill for the venue shortlist and submission plan.
+
 ## Examples
 
 Requests that should trigger this skill:

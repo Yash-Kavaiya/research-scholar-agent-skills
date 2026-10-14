@@ -77,6 +77,13 @@ Total: <GPU hours / lab days>. Available: <...>. Margin: 30%. Cut order if over 
 ## Risks and fallbacks
 ```
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/evaluation-standards.md`: Read at steps 3 to 8, when choosing baselines and metrics, planning for variance, and estimating the compute budget.
+- `assets/experiment-plan-template.md`: Copy and fill for the experiment plan and budget.
+
 ## Examples
 
 Requests that should trigger this skill:

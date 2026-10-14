@@ -89,6 +89,13 @@ Hand off instead to fix the underlying reference data (`bibtex-manager`) or to c
 - Sentences reworded for the citation form: ...
 ```
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/style-differences-and-csl.md`: Read at steps 1, 3, 5, and 6, when identifying the exact target style, choosing the CSL file, converting in-text citations, and checking rendered output.
+- `assets/conversion-record-template.md`: Copy and fill to record a style conversion.
+
 ## Examples
 
 Requests that should trigger this skill:
