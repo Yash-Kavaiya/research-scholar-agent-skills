@@ -88,6 +88,13 @@ Hand off instead for data plots (`publication-figure-maker`) or the PRISMA flow 
 - A legend line for shapes, colours, and arrow styles.
 - A short list of assumptions made about the architecture where the description was incomplete.
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/diagram-grammar-and-snippets.md`: Read at steps 3 to 6, when choosing a format, applying a visual grammar, and writing TikZ, Mermaid, or Graphviz source.
+- `assets/diagram-spec-template.md`: Copy and fill to list elements and connections before drawing.
+
 ## Examples
 
 Requests that should trigger this skill:

@@ -84,6 +84,13 @@ Hand off instead for a standalone paper (`paper-outline-generator`) or a proposa
 
 Deliver the updated *thesis-terms.md* with every chapter.
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/thesis-structure-and-consistency.md`: Read at steps 1 to 3 and 7 to 9, when planning chapters, keeping terminology consistent, adapting published papers, and running the consistency check.
+- `assets/chapter-plan-and-terms-template.md`: Copy and fill for the chapter plan and the shared terminology sheet.
+
 ## Examples
 
 Requests that should trigger this skill:
