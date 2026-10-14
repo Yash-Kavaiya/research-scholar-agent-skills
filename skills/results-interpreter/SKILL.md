@@ -76,6 +76,13 @@ Ask for the setup when it is missing. Numbers cannot be interpreted without know
 ### Discussion
 ```
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/claim-strength-and-wording.md`: Read at steps 3 to 10, when judging practical significance, grading findings, choosing wording to match the evidence, and drafting results and discussion text.
+- `assets/findings-summary-template.md`: Copy and fill for the findings summary and the claims table.
+
 ## Examples
 
 Requests that should trigger this skill:

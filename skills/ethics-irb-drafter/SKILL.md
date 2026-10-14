@@ -62,6 +62,13 @@ Separate documents, each headed **DRAFT for review by <committee name>**:
 - *data-management-plan.md*
 - *open-questions.md*: facts still needed, and decisions that belong to the user, supervisor, or committee.
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/ethics-principles-and-risk.md`: Read at steps 1, 2, 4, and 7, when deciding the review route, naming frameworks, assessing risk, and planning data protection.
+- `assets/consent-and-information-sheet-template.md`: Copy and fill for the participant information sheet and consent form.
+
 ## Examples
 
 Requests that should trigger this skill:

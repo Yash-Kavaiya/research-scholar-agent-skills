@@ -102,6 +102,13 @@ Descriptives: control M = 70.2, SD = 8.1, n = 30; treatment M = 75.8, SD = 7.9, 
 ## Interpretation and caveats
 ```
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/test-decision-guide.md`: Read at steps 1 and 4 to 7, when choosing a test the script does not cover, judging assumptions, correcting for multiple comparisons, and reporting in APA style.
+- `assets/analysis-report-template.md`: Copy and fill for the analysis report and the results paragraph.
+
 ## Examples
 
 Requests that should trigger this skill:

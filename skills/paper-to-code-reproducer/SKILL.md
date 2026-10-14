@@ -83,6 +83,13 @@ Results table in the README:
 |---|---|---|---|
 ```
 
+## Reference files
+
+Open these only when the step calls for them; they are not needed for every request.
+
+- `references/reproduction-protocol.md`: Read at steps 3 to 9, when extracting the specification, filling unspecified details, testing units, and diagnosing gaps between reproduced and reported numbers.
+- `assets/reproduction-report-template.md`: Copy and fill for the reproduction README and assumptions log.
+
 ## Examples
 
 Requests that should trigger this skill:
